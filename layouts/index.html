@@ -1,0 +1,41 @@
+{{ partial "header.html" . }}
+{{ range where .Data.Pages "Section" "front" }}
+<div class="front-card mdl-card mdl-shadow--4dp mdl-cell
+		mdl-cell--6-col mdl-cell--4-col-phone mdl-cell--8-col-tablet">
+<div class="mdl-card__title">
+	<h1 class="mdl-card__title-text">{{ .Title }}</h1>
+	</div>
+	<div class="mdl-card__supporting-text">
+	{{ .Content }}
+	</div>
+</div>
+{{end}}
+{{ range first 1 (where .Data.Pages "Section" "pubs") }}
+<div class="front-card mdl-card mdl-shadow--4dp mdl-cell
+		mdl-cell--6-col mdl-cell--4-col-phone mdl-cell--8-col-tablet">
+<div class="mdl-card__title" {{ if .hero }}style="background: url('media/{{.hero}}') center / cover"{{end}}>
+	<h1 class="mdl-card__title-text">{{ .Title }}</h1>
+	</div>
+	<div class="mdl-card__supporting-text">
+	{{ .Content }}
+	</div>
+	<div class="mdl-card__actions mdl-card--border">
+	<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Read more...</a>
+	</div>
+</div>
+{{end}}
+{{ range first 1 (where .Data.Pages "Section" "posts") }}
+<div class="front-card mdl-card mdl-shadow--4dp mdl-cell
+		mdl-cell--6-col mdl-cell--4-col-phone mdl-cell--8-col-tablet">
+<div class="mdl-card__title" {{ if .hero }}style="background: url('media/{{.hero}}') center / cover"{{end}}>
+	<h1 class="mdl-card__title-text">{{ .Title }}</h1>
+	</div>
+	<div class="mdl-card__supporting-text">
+	{{ .Summary }}
+	</div>
+	<div class="mdl-card__actions mdl-card--border">
+	<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Read more...</a>
+	</div>
+</div>
+{{end}}
+{{ partial "footer.html" . }}

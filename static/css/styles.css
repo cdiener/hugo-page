@@ -1,0 +1,13 @@
+.mdl-grid {
+	max-width: 1200px;
+}
+
+.mdl-navigation .mdl-button {
+	color: white;
+}
+
+.front-card > .mdl-card__title {
+	color: #fff;
+	height: 120px;
+	background: url('../media/board.jpg') center / cover;
+}
