@@ -1,6 +1,5 @@
 +++
 date = "2015-08-27T12:40:58-05:00"
-draft = true
 title = "Who am I?"
 weight = 1
 +++

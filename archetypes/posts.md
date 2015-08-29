@@ -1,0 +1,4 @@
++++
+hero = ""
+categories = ["science", "comment"]
++++

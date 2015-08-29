@@ -2,12 +2,50 @@
 	max-width: 1200px;
 }
 
-.mdl-navigation .mdl-button {
-	color: white;
+.mdl-navigation a.mdl-navigation__link {
+	color: #ccc;
+    font: 1.1em Roboto, Helvetica, Arial, sans-serif;
 }
 
-.front-card > .mdl-card__title {
+.mdl-navigation a.mdl-navigation__link:hover {
+	color: #fff;
+}
+
+.card > .mdl-card__title {
+	color: #fff;
+	height: 120px;
+}
+
+.image-card > .mdl-card__title {
 	color: #fff;
 	height: 120px;
 	background: url('../media/board.jpg') center / cover;
+}
+
+.image-card i.material-icons {
+    color: #fff;
+}
+
+.mdl-card__supporting-text > h1 {
+    font-size: 2em;
+    line-height: normal;
+    margin: 0.25em 0;
+}
+
+.mdl-card__supporting-text > h2 {
+    font-size: 1.5em;
+    margin: 0;
+    line-height: normal;
+    margin: 0.25em 0;
+}
+
+.mdl-card__supporting-text > h3 {
+    font-size: 1.25em;
+    font-weight: 500;
+    line-height: normal;
+    margin: 0.25em 0;
+}
+
+.image-card .mdl-card__actions {
+    margin-top: auto;
 }
