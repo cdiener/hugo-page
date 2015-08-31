@@ -57,3 +57,31 @@
 #back {
 	margin: 5px;
 }
+
+#vis .node {
+  stroke: #f5f5f5;
+  stroke-width: 2px;
+}
+
+#vis .node.fixed {
+  stroke: #000;
+}
+
+#vis .node text {
+  stroke: none;
+  fill: black;
+  pointer-events: none;
+  font: 10px sans-serif;
+}
+
+#vis .link {
+  stroke: #999;
+  stroke-opacity: .6;
+  stroke-width: 2;
+}
+
+#vis {
+	margin: 0 auto;
+	padding: 0;
+	max-width: 900px;
+}

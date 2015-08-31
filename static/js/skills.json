@@ -1,0 +1,38 @@
+{
+	"name": "",
+	"group": 0,
+	"children":	[
+		{"name":"Programming",
+		 "group": 1,	
+		 "children": [
+			{"name":"C/C++", "group": 2},
+			{"name":"Python", "group": 2},
+			{"name":"R", "group": 2},
+			{"name":"Golang", "group": 2}
+		]},
+		{"name":"Molecular Biology",
+		 "group": 3,
+		 "children": [
+			{"name":"Microbial cultures", "group": 4},
+			{"name":"PCR", "group": 4},
+			{"name":"Confocal Microscopy", "group": 4},
+			{"name":"DNA gels", "group": 4}
+		]},
+		{"name":"Systems Biology",
+		 "group": 5,
+		 "children": [
+			{"name":"Statistics", "group": 6},
+			{"name":"Omics analysis", "group":6},
+			{"name":"ODEs/PDEs", "group": 6},
+			{"name":"Master equations", "group": 6},
+			{"name":"FBA", "group": 6}
+		]},
+		{"name":"Web Technologies",
+		 "group": 7,
+		 "children": [
+			{"name":"HTML", "group": 8},
+			{"name":"JavaScript", "group": 8},
+			{"name":"Docker/Servers", "group": 8}
+		]}
+	]
+}
