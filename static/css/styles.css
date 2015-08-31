@@ -26,26 +26,34 @@
     color: #fff;
 }
 
-.mdl-card__supporting-text > h1 {
-    font-size: 2em;
+.mdl-card h1 {
+    font-size: 1.5em;
     line-height: normal;
     margin: 0.25em 0;
 }
 
-.mdl-card__supporting-text > h2 {
-    font-size: 1.5em;
+.mdl-card h2 {
+    font-size: 1.25em;
     margin: 0;
     line-height: normal;
     margin: 0.25em 0;
 }
 
-.mdl-card__supporting-text > h3 {
-    font-size: 1.25em;
+.mdl-card h3 {
+    font-size: 1em;
     font-weight: 500;
     line-height: normal;
     margin: 0.25em 0;
 }
 
-.image-card .mdl-card__actions {
+.mdl-card__actions {
     margin-top: auto;
+}
+
+.mdl-button--primary img {
+	margin: auto 0.5em auto 0;
+}
+
+#back {
+	margin: 5px;
 }

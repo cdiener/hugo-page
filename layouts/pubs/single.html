@@ -1,0 +1,20 @@
+{{ partial "header_no_menu.html" . }} 
+<a class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect back" href="/{{.Section}}" id="back">
+<i class="material-icons">arrow_back</i></a>	
+<div class="mdl-tooltip" for="back">Return to overview...</div>
+<div class="card mdl-card mdl-shadow--4dp mdl-cell
+		mdl-cell--12-col mdl-cell--4-col-phone mdl-cell--8-col-tablet">
+<div class="mdl-card__title mdl-color--primary" {{ if .Params.hero }}style="background: url('/media/{{.Params.hero}}') center / cover"{{end}}>
+	<h1 class="mdl-card__title-text">{{ .Title }}</h1>
+	</div>
+	<div class="mdl-card__supporting-text">
+	{{ .Content }}
+	</div>
+	<div class="mdl-card__actions mdl-card--border">
+	<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect"
+        href="http://ncbi.nlm.nih.gov/pubmed/{{.Params.pubmed}}" target="_blank">Pubmed</a>
+	<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect"
+        href="http://dx.doi.org/{{.Params.doi}}" target="_blank">DOI</a>
+    </div>
+</div>
+{{ partial "footer.html" . }}

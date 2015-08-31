@@ -1,8 +1,10 @@
 +++
 categories = ["science", "comment"]
 date = "2015-08-29T11:28:45-05:00"
-hero = ""
-title = "Test Post 2"
+hero = "board.jpg"
+github = "govitae"
+figshare = "articles/_Microscopic_images_left_and_derived_computational_domains_and_factor_distributions_right_for_BAR1_wild_type_top_and_bar1_916_bottom_/1084928"
+title = "Test Post 1"
 
 +++
 
