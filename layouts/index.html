@@ -9,10 +9,12 @@
 	{{ .Content }}
 	</div>
     {{ if eq .Weight 1 }}<div class="mdl-card__menu">
+	<a class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" href="http://orcid.org/0000-0002-7476-0868 " target="_blank">
+    <img src="/media/orcid.png" height="65%"/></a>
     <a class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" href="http://github.com/cdiener" target="_blank">
     <img src="/media/github_white.svg" height="80%"/></a>
     <a class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" href="http://twitter.com/@thaasophobia" target="_blank">
-    <img src="/media/twitter_white.svg" height="80%"/></a>
+    <img src="/media/twitter.svg" height="80%"/></a>
     </div>{{end}}
 </div>
 {{end}}
@@ -42,7 +44,7 @@
 	</div>
 	<div class="mdl-card__supporting-text">
     <h2>{{ .Title }}</h2>
-	{{ .Summary }}
+	<p>{{ .Summary }}</p>
 	</div>
 	<div class="mdl-card__actions mdl-card--border">
 	<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="{{.RelPermalink}}">Read more...</a>
