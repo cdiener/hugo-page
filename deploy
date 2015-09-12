@@ -8,11 +8,11 @@ if [[ $msg -eq 0 ]] ; then
 fi
 
 echo "Minifying static assets..."
-css-html-js-minify.py static > /dev/null
+css-html-js-minify.py static &> /dev/null
 
 echo "Saving changes..."
-git add -A
-git commit -am "$msg"
+git add -A > /dev/null
+git commit -am "$msg" > /dev/null
 git push
 
 echo "Generating page..."
@@ -20,8 +20,8 @@ hugo
 
 echo "Deploying site..."
 cd public
-git add -A
-git commit -am "$msg"
+git add -A > /dev/null
+git commit -am "$msg" > /dev/null
 git push
 
 echo "--- done ---"
