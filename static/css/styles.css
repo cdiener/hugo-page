@@ -3,7 +3,7 @@
 }
 
 .mdl-navigation a.mdl-navigation__link {
-	color: #ccc;
+	color: #ddd;
     font: 1.1em Roboto, Helvetica, Arial, sans-serif;
 }
 
@@ -33,14 +33,14 @@
 }
 
 .mdl-card h2 {
-    font-size: 1.25em;
+    font-size: 1.3em;
     margin: 0;
     line-height: normal;
     margin: 0.25em 0;
 }
 
 .mdl-card h3 {
-    font-size: 1em;
+    font-size: 1.1em;
     font-weight: 500;
     line-height: normal;
     margin: 0.25em 0;
