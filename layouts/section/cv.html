@@ -1,9 +1,15 @@
 {{ partial "header.html" . }}
-<div class="mdl-cell mdl-cell--12-col mdl-cell--4-col-phone mdl-cell--8-col-tablet">
-<h4>Skills</h4>
-<div id="vis"></div>
+<div class="mdl-cell mdl-cell--2-col-desktop"></div>
+<div class="card mdl-card mdl-shadow--4dp mdl-cell
+		mdl-cell--8-col mdl-cell--4-col-phone mdl-cell--8-col-tablet">
+<div class="mdl-card__title mdl-color--primary">
+	<h1 class="mdl-card__title-text">Skills</h1></div>
+    <div class="mdl-card__supporting-test"><div id="vis"></div></div>
+	<div class="mdl-card__supporting-text mdl-card--border">
+	<p>Selecting a node will fix it to be dragged around. double-click to unfix.</p>
+	</div>
 </div>
-Selecting a node will fix it to be dragged around. double-click to unfix.
+<div class="mdl-cell mdl-cell--2-col-desktop"></div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
 <script src="/js/tree.min.js"></script>
 {{ partial "info_footer.html" . }}

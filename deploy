@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+echo "--- Deploying ---"
+
+msg=$1
+if [[ $msg -eq 0 ]] ; then
+    msg="Changes from $(date)"
+fi
+
+echo "Minifying static assets..."
+css-html-js-minify.py static
+
+echo "Saving changes..."
+git add -A
+git commit -am "$msg"
+git push
+
+echo "Generating page..."
+hugo
+
+echo "Deploying site..."
+cd public
+git add -A
+git commit -am "$msg"
+git push
+
+cd..
+echo "--- done ---"

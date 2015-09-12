@@ -1,5 +1,6 @@
 a {
 	text-decoration: none;
+    font-weight: 600;
 }
 
 .mdl-grid {
@@ -58,6 +59,14 @@ a {
 	margin: auto 0.5em auto 0;
 }
 
+.mdl-mini-footer__link-list a {
+    font-weight: bold;
+}
+
+.mdl-mini-footer__link-list a:hover {
+    color: #fff;
+}
+
 #back {
 	margin: 5px;
 }
@@ -85,7 +94,7 @@ a {
 }
 
 #vis {
-	margin: 0 auto;
+	margin: 0 auto -30px auto;
 	padding: 0;
-	max-width: 900px;
+	max-width: 700px;
 }
