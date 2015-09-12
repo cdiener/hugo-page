@@ -1,4 +1,12 @@
 {{ partial "header.html" . }}
+<p>{{.Section}}</p>
+{{if eq .URL "/posts/"}}<div class="mdl-cell mdl-cell--12-col mdl-cell--4-col-phone mdl-cell--8-col-tablet">
+    <h4>Posts</h4>
+</div>{{end}}
+{{if eq .URL "/pubs/"}}<div class="mdl-cell mdl-cell--12-col mdl-cell--4-col-phone mdl-cell--8-col-tablet">
+    <h4>Publications</h4>
+    <p>Well, you found this little secret page didn't you? Well enjoy :)</p>
+</div>{{end}}
 {{ range $i, $e := .Data.Pages }}
 <div class="card mdl-card mdl-shadow--4dp mdl-cell
 		mdl-cell--4-col mdl-cell--4-col-phone mdl-cell--4-col-tablet">

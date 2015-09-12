@@ -1,25 +1,18 @@
 +++
 date = "2015-08-27T12:49:36-05:00"
 title = "What am I currently working on?"
-weight = 3
+weight = 2
 +++
 
-# Title
+I am currently in my second post-doc here in Mexico at the [National Institute
+of Genomic Medicine](http://inmegen.gob.mx) working on the Systems Biology of
+Metabolism in human disease. This is done within the [Human Systems Biology Group]
+(http://resendislab.inmegen.gob.mx) of Prof. Resendis-Antonio.
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed doeiusmod tempor 
-incididunt ut labore et dolore magna aliqua. Ut enimad minim veniam, quis 
-nostrud exercitation ullamco laboris nisi utaliquip ex ea commodo consequat. 
-Duis aute irure dolor inreprehenderit in voluptate velit esse cillum dolore eu 
-
-## Subtitle
-
-fugiat nullapariatur. Excepteur sint occaecat cupidatat non proident, sunt 
-inculpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit 
-amet, consectetur adipisicing elit, sed doeiusmod tempor incididunt ut labore 
-et dolore magna aliqua. Ut enimad minim veniam, quis nostrud exercitation 
-ullamco laboris nisi utaliquip ex ea commodo consequat. Duis aute irure dolor 
-
-### Subtitle
-
-inreprehenderit in voluptate velit esse cillum dolore eu fugiat nullapariatur. 
-Excepteur sint occaecat cupid
+Currently, we are interested in the metabolic alterations that occur during cancer.
+Cancer is a very heterogeneous disease and even though many cancers look similar
+on the outside, the alterations that lead to the cancer are not. We are working
+on methods that can identify affected enzymes from global measurements of 
+metabolite concentrations. We achieve that by a hybrid method from Systems Biology
+and Bioinformatics that analyzes changes in the space of all possible enzyme 
+activities for a distinct steady state.
