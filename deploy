@@ -8,7 +8,7 @@ if [[ $msg -eq 0 ]] ; then
 fi
 
 echo "Minifying static assets..."
-css-html-js-minify.py static
+css-html-js-minify.py static > /dev/null
 
 echo "Saving changes..."
 git add -A
@@ -24,5 +24,4 @@ git add -A
 git commit -am "$msg"
 git push
 
-cd..
 echo "--- done ---"
