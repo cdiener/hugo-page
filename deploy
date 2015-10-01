@@ -3,7 +3,7 @@
 echo "--- Deploying ---"
 
 msg=$1
-if [[ $msg -eq 0 ]] ; then
+if [[ -z "$msg" ]] ; then
     msg="Changes from $(date)"
 fi
 
