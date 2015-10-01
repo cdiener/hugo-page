@@ -98,3 +98,11 @@ a {
 	padding: 0;
 	max-width: 700px;
 }
+
+.mdl-shadow--4dp {
+    box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.7);
+}
+
+.mdl-shadow--2dp {
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.35);
+}

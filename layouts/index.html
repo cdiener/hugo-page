@@ -1,6 +1,6 @@
 {{ partial "header.html" . }}
 {{ range where .Data.Pages "Section" "front" }}
-<div class="image-card mdl-card mdl-shadow--4dp mdl-cell
+<div class="image-card mdl-card mdl-shadow--2dp mdl-cell
 		mdl-cell--6-col mdl-cell--4-col-phone mdl-cell--8-col-tablet">
 <div class="mdl-card__title">
 	<h1 class="mdl-card__title-text">{{ .Title }}</h1>
@@ -19,7 +19,7 @@
 </div>
 {{end}}
 {{ range $i, $e := first 1 (where .Data.Pages "Section" "pubs") }}
-<div class="image-card mdl-card mdl-shadow--4dp mdl-cell
+<div class="image-card mdl-card mdl-shadow--2dp mdl-cell
 		mdl-cell--6-col mdl-cell--4-col-phone mdl-cell--8-col-tablet">
 <div class="mdl-card__title" {{ if $e.Params.hero }}style="background: url('/media/{{$e.Params.hero}}') center / cover"{{end}}>
 	<h1 class="mdl-card__title-text">My latest publication</h1>
@@ -37,7 +37,7 @@
 </div>
 {{end}}
 {{ range first 1 (where .Data.Pages "Section" "posts") }}
-<div class="image-card mdl-card mdl-shadow--4dp mdl-cell
+<div class="image-card mdl-card mdl-shadow--2dp mdl-cell
 		mdl-cell--6-col mdl-cell--4-col-phone mdl-cell--8-col-tablet">
 <div class="mdl-card__title" {{ if .Params.hero }}style="background: url('/media/{{.Params.hero}}') center / cover"{{end}}>
 	<h1 class="mdl-card__title-text">Latest post</h1>
