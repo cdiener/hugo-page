@@ -59,11 +59,16 @@ a {
 	margin: auto 0.5em auto 0;
 }
 
-.mdl-mini-footer__link-list a {
-    font-weight: bold;
+.mdl-mini-footer {
+    padding: 1em;
 }
 
-.mdl-mini-footer__link-list a:hover {
+.mdl-mini-footer a {
+    font-weight: bold;
+    color: #ddd;
+}
+
+.mdl-mini-footer a:hover {
     color: #fff;
 }
 
@@ -100,9 +105,9 @@ a {
 }
 
 .mdl-shadow--4dp {
-    box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.7);
+    box-shadow: 0 1px 8px 0 #444;
 }
 
 .mdl-shadow--2dp {
-    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.35);
+    box-shadow: 0 1px 4px 0 #888;
 }
