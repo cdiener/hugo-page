@@ -103,11 +103,3 @@ a {
 	padding: 0;
 	max-width: 700px;
 }
-
-.mdl-shadow--4dp {
-    box-shadow: 0 1px 8px 0 #444;
-}
-
-.mdl-shadow--2dp {
-    box-shadow: 0 1px 4px 0 #888;
-}
