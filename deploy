@@ -16,7 +16,7 @@ git commit -am "$msg" > /dev/null
 git push
 
 echo "Cleaning up public..."
-cd public && git reset --hard HEAD && git pull
+(cd public && git reset --hard HEAD && git pull &> /dev/null)
 
 echo "Generating page..."
 hugo
