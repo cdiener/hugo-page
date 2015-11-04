@@ -15,6 +15,9 @@ git add -A > /dev/null
 git commit -am "$msg" > /dev/null
 git push
 
+echo "Cleaning up public..."
+cd public && git reset --hard HEAD && git pull
+
 echo "Generating page..."
 hugo
 
