@@ -9,10 +9,13 @@ of Genomic Medicine](http://inmegen.gob.mx) working on the Systems Biology of
 Metabolism in human disease. This is done within the [Human Systems Biology Group]
 (http://resendislab.inmegen.gob.mx) of Prof. Resendis-Antonio.
 
-Currently, we are interested in the metabolic alterations that occur during cancer.
-Cancer is a very heterogeneous disease and even though many cancers look similar
-on the outside, the alterations that lead to the cancer are not. We are working
-on methods that can identify affected enzymes from global measurements of 
-metabolite concentrations. We achieve that by a hybrid method from Systems Biology
-and Bioinformatics that analyzes changes in the space of all possible enzyme 
-activities for a distinct steady state.
+Currently, we are interested in the metabolic alterations that occur during 
+cancer. Even though have some idea of the metabolic liabilities of cancer in 
+cell lines, that knowledge can usually not simply be transferred to cancer 
+patients. We are trying to overcome this limitation by applying methods from 
+machine learning and metabolic modeling to the the 
+[NCI-60](https://dtp.cancer.gov/discovery_development/nci-60/) cancer cell line 
+panel as well as the Cancer Genome Atlas 
+([TCGA](https://tcga-data.nci.nih.gov/tcga/)). This way we can study 
+proliferation and metabolic fluxes in a personalized manner for the patients 
+within the TCGA. 

@@ -1,8 +1,8 @@
 {{ partial "header_no_menu.html" . }} 
 <a class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect back" href="/{{.Section}}" id="back">
 <i class="material-icons">arrow_back</i></a>	
-<div class="mdl-tooltip" for="back">Go to list view...</div>
-<div class="card mdl-card mdl-shadow--2dp mdl-cell
+<span class="mdl-tooltip mdl-tooltip--right" for="back">Return to overview...</span>
+<div class="card mdl-card mdl-shadow--4dp mdl-cell
 		mdl-cell--12-col mdl-cell--4-col-phone mdl-cell--8-col-tablet">
 <div class="mdl-card__title mdl-color--primary" {{ if .Params.hero }}style="background: url('/media/{{.Params.hero}}') center / cover"{{end}}>
 	<h1 class="mdl-card__title-text">{{ .Title }}</h1>
@@ -13,10 +13,8 @@
 	<div class="mdl-card__actions mdl-card--border">
 	<a class="mdl-button mdl-button--primary mdl-js-button mdl-js-ripple-effect {{ if not .Params.github }}mdl-button--disabled{{end}}" href={{ if .Params.github }}"http://github.com/cdiener/{{.Params.github}}" target="_blank"{{else}}""{{end}} id="github">
     {{ if .Params.github }}<img src="/media/github.svg" height="80%">{{end}}Source code</a>
-	<div class="mdl-tooltip" for="github">Sources for Post</div>
 	<a class="mdl-button mdl-button--primary mdl-js-button mdl-js-ripple-effect {{ if not .Params.figshare }}mdl-button--disabled{{end}}" href={{ if .Params.figshare }}"http://figshare.com/{{.Params.figshare}}" target="_blank"{{else}}""{{end}}>
     {{ if .Params.figshare }}<img src="/media/figshare.svg" height="80%">{{end}}Data</a>
-	<span class="mdl-tooltip" for="figshare">Additional Data</span>
     </div>
 </div>
 
