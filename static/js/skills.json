@@ -21,18 +21,25 @@
 		{"name":"Systems Biology",
 		 "group": 5,
 		 "children": [
-			{"name":"Statistics", "group": 6},
 			{"name":"Omics analysis", "group":6},
 			{"name":"ODEs/PDEs", "group": 6},
 			{"name":"Master equations", "group": 6},
 			{"name":"FBA", "group": 6}
 		]},
-		{"name":"Web Technologies",
+        {"name":"Data Science",
 		 "group": 7,
 		 "children": [
-			{"name":"HTML", "group": 8},
-			{"name":"JavaScript", "group": 8},
-			{"name":"Docker/Servers", "group": 8}
+            {"name":"Data scraping", "group": 8},
+			{"name":"Machine Learning", "group": 8},
+			{"name":"Hypothesis testing", "group": 8},
+			{"name":"Frequentist/Bayesian", "group": 8}
+		]},
+		{"name":"Web Technologies",
+		 "group": 9,
+		 "children": [
+			{"name":"HTML", "group": 10},
+			{"name":"JavaScript", "group": 10},
+			{"name":"Docker/Clusters", "group": 10}
 		]}
 	]
 }
