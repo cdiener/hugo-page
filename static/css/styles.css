@@ -89,12 +89,13 @@ a {
   stroke: none;
   fill: black;
   pointer-events: none;
-  font: 10px sans-serif;
+  font: 12px Roboto;
 }
 
 #vis .link {
+  fill: none;
   stroke: #999;
-  stroke-opacity: .6;
+  stroke-opacity: .4;
   stroke-width: 2;
 }
 

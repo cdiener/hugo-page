@@ -6,95 +6,152 @@
  * MIT license. See LICENSE for more information.
  */
 
-var width = 500,
-    height = 400;
+var color = d3.scale.category20(),
+    df = 140;
+    tf = 15;
+color.domain(d3.range(19));
 
-var color = d3.scale.category20();
+var margin = {top: 10, right: 20, bottom: 30, left: 20},
+	width = 512 - margin.right - margin.left,
+	height = 288 - margin.top - margin.bottom;
+	
+var i = 0,
+	duration = 600,
+	root;
 
-var force = d3.layout.force()
-    .charge(-400)
-    .linkDistance(50)
-    .size([width, height]);
+var tree = d3.layout.tree()
+	.size([height, width]);
+
+var diagonal = d3.svg.diagonal()
+	.projection(function(d) { return [d.y, d.x]; });
 
 var svg = d3.select("#vis").append("svg")
-	.attr({
+        .attr({
         "width": "100%",
         "height": "100%"
      })
-    .attr("viewBox", "0 0 " + width + " " + height )
-    .attr("preserveAspectRatio", "xMidYMid meet");
+    .attr("viewBox", "0 0 " + (width + margin.right + margin.left) + " " + (height + margin.top + margin.bottom))
+    .attr("preserveAspectRatio", "xMidYMid meet")
+    .append("g")
+	.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-
-// Returns a list of all nodes under the root.
-function flatten(root) {
-	var nodes = [], i = 0;
-
-	function recurse(node, depth) {
-		if (node.children) node.children.forEach(function(n) {recurse(n,depth+1)} );  
-		if (!node.id) node.id = ++i;
-		if (!node.depth) node.depth = depth;
-		if (!node.x) node.x = node.id*30;
-		if (!node.y) node.y = node.depth*30;
-		nodes.push(node);
-	}
-
-	recurse(root, 0);
-	return nodes;
-}
-
-  
-function dblclick(d) {
-	d3.select(this).classed("fixed", d.fixed = false);
-}
-
-function dragstart(d) {
-	d3.select(this).classed("fixed", d.fixed = true);
-}
+d3.select(self.frameElement).style("height", "400px");
 
 d3.json("/js/skills.json", function(error, json) {
-	if (error) throw error;
-  
-	var nodes = flatten(json),
-		links = d3.layout.tree().links(nodes);
+    root = json[0];
+    root.x0 = height / 2;
+    root.y0 = 0;
 
-	force.nodes(nodes)
-		.links(links)
-		.start();
-	  
-	var drag = force.drag()
-		.on("dragstart", dragstart);
+    root.children.forEach(collapse);
+    
+    update(root);
+    });
 
-	var link = svg.selectAll(".link")
-		.data(links)
-		.enter().append("line")
-		.attr("class", "link");
+function collapse(d) {
+    if (d.children) {
+        d._children = d.children;
+        d._children.forEach(collapse);
+        d.children = null;
+    }
+}
 
-	var node = svg.selectAll(".node")
-		.data(nodes)
-		.enter().append("g")
-		.attr("class", "node")
-		.on("dblclick", dblclick)
-		.call(drag);
+function update(source) {
 
-	node.append("circle")
-		.attr("class", "node")
-		.attr("r", 8)
-		.style("fill", function(d) { return color(d.group); })
-		.on("dblclick", dblclick)
-		.call(drag);
+  // Compute the new tree layout.
+  var nodes = tree.nodes(root).reverse(),
+	  links = tree.links(nodes);
 
-	node.append("text")
-		.attr("dx", 10)
-		.attr("dy", "0.3em")
-		.text(function(d) { return d.name });
+  // Normalize for fixed-depth.
+  nodes.forEach(function(d) { d.y = d.depth * df; });
 
-	force.on("tick", function() {	  
-		link.attr("x1", function(d) { return d.source.x; })
-			.attr("y1", function(d) { return d.source.y; })
-			.attr("x2", function(d) { return d.target.x; })
-			.attr("y2", function(d) { return d.target.y; });
+  // Update the nodes…
+  var node = svg.selectAll("g.node")
+	  .data(nodes, function(d) { return d.id || (d.id = ++i); });
 
-		node.attr("transform", function(d) { 
-			return "translate(" + d.x + "," + d.y + ")"; });
-	});
-});
+  // Enter any new nodes at the parent's previous position.
+  var nodeEnter = node.enter().append("g")
+	  .attr("class", "node")
+	  .attr("transform", function(d) { return "translate(" + source.y0 + "," + source.x0 + ")"; })
+	  .on("click", click);
+
+  nodeEnter.append("circle")
+	  .attr("r", 1e-6)
+      .style("stroke", function(d) { return d._children ? d3.rgb(color(d.group)).darker(1) : "#fff"; })
+	  .style("fill", function(d) { return color(d.group); });
+
+  nodeEnter.append("text")
+	  .attr("x", function(d) { return d.children || d._children ? -tf : tf; })
+	  .attr("dy", ".35em")
+	  .attr("text-anchor", function(d) { return d.children || d._children ? "end" : "start"; })
+	  .text(function(d) { return d.name; })
+	  .style("fill-opacity", 1e-6);
+
+  // Transition nodes to their new position.
+  var nodeUpdate = node.transition()
+	  .duration(duration)
+	  .attr("transform", function(d) { return "translate(" + d.y + "," + d.x + ")"; });
+
+  nodeUpdate.select("circle")
+	  .attr("r", 10)
+      .style("stroke", function(d) { return d._children ? d3.rgb(color(d.group)).darker(1) : "#fff"; })
+	  .style("fill", function(d) { return color(d.group); });
+
+  nodeUpdate.select("text")
+	  .style("fill-opacity", 1);
+
+  // Transition exiting nodes to the parent's new position.
+  var nodeExit = node.exit().transition()
+	  .duration(duration)
+	  .attr("transform", function(d) { return "translate(" + source.y + "," + source.x + ")"; })
+	  .remove();
+
+  nodeExit.select("circle")
+	  .attr("r", 1e-6);
+
+  nodeExit.select("text")
+	  .style("fill-opacity", 1e-6);
+
+  // Update the links…
+  var link = svg.selectAll("path.link")
+	  .data(links, function(d) { return d.target.id; });
+
+  // Enter any new links at the parent's previous position.
+  link.enter().insert("path", "g")
+	  .attr("class", "link")
+	  .attr("d", function(d) {
+		var o = {x: source.x0, y: source.y0};
+		return diagonal({source: o, target: o});
+	  });
+
+  // Transition links to their new position.
+  link.transition()
+	  .duration(duration)
+	  .attr("d", diagonal);
+
+  // Transition exiting nodes to the parent's new position.
+  link.exit().transition()
+	  .duration(duration)
+	  .attr("d", function(d) {
+		var o = {x: source.x, y: source.y};
+		return diagonal({source: o, target: o});
+	  })
+	  .remove();
+
+  // Stash the old positions for transition.
+  nodes.forEach(function(d) {
+	d.x0 = d.x;
+	d.y0 = d.y;
+  });
+}
+
+// Toggle children on click.
+function click(d) {
+  if (d.children) {
+	d._children = d.children;
+	d.children = null;
+  } else {
+	d.children = d._children;
+	d._children = null;
+  }
+  update(d);
+}
