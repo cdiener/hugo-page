@@ -14,12 +14,12 @@
 	<h1 class="mdl-card__title-text">{{ $e.Title }}</h1>
 	</div>
 	<div class="mdl-card__supporting-text">
+    <p class="mdl-typography--subhead mdl-typography--caption-color-contrast">{{.ReadingTime}}m read</p>
 	<p>{{ $e.Summary }}</p>
 	</div>
 	<div class="mdl-card__actions mdl-card--border">
 	<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect"
         href="{{.RelPermalink}}">Read more...</a>
-    </div>
-</div>
+</div></div>
 {{end}}
 {{ partial "footer.html" . }}
