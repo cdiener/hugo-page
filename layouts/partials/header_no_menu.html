@@ -11,7 +11,7 @@
     <meta property="og:url" content="{{.Permalink}}" />
     <meta property="og:title" content="{{.Title}}" />
     <meta property="og:description" content="{{ substr .Summary 0 60}}..." />
-    {{ if .Params.hero }}<meta property="og:image" content="{{ .Site.BaseURL }}media/{{.Params.hero}}" />{{end}}
+    {{ if .Params.hero }}<meta property="og:image" content="{{ .Site.BaseURL }}/media/{{.Params.hero}}" />{{end}}
 
 	<title>{{ .Site.Title }}</title>
 
