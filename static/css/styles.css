@@ -106,11 +106,16 @@ a {
 }
 
 table {
-    margin-left: auto; 
+    margin-left: auto;
     margin-right: auto;
 }
 
 .highlight {
     margin: 8px;
     padding: 1px 1em;
+}
+
+.spaced {
+    display: flex;
+    justify-content: space-between;
 }
