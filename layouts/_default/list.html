@@ -1,25 +1,23 @@
 {{ partial "header.html" . }}
 <p>{{.Section}}</p>
-{{if eq .URL "/posts/"}}<div class="mdl-cell mdl-cell--12-col mdl-cell--4-col-phone mdl-cell--8-col-tablet">
-    <h4>Posts</h4>
-</div>{{end}}
-{{if eq .URL "/pubs/"}}<div class="mdl-cell mdl-cell--12-col mdl-cell--4-col-phone mdl-cell--8-col-tablet">
-    <h4>Publications</h4>
-    <p>Well, you found this little secret page didn't you? Well enjoy :)</p>
-</div>{{end}}
+<div class="mdl-cell mdl-cell--12-col mdl-cell--4-col-phone mdl-cell--8-col-tablet">
+{{if eq .URL "/posts/"}}<h4>Posts</h4>{{end}}
+{{if eq .URL "/pubs/"}}<h4>Publications</h4>{{end}}</div>
 {{ range $i, $e := .Data.Pages }}
 <div class="card mdl-card mdl-shadow--4dp mdl-cell
 		mdl-cell--4-col">
 <div class="mdl-card__title mdl-color--primary" {{ if $e.Params.hero }}style="background: url('/media/{{$e.Params.hero}}') center / cover"{{end}}>
 	<h1 class="mdl-card__title-text">{{ $e.Title }}</h1>
-	</div>
+</div>
 	<div class="mdl-card__supporting-text">
+    <p class="spaced">
+    <span class="mdl-typography--caption-color-contrast">{{$e.Date.Format "02-01-2006"}}</span>
+    <span class="mdl-typography--caption-color-contrast right">{{$e.ReadingTime}}m read</span></p>
 	<p>{{ $e.Summary }}</p>
 	</div>
 	<div class="mdl-card__actions mdl-card--border">
 	<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect"
         href="{{.RelPermalink}}">Read more...</a>
-    </div>
-</div>
+</div></div>
 {{end}}
 {{ partial "footer.html" . }}

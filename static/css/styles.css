@@ -114,3 +114,8 @@ table {
     margin: 8px;
     padding: 1px 1em;
 }
+
+.spaced {
+    display: flex;
+    justify-content: space-between;
+}
