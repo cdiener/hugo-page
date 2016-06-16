@@ -1,6 +1,10 @@
+html > body{
+    font-family:'Roboto' ,'Arial', sans-serif!important
+}
+
 a {
 	text-decoration: none;
-    font-weight: 600;
+    font-weight: bold;
 }
 
 .mdl-grid {
@@ -9,21 +13,25 @@ a {
 
 .mdl-navigation a.mdl-navigation__link {
 	color: #ddd;
-    font: 1.1em Roboto, Helvetica, Arial, sans-serif;
+    font: 1.1rem Roboto, Helvetica, Arial, sans-serif;
 }
 
 .mdl-navigation a.mdl-navigation__link:hover {
 	color: #fff;
 }
 
-.card > .mdl-card__title {
+.card .mdl-card__supporting-text {
+    padding: 1rem;
+    width: auto;
+    text-align: justify;
+}
+
+.card .mdl-card__title {
 	color: #fff;
 	height: 120px;
 }
 
-.image-card > .mdl-card__title {
-	color: #fff;
-	height: 120px;
+.image-card {
 	background: url('../media/board.jpg') center / cover;
 }
 
@@ -100,7 +108,7 @@ a {
 }
 
 #vis {
-	margin: 0 auto -30px auto;
+	margin: 0 auto;
 	padding: 0;
 	max-width: 700px;
 }

@@ -9,9 +9,12 @@
 	<title>{{ .Site.Title }}</title>
 
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/{{ .Site.Params.mdlversion }}/material.{{.Site.Params.mdltheme}}.min.css">
 	<link rel="stylesheet" href="/css/styles.min.css">
+    <style>
+		.mdl-grid { max-width: 800px; }
+    </style>
 </head>
 <body>
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
@@ -26,6 +29,12 @@
 		<a class="mdl-navigation__link" href="/cv">Résumé</a>
 	</nav>
 </div>
+<div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+  <a href="#basics" class="mdl-layout__tab is-active">Basics</a>
+  <a href="#education" class="mdl-layout__tab">Education</a>
+  <a href="#career" class="mdl-layout__tab">Career</a>
+  <a href="#other" class="mdl-layout__tab">Other</a>
+</div>
 </header>
 <div class="mdl-layout__drawer">
 	<span class="mdl-layout-title">Menu</span>
@@ -37,4 +46,3 @@
 	</nav>
 </div>
 <main class="mdl-layout__content mdl-color--grey-100">
-<div class="page-content mdl-grid">

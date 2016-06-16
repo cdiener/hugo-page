@@ -1,6 +1,7 @@
-{{ partial "header.html" . }}
-<div class="mdl-cell mdl-cell--2-col-desktop"></div>
-<div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-phone mdl-cell--8-col-tablet">
+{{ partial "cv_header.html" . }}
+<section class="mdl-layout__tab-panel is-active" id="basics">
+     <div class="page-content mdl-grid">
+<div class="mdl-cell mdl-cell--12-col mdl-cell--4-col-phone mdl-cell--8-col-tablet">
 <h5>More coming soon...</h5>
 <div class="card mdl-card mdl-shadow--4dp" style="width:100%">
 <div class="mdl-card__title mdl-color--primary">
@@ -9,7 +10,13 @@
         <div id="vis"></div>
         <p>Click on a node to open/collapse...</p>
     </div></div></div>
-<div class="mdl-cell mdl-cell--2-col-desktop"></div>
+</div></section>
+<section class="mdl-layout__tab-panel" id="education"> <div class="page-content mdl-grid">
+</div></section>
+<section class="mdl-layout__tab-panel" id="career"> <div class="page-content mdl-grid">
+</div></section>
+<section class="mdl-layout__tab-panel" id="other"> <div class="page-content mdl-grid">
+</div></section>
 <script src="/js/d3.min.js" charset="utf-8"></script>
 <script src="/js/tree.min.js"></script>
-{{ partial "footer.html" . }}
+{{ partial "cv_footer.html" . }}
