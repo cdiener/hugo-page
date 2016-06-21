@@ -26,6 +26,10 @@ a {
     text-align: justify;
 }
 
+.card .mdl-card__supporting-text img {
+    width: 100%;
+}
+
 .card .mdl-card__title {
 	color: #fff;
 	height: 120px;
