@@ -8,7 +8,7 @@ a {
 }
 
 .mdl-grid {
-	max-width: 1200px;
+	max-width: 1400px;
 }
 
 .mdl-navigation a.mdl-navigation__link {
@@ -18,6 +18,11 @@ a {
 
 .mdl-navigation a.mdl-navigation__link:hover {
 	color: #fff;
+}
+
+.card {
+    width: 100%;
+    height: 100%;
 }
 
 .card .mdl-card__supporting-text {
@@ -36,7 +41,7 @@ a {
 }
 
 .image-card {
-	background: url('../media/board.jpg') center / cover;
+	background: url('../media/default.jpg') center / cover;
 }
 
 .image-card i.material-icons {

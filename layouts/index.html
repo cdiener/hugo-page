@@ -1,7 +1,7 @@
 {{ partial "header.html" . }}
 {{ range where .Data.Pages "Section" "front" }}
-<div class="card mdl-card mdl-shadow--4dp mdl-cell
-		mdl-cell--6-col mdl-cell--4-col-phone mdl-cell--8-col-tablet">
+<div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-phone mdl-cell--8-col-tablet">
+<div class="card mdl-card mdl-shadow--4dp">
 <div class="mdl-card__title image-card">
 	<h1 class="mdl-card__title-text">{{ .Title }}</h1>
 	</div>
@@ -16,12 +16,12 @@
     <a class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" href="http://twitter.com/@thaasophobia" target="_blank">
     <img src="/media/twitter_white.svg" height="80%"/></a>
     </div>{{end}}
-</div>
+</div></div>
 {{end}}
 {{ range $i, $e := first 1 (where .Data.Pages "Section" "pubs") }}
-<div class="card mdl-card mdl-shadow--4dp mdl-cell
-		mdl-cell--6-col mdl-cell--4-col-phone mdl-cell--8-col-tablet">
-<div class="mdl-card__title" {{ if $e.Params.hero }}style="background: url('/media/{{$e.Params.hero}}') center / cover"{{end}}>
+<div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-phone mdl-cell--8-col-tablet">
+<div class="card mdl-card mdl-shadow--4dp">
+<div class="mdl-card__title image-card" {{ if $e.Params.hero }}style="background: url('/media/{{$e.Params.hero}}') center / cover"{{end}}>
 	<h1 class="mdl-card__title-text">My latest publication</h1>
 	</div>
 	<div class="mdl-card__supporting-text">
@@ -32,16 +32,14 @@
     <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect"
         href="{{.RelPermalink}}">Read more...</a>
 	<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect"
-        href="http://ncbi.nlm.nih.gov/pubmed/{{$e.Params.pubmed}}" target="_blank">Pubmed</a>
-	<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect"
         href="http://dx.doi.org/{{$e.Params.doi}}" target="_blank">DOI</a>
     </div>
-</div>
+</div></div>
 {{end}}
 {{ range first 1 (where .Data.Pages "Section" "posts") }}
-<div class="card mdl-card mdl-shadow--4dp mdl-cell
-		mdl-cell--6-col mdl-cell--4-col-phone mdl-cell--8-col-tablet">
-<div class="mdl-card__title" {{ if .Params.hero }}style="background: url('/media/{{.Params.hero}}') center / cover"{{end}}>
+<div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-phone mdl-cell--8-col-tablet">
+<div class="card mdl-card mdl-shadow--4dp">
+<div class="mdl-card__title image-card" {{ if .Params.hero }}style="background: url('/media/{{.Params.hero}}') center / cover"{{end}}>
 	<h1 class="mdl-card__title-text">Latest post</h1>
 	</div>
 	<div class="mdl-card__supporting-text">
@@ -51,6 +49,6 @@
 	<div class="mdl-card__actions mdl-card--border">
 	<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="{{.RelPermalink}}">Read more...</a>
 	</div>
-</div>
+</div></div>
 {{end}}
 {{ partial "info_footer.html" . }}

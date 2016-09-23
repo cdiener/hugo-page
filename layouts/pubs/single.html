@@ -1,9 +1,9 @@
-{{ partial "header_no_menu.html" . }} 
+{{ partial "header_no_menu.html" . }}
 <a class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect back" href="/{{.Section}}" id="back">
-<i class="material-icons">arrow_back</i></a>	
+<i class="material-icons">arrow_back</i></a>
 <div class="mdl-tooltip mdl-tooltip--right" for="back">Return to overview...</div>
-<div class="card mdl-card mdl-shadow--4dp mdl-cell
-		mdl-cell--12-col mdl-cell--4-col-phone mdl-cell--8-col-tablet">
+<div class="mdl-cell mdl-cell--12-col mdl-cell--4-col-phone mdl-cell--8-col-tablet">
+<div class="card mdl-card mdl-shadow--4dp">
 <div class="mdl-card__title mdl-color--primary" {{ if .Params.hero }}style="background: url('/media/{{.Params.hero}}') center / cover"{{end}}>
 	<h1 class="mdl-card__title-text">{{ .Title }}</h1>
 	</div>
@@ -16,5 +16,5 @@
 	<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect"
         href="http://dx.doi.org/{{.Params.doi}}" target="_blank">DOI</a>
     </div>
-</div>
+</div></div>
 {{ partial "footer.html" . }}

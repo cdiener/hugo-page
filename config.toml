@@ -4,5 +4,5 @@ title = "Christian's website"
 pygmentsStyle = "default"
 
 [params]
-    mdlversion = "1.1.3"
+    mdlversion = "1.2.1"
     mdltheme = "indigo-red"
