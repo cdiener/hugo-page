@@ -1,9 +1,19 @@
 {{ partial "cv_header.html" . }}
 <section class="mdl-layout__tab-panel is-active" id="basics">
-     <div class="page-content mdl-grid">
+<div class="page-content mdl-grid">
+<section class="mdl-cell mdl-cell--12-col mdl-cell--4-col-phone mdl-cell--8-col-tablet">
+<div class="basic-info">
+{{ with .Site.Data.cv }}<img class="face" src="/media/{{.basics.picture}}" />
+<div class="address">
+    <h1><span class="mdl-color-text--indigo-200">{{.basics.first}}</span>
+        <span class="mdl-color-text--indigo-900">{{.basics.last}}</span></h1>
+    <p>{{.basics.location.address}}<br/>
+       {{.basics.location.city}}, {{.basics.location.postalcode}}<br/>
+       {{.basics.location.country}}</p>
+</div></div>
+</section>
 <div class="mdl-cell mdl-cell--12-col mdl-cell--4-col-phone mdl-cell--8-col-tablet">
-<h5>More coming soon...</h5>
-<div class="card mdl-card mdl-shadow--4dp" style="width:100%">
+<div class="card mdl-card mdl-shadow--4dp">
 <div class="mdl-card__title mdl-color--primary">
 	<h1 class="mdl-card__title-text">Skills</h1></div>
     <div class="mdl-card__supporting-text">
@@ -12,11 +22,38 @@
     </div></div></div>
 </div></section>
 <section class="mdl-layout__tab-panel" id="education"> <div class="page-content mdl-grid">
+<div class="mdl-cell mdl-cell--12-col mdl-cell--4-col-phone mdl-cell--8-col-tablet card mdl-card mdl-shadow--4dp">
+    <div class="mdl-card__title mdl-color--indigo-900" style="height:auto">
+    <div class="mdl-card__title-text">Education</div>
+</div></div>
+{{ range .education }}<div class="mdl-cell mdl-cell--12-col mdl-cell--4-col-phone mdl-cell--8-col-tablet card mdl-card mdl-shadow--4dp">
+    <div class="mdl-card__supporting-text">
+    <h1 class="mdl-color-text--primary">{{.institution}}</h1>
+    <h3 class="mdl-color-text--gray">{{.begin}} - {{.end}}</h3>
+    <h2>{{.title}} in {{.area}}</h2>
+</div></div>{{end}}
 </div></section>
 <section class="mdl-layout__tab-panel" id="career"> <div class="page-content mdl-grid">
+<div class="mdl-cell mdl-cell--12-col mdl-cell--4-col-phone mdl-cell--8-col-tablet card mdl-card mdl-shadow--4dp">
+    <div class="mdl-card__title mdl-color--indigo-900" style="height:auto">
+    <div class="mdl-card__title-text">Career</div>
+</div></div>
+{{ range .work }}<div class="mdl-cell mdl-cell--12-col mdl-cell--4-col-phone mdl-cell--8-col-tablet card mdl-card mdl-shadow--4dp">
+    {{ if .website }}<div class="mdl-card__menu">
+    <a class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" href="{{.website}}" target="_blank">
+    <i class="material-icons">home</i></a>
+    </div>{{end}}
+    <div class="mdl-card__supporting-text">
+    <h1 class="mdl-color-text--primary">{{.company}}</h1>
+    <h3 class="mdl-color-text--gray">{{.begin}} - {{.end}}</h3>
+    <h2>{{.position}}</h2>
+    <p>{{.summary}}</p>
+    <h2>Highlights</h2>
+    <ul>{{ range .highlights }}<li>{{.}}</li>{{end}}</ul>
+</div></div>{{end}}
 </div></section>
 <section class="mdl-layout__tab-panel" id="other"> <div class="page-content mdl-grid">
-</div></section>
+</div></section>{{end}}
 <script src="/js/d3.min.js" charset="utf-8"></script>
 <script src="/js/tree.min.js"></script>
 {{ partial "cv_footer.html" . }}
