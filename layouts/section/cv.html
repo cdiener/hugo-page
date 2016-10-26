@@ -28,9 +28,9 @@
 </div></div>
 {{ range .education }}<div class="mdl-cell mdl-cell--12-col mdl-cell--4-col-phone mdl-cell--8-col-tablet card mdl-card mdl-shadow--4dp">
     <div class="mdl-card__supporting-text">
-    <h1 class="mdl-color-text--primary">{{.institution}}</h1>
+    <h2 class="mdl-color-text--primary">{{.institution}}</h2>
     <h3 class="mdl-color-text--gray">{{.begin}} - {{.end}}</h3>
-    <h2>{{.title}} in {{.area}}</h2>
+    <h3>{{.title}} in {{.area}}</h3>
 </div></div>{{end}}
 </div></section>
 <section class="mdl-layout__tab-panel" id="career"> <div class="page-content mdl-grid">
@@ -39,18 +39,20 @@
     <div class="mdl-card__title-text">Career</div>
 </div></div>
 {{ range .work }}<div class="mdl-cell mdl-cell--12-col mdl-cell--4-col-phone mdl-cell--8-col-tablet card mdl-card mdl-shadow--4dp">
-    {{ if .website }}<div class="mdl-card__menu">
-    <a class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" href="{{.website}}" target="_blank">
-    <i class="material-icons">home</i></a>
-    </div>{{end}}
     <div class="mdl-card__supporting-text">
-    <h1 class="mdl-color-text--primary">{{.company}}</h1>
+    <h2 class="mdl-color-text--primary">{{.company}}</h2>
     <h3 class="mdl-color-text--gray">{{.begin}} - {{.end}}</h3>
-    <h2>{{.position}}</h2>
+    <h3>{{.position}}</h3>
     <p>{{.summary}}</p>
+    {{if .highlights}}
     <h2>Highlights</h2>
-    <ul>{{ range .highlights }}<li>{{.}}</li>{{end}}</ul>
-</div></div>{{end}}
+    <ul>{{ range .highlights }}<li>{{.}}</li>{{end}}</ul>{{end}}
+</div>
+{{ if .website }}<div class="mdl-card__actions mdl-card--border">
+<a class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" href="{{.website}}" target="_blank">
+<i class="material-icons">home</i></a>
+</div>{{end}}
+</div>{{end}}
 </div></section>
 <section class="mdl-layout__tab-panel" id="other"> <div class="page-content mdl-grid">
 </div></section>{{end}}

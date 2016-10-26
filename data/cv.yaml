@@ -1,0 +1,109 @@
+basics:
+  first: Christian
+  last: Diener
+  label: Data Scientist
+  picture: face.png
+  email: mail [at] cdiener.com
+  phone:
+  website:
+  summary:
+  location:
+    address: INMEGEN, Periférico Sur No. 4809
+    postalcode: 14610
+    city: México D.F.
+    country: MEX
+    region: Tlalpan
+  profiles:
+  - network: twitter
+    user: thaasophobia
+    url: ""
+  - network: github
+    user: cdiener
+    url: ""
+work:
+- company: National Institute for Genomic Medicine
+  position: PostDoc
+  website: http://inmegen.gob.mx
+  begin: 2015
+  end: now
+  summary: PostDoc in the laboratory of Human Systems Biology of Dr. Osbaldo
+    Resendis in the field of Cancer Metabolomics.
+- company: Universidad Nacional Autónoma de México
+  position: PostDoc
+  website: http://unam.mx
+  begin: 2012
+  end: 2014
+  summary: PostDoc in the laboratory of Integrative Research of Biological Systems
+    of Dr. Gabriel Del Rio Guerra in the field of Synthetic Biology and Peptide
+    design.
+education:
+- institution: Max Planck Institute for Molecular Genetics
+  area: Systems Biology
+  title: Ph.D.
+  begin: 2008
+  end: 2012
+  grade: summa cum laude
+- institution: Max Planck Institute for Molecular Genetics
+  area: Systems Biology
+  title: preparatory program (M.Sc. equivalent)
+  begin: 2007
+  end: 2008
+- institution: Freie Universität Berlin
+  area: Computational Biology
+  title: B.Sc.
+  begin: 2004
+  end: 2007
+awards:
+- title: Award of the American Society of Biochemistry and Molecular Biology
+  date: 10/2011
+  institution: Cellular Signaling Conference, Mérida México
+  summary: Awarded for exceptional research quality.
+- title: Scholarship of the German Academic Exchange Program (DAAD)
+  date: 2011
+  institution: Universidad Nacional Autónoma de México
+  summary: Scholarship for a short research stay.
+- title: Scholarship of the International Max Planck Research School
+  date: 2007
+  institution: Max Planck Institute for Molecular Genetics
+  summary: Full scholarship for pre-doc and Ph.D. studies.
+- title: Young investigator award
+  date: 2007
+  institution: SYSBIOHEALTH symposium, Milano Italy
+  summary: Awarded for best poster.
+publications:
+skills:
+- name: Programming
+  level: Master
+  keywords:
+  - C/C++
+  - Python
+  - R
+- name: Web technologies
+  level: Master
+  keywords:
+  - HTML
+  - CSS
+  - Javascript
+  - Server/container management
+- name: Molecular Biology
+  level: Master
+  keywords:
+  - Confocal/epifluorescence microscopy
+  - Handling of microbial cell lines
+  - PCR and transfection
+languages:
+- language: English
+  fluency: fluent
+- language: Spanish
+  fluency: fluent
+- language: German
+  fluency: native speaker
+interests:
+- name:
+  keywords:
+  - Systems Biology
+  - Synthetic Biology
+  - Mathematical modeling of cancer dynamics
+  - Spatial dynamics of cell populations
+  - Integrative research on "omics" data
+  - Statistics for Metagenomics and Big Data
