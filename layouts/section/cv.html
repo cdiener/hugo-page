@@ -12,14 +12,13 @@
        {{.basics.location.country}}</p>
 </div></div>
 </section>
-<div class="mdl-cell mdl-cell--12-col mdl-cell--4-col-phone mdl-cell--8-col-tablet">
-<div class="card mdl-card mdl-shadow--4dp" style="margin-top:4em;">
+<div class="card mdl-card mdl-shadow--4dp" style="margin: 3em 0;">
 <div class="mdl-card__title mdl-color--primary">
-	<h1 class="mdl-card__title-text">Skills</h1></div>
+    <h1 class="mdl-card__title-text">Skills</h1></div>
     <div class="mdl-card__supporting-text">
         <div id="vis"></div>
         <p>Click on a node to open/collapse...</p>
-    </div></div></div>
+    </div></div>
 </div></section>
 <section class="mdl-layout__tab-panel" id="education"> <div class="page-content mdl-grid">
 <div class="mdl-cell mdl-cell--12-col mdl-cell--4-col-phone mdl-cell--8-col-tablet card mdl-card mdl-shadow--4dp">
@@ -54,7 +53,40 @@
 </div>{{end}}
 </div>{{end}}
 </div></section>
-<section class="mdl-layout__tab-panel" id="other"> <div class="page-content mdl-grid">
+<section class="mdl-layout__tab-panel" id="other">
+<div class="page-content mdl-grid">
+{{if .interests}}
+<div class="mdl-cell mdl-cell--12-col mdl-cell--4-col-phone mdl-cell--8-col-tablet card mdl-card mdl-shadow--4dp">
+    <div class="mdl-card__title mdl-color--primary">
+    <h1 class="mdl-card__title-text">Interests</h1></div>
+    <div class="mdl-card__supporting-text">
+    {{range .interests}}{{if .name}}<h2 class="mdl-color-text--primary">{{.name}}</h2>{{end}}
+    {{range .keywords}}
+    <h3 class="mdl-color-test--gray">{{.}}</h3>
+    {{end}}{{end}}
+    </div>
+</div>{{end}}
+<div class="mdl-cell mdl-cell--12-col mdl-cell--4-col-phone mdl-cell--8-col-tablet card mdl-card mdl-shadow--4dp">
+    <div class="mdl-card__title mdl-color--primary">
+    <h1 class="mdl-card__title-text">Awards &amp; Scholarships</h1></div>
+    <div class="mdl-card__supporting-text">
+    {{range .awards}}<h2 class="mdl-color-text--primary">{{.title}}</h2>
+    <h3 class="mdl-color-text--gray">{{.date}}</h3>
+    <span class="mdl-color-text--gary">at {{.institution}}</span>
+    <p>{{.summary}}</p>
+    <br>{{end}}
+    </div>
+</div>
+{{if .languages}}<div class="mdl-cell mdl-cell--12-col mdl-cell--4-col-phone mdl-cell--8-col-tablet card mdl-card mdl-shadow--4dp">
+    <div class="mdl-card__title mdl-color--primary">
+    <h1 class="mdl-card__title-text">Languages</h1></div>
+    <div class="mdl-card__supporting-text">
+    <ul>
+    {{range .languages}}
+    <li><span class="mdl-color-text--primary" style="font-weight: 500">{{.language}}</span> - {{.fluency}}</li>
+    {{end}}</ul>
+    </div>
+</div>{{end}}
 </div></section>{{end}}
 <script src="/js/d3.min.js" charset="utf-8"></script>
 <script src="/js/tree.min.js"></script>

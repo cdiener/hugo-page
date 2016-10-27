@@ -1,8 +1,8 @@
 /*
  * tree.js
- * 
+ *
  * Copyright 2015 Christian Diener <ch.diener[a]gmail.com>
- * 
+ *
  * MIT license. See LICENSE for more information.
  */
 
@@ -11,10 +11,10 @@ var color = d3.scale.category20(),
     tf = 15;
 color.domain(d3.range(19));
 
-var margin = {top: 10, right: 20, bottom: 30, left: 20},
-	width = 512 - margin.right - margin.left,
-	height = 288 - margin.top - margin.bottom;
-	
+var margin = {top: 10, right: 20, bottom: 30, left: 15},
+	width = 400 - margin.right - margin.left,
+	height = 300 - margin.top - margin.bottom;
+
 var i = 0,
 	duration = 600,
 	root;
@@ -43,7 +43,7 @@ d3.json("/js/skills.json", function(error, json) {
     root.y0 = 0;
 
     root.children.forEach(collapse);
-    
+
     update(root);
     });
 
@@ -62,7 +62,7 @@ function update(source) {
 	  links = tree.links(nodes);
 
   // Normalize for fixed-depth.
-  nodes.forEach(function(d) { d.y = d.depth * df; });
+  nodes.forEach(function(d) { d.y = d.depth * df - (d.depth > 1 ? df/3 : 0); });
 
   // Update the nodes…
   var node = svg.selectAll("g.node")
@@ -139,7 +139,7 @@ function update(source) {
 
   // Stash the old positions for transition.
   nodes.forEach(function(d) {
-	d.x0 = d.x;
+    d.x0 = d.x;
 	d.y0 = d.y;
   });
 }

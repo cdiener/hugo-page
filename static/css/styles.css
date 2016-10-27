@@ -129,7 +129,7 @@ a {
   stroke: none;
   fill: black;
   pointer-events: none;
-  font: 12px Roboto;
+  font: 0.85em Roboto;
 }
 
 #vis .link {
@@ -158,4 +158,11 @@ table {
 .spaced {
     display: flex;
     justify-content: space-between;
+}
+
+@media screen and (max-width: 1024px) {
+.mdl-layout__tab-bar {
+    width: calc(100% - 120px);
+    padding: 0 0 0 60px;
+}
 }
