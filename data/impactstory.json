@@ -1,0 +1,912 @@
+{
+    "_full_name": "Christian Diener", 
+    "_id": "0000-0002-7476-0868", 
+    "affiliation_name": "Instituto Nacional de Medicina Gen\u00f3mica", 
+    "affiliation_role_title": "Postdoc", 
+    "badges": [
+        {
+            "context": "This level of availability puts you in the top 7% of researchers.", 
+            "created": "2016-05-29 15:34:00.894366+00:00", 
+            "description": "85% of your research is free to read online.", 
+            "display_name": "Open Access", 
+            "extra_description": null, 
+            "group": "openness", 
+            "id": "VuvgAuL5CB", 
+            "importance": 0.9, 
+            "name": "percent_fulltext", 
+            "percentile": 0.93, 
+            "show_in_ui": true, 
+            "sort_score": 0.8370000000000001, 
+            "support_finale": null, 
+            "support_intro": "Even better, 71% of your papers are published under a fully Open license like CC-BY, making them available for a wide range of reuse (not just reading). Learn more about why this is important at <a href=\"http://sparcopen.org/our-work/howopenisit/\">HowOpenIsIt.</a>", 
+            "support_items": null, 
+            "value": 85.7
+        }, 
+        {
+            "context": "This level of availability puts you in the top 1% of researchers.", 
+            "created": "2016-10-17 04:18:11.503764+00:00", 
+            "description": "71% of your research has a CC-BY, CC0, or public domain license.", 
+            "display_name": "Open License", 
+            "extra_description": null, 
+            "group": "openness", 
+            "id": "FMwr2zypQr", 
+            "importance": 0.8, 
+            "name": "open_license", 
+            "percentile": 0.99, 
+            "show_in_ui": false, 
+            "sort_score": 0.8, 
+            "support_finale": null, 
+            "support_intro": null, 
+            "support_items": null, 
+            "value": 71.4
+        }, 
+        {
+            "context": "That's a high proportion: only 4% of researchers publish work that inspires this level of engagement from the developing world.", 
+            "created": "2016-06-20 13:16:51.534825+00:00", 
+            "description": "Of people who save and share your research, 51% are in the Global South.", 
+            "display_name": "Global South", 
+            "extra_description": null, 
+            "group": "engagement", 
+            "id": "3PAkvecZhV", 
+            "importance": 0.4, 
+            "name": "global_south", 
+            "percentile": 0.96, 
+            "show_in_ui": true, 
+            "sort_score": 0.384, 
+            "support_finale": null, 
+            "support_intro": "Countries include", 
+            "support_items": [
+                "Brazil", 
+                "Chile", 
+                "China", 
+                "French Polynesia", 
+                "India", 
+                "Mexico", 
+                "Sri Lanka"
+            ], 
+            "value": 51.35
+        }, 
+        {
+            "context": null, 
+            "created": "2016-05-16 02:27:10.132480+00:00", 
+            "description": "Your research has been saved and shared in 14 countries.", 
+            "display_name": "Global Reach", 
+            "extra_description": null, 
+            "group": "engagement", 
+            "id": "3fn4Y4tMXj", 
+            "importance": 0.8, 
+            "name": "global_reach", 
+            "percentile": 0.39, 
+            "show_in_ui": true, 
+            "sort_score": 0.31200000000000006, 
+            "support_finale": " countries.", 
+            "support_intro": "Countries include", 
+            "support_items": [
+                "Brazil", 
+                "Chile", 
+                "China", 
+                "France", 
+                "French Polynesia", 
+                "Germany", 
+                "India", 
+                "Mexico", 
+                "Norway", 
+                "Portugal", 
+                "Spain", 
+                "Sri Lanka", 
+                "United Kingdom", 
+                "United States"
+            ], 
+            "value": 14.0
+        }, 
+        {
+            "context": "Only 10% of scholars have been tweeted by someone with this many followers.", 
+            "created": "2016-09-09 10:26:25.693055+00:00", 
+            "description": "Someone with over 100.536 thousand followers has tweeted your research.", 
+            "display_name": "Follower Frenzy", 
+            "extra_description": null, 
+            "group": "engagement", 
+            "id": "Buk4HwzBRC", 
+            "importance": 0.2, 
+            "name": "megafan", 
+            "percentile": 0.9, 
+            "show_in_ui": true, 
+            "sort_score": 0.18000000000000002, 
+            "support_finale": null, 
+            "support_intro": "Thanks, <a href='http://twitter.com/PLOS'>@PLOS</a>.", 
+            "support_items": null, 
+            "value": 100536.0
+        }, 
+        {
+            "context": null, 
+            "created": "2016-05-17 19:33:58.951095+00:00", 
+            "description": "Your top publication has been saved and shared 34 times.", 
+            "display_name": "Greatest Hit", 
+            "extra_description": null, 
+            "group": "buzz", 
+            "id": "Q2gc8r6XWv", 
+            "importance": 0.5, 
+            "name": "big_hit", 
+            "percentile": 0.3, 
+            "show_in_ui": true, 
+            "sort_score": 0.15, 
+            "support_finale": null, 
+            "support_intro": "Your greatest hit online is <a href='/u/0000-0002-7476-0868/p/joEnGrFyKt'>Onset of immune senescence defined by unbiased pyrosequencing of human immunoglobulin mRNA repertoires.</a>.", 
+            "support_items": null, 
+            "value": 34.0
+        }, 
+        {
+            "context": "Fewer than a quarter of researchers show this kind of consistency.", 
+            "created": "2016-06-25 13:04:52.333302+00:00", 
+            "description": "Every one of your publications since 2012 has been saved and shared online.", 
+            "display_name": "Clean Sweep", 
+            "extra_description": null, 
+            "group": "buzz", 
+            "id": "BUZ5PiXT8R", 
+            "importance": 0.1, 
+            "name": "clean_sweep", 
+            "percentile": 0.85, 
+            "show_in_ui": true, 
+            "sort_score": 0.085, 
+            "support_finale": null, 
+            "support_intro": null, 
+            "support_items": null, 
+            "value": 1.0
+        }
+    ], 
+    "campaign": null, 
+    "claimed_at": "2016-09-13 19:29:57.254834+00:00", 
+    "coauthors": null, 
+    "created": "2016-04-21 15:22:16.262284+00:00", 
+    "depsy_id": null, 
+    "email": "ch.diener+twitter@gmail.com", 
+    "family_name": "Diener", 
+    "first_name": "Christian", 
+    "fresh_orcid": false, 
+    "given_names": "Christian", 
+    "id": "0000-0002-7476-0868", 
+    "mendeley": {
+        "country_percent": {
+            "Brazil": 0.07, 
+            "Chile": 0.03, 
+            "China": 0.03, 
+            "France": 0.03, 
+            "French Polynesia": 0.03, 
+            "Germany": 0.2, 
+            "India": 0.07, 
+            "Mexico": 0.23, 
+            "Portugal": 0.03, 
+            "Spain": 0.07, 
+            "Sri Lanka": 0.03, 
+            "United Kingdom": 0.03, 
+            "United States": 0.13
+        }, 
+        "job_title_percent": {
+            "Faculty": 0.13, 
+            "Masters Student": 0.16, 
+            "Other": 0.03, 
+            "PhD Student": 0.38, 
+            "Researcher": 0.26, 
+            "Undergrad Student": 0.04
+        }, 
+        "mendeley_url": null, 
+        "percent_of_products": 1.0, 
+        "readers": 156, 
+        "subdiscipline_percent": {
+            "Agricultural and Biological Sciences": 0.67, 
+            "Arts and Humanities": 0.01, 
+            "Biochemistry, Genetics and Molecular Biology": 0.08, 
+            "Chemistry": 0.08, 
+            "Computer Science": 0.01, 
+            "Design": 0.01, 
+            "Engineering": 0.01, 
+            "Immunology and Microbiology": 0.01, 
+            "Mathematics": 0.01, 
+            "Medicine and Dentistry": 0.06, 
+            "Nursing and Health Professions": 0.01, 
+            "Pharmacology, Toxicology and Pharmaceutical Science": 0.02, 
+            "Physics and Astronomy": 0.01, 
+            "Psychology": 0.01
+        }
+    }, 
+    "num_mentions": 175, 
+    "num_orcid_products": 7, 
+    "num_posts": 19, 
+    "num_twitter_followers": 58, 
+    "orcid_id": "0000-0002-7476-0868", 
+    "overview_badges": [
+        {
+            "context": "This level of availability puts you in the top 7% of researchers.", 
+            "created": "2016-05-29 15:34:00.894366+00:00", 
+            "description": "85% of your research is free to read online.", 
+            "display_name": "Open Access", 
+            "extra_description": null, 
+            "group": "openness", 
+            "id": "VuvgAuL5CB", 
+            "importance": 0.9, 
+            "name": "percent_fulltext", 
+            "percentile": 0.93, 
+            "show_in_ui": true, 
+            "sort_score": 0.8370000000000001, 
+            "support_finale": null, 
+            "support_intro": "Even better, 71% of your papers are published under a fully Open license like CC-BY, making them available for a wide range of reuse (not just reading). Learn more about why this is important at <a href=\"http://sparcopen.org/our-work/howopenisit/\">HowOpenIsIt.</a>", 
+            "support_items": null, 
+            "value": 85.7
+        }, 
+        {
+            "context": "That's a high proportion: only 4% of researchers publish work that inspires this level of engagement from the developing world.", 
+            "created": "2016-06-20 13:16:51.534825+00:00", 
+            "description": "Of people who save and share your research, 51% are in the Global South.", 
+            "display_name": "Global South", 
+            "extra_description": null, 
+            "group": "engagement", 
+            "id": "3PAkvecZhV", 
+            "importance": 0.4, 
+            "name": "global_south", 
+            "percentile": 0.96, 
+            "show_in_ui": true, 
+            "sort_score": 0.384, 
+            "support_finale": null, 
+            "support_intro": "Countries include", 
+            "support_items": [
+                "Brazil", 
+                "Chile", 
+                "China", 
+                "French Polynesia", 
+                "India", 
+                "Mexico", 
+                "Sri Lanka"
+            ], 
+            "value": 51.35
+        }, 
+        {
+            "context": null, 
+            "created": "2016-05-17 19:33:58.951095+00:00", 
+            "description": "Your top publication has been saved and shared 34 times.", 
+            "display_name": "Greatest Hit", 
+            "extra_description": null, 
+            "group": "buzz", 
+            "id": "Q2gc8r6XWv", 
+            "importance": 0.5, 
+            "name": "big_hit", 
+            "percentile": 0.3, 
+            "show_in_ui": true, 
+            "sort_score": 0.15, 
+            "support_finale": null, 
+            "support_intro": "Your greatest hit online is <a href='/u/0000-0002-7476-0868/p/joEnGrFyKt'>Onset of immune senescence defined by unbiased pyrosequencing of human immunoglobulin mRNA repertoires.</a>.", 
+            "support_items": null, 
+            "value": 34.0
+        }
+    ], 
+    "percent_fulltext": 0.857, 
+    "percent_open_license": 0.714, 
+    "picture": "https://pbs.twimg.com/profile_images/454744049140772865/NUARHrKU.png", 
+    "products": [
+        {
+            "_title": "The space of enzyme regulation in HeLa cells can be inferred from its intracellular metabolome.", 
+            "altmetric_id": "9022562", 
+            "altmetric_score": 4.2, 
+            "authors": "Diener C, Mu\u00f1oz-Gonzalez F, Encarnaci\u00f3n S, Resendis-Antonio O", 
+            "doi": "10.1038/srep28415", 
+            "events_last_week_count": 0, 
+            "fulltext_url": "http://doi.org/10.1038/srep28415", 
+            "genre": "article", 
+            "has_fulltext_url": true, 
+            "id": "dkyZMFEcVq", 
+            "journal": null, 
+            "license": "cc-by", 
+            "mendeley": {
+                "country_percent": {
+                    "Mexico": 0.5, 
+                    "Spain": 0.5
+                }, 
+                "job_title_percent": {
+                    "Masters Student": 0.25, 
+                    "PhD Student": 0.25, 
+                    "Researcher": 0.25, 
+                    "Undergrad Student": 0.25
+                }, 
+                "mendeley_url": "http://www.mendeley.com/research/space-enzyme-regulation-hela-cells-inferred-intracellular-metabolome", 
+                "readers": 4, 
+                "subdiscipline_percent": {
+                    "Agricultural and Biological Sciences": 0.75, 
+                    "Medicine and Dentistry": 0.25
+                }
+            }, 
+            "num_mentions": 10, 
+            "num_posts": 6, 
+            "orcid_id": "0000-0002-7476-0868", 
+            "posts": [
+                {
+                    "attribution": "Human Metabolome Technologies America, Inc.", 
+                    "posted_on": "2016-07-08T16:44:57+00:00", 
+                    "source": "facebook", 
+                    "title": "Metabolic kinetic constants proposed the importance of post-transcriptional modifications rather than gene transcription.\n", 
+                    "url": "https://www.facebook.com/permalink.php?story_fbid=1726831857556945&id=1539429129630553"
+                }, 
+                {
+                    "attribution": "Cancer Metabolism", 
+                    "posted_on": "2016-06-27T08:13:22+00:00", 
+                    "source": "facebook", 
+                    "title": "During the transition from a healthy state to a cancerous one, cells alter their metabolism \u2026", 
+                    "url": "https://www.facebook.com/permalink.php?story_fbid=1043921079034846&id=317356245024670"
+                }, 
+                {
+                    "attribution": "Erika", 
+                    "followers": 82, 
+                    "posted_on": "2016-06-29T21:47:55+00:00", 
+                    "source": "twitter", 
+                    "title": "", 
+                    "twitter_handle": "cerikah", 
+                    "url": "http://twitter.com/cerikah/statuses/748271805253595136"
+                }, 
+                {
+                    "attribution": "shridhar", 
+                    "followers": 363, 
+                    "posted_on": "2016-06-27T16:40:31+00:00", 
+                    "source": "twitter", 
+                    "title": "", 
+                    "twitter_handle": "mahishishridhar", 
+                    "url": "http://twitter.com/mahishishridhar/statuses/747469671851425793"
+                }, 
+                {
+                    "attribution": "Erika Pel\u00e1ez", 
+                    "followers": 39, 
+                    "posted_on": "2016-06-24T19:05:07+00:00", 
+                    "source": "twitter", 
+                    "title": "", 
+                    "twitter_handle": "midoridancer", 
+                    "url": "http://twitter.com/midoridancer/statuses/746418896400416769"
+                }, 
+                {
+                    "attribution": "Christian Diener", 
+                    "followers": 81, 
+                    "posted_on": "2016-06-24T18:27:50+00:00", 
+                    "source": "twitter", 
+                    "title": "", 
+                    "twitter_handle": "thaasophobia", 
+                    "url": "http://twitter.com/thaasophobia/statuses/746409514975395840"
+                }
+            ], 
+            "sources": [
+                {
+                    "display_name": "Tweets", 
+                    "events_last_week_count": 0, 
+                    "posts_count": 4, 
+                    "source_name": "twitter"
+                }, 
+                {
+                    "display_name": "Mendeley saves", 
+                    "events_last_week_count": 0, 
+                    "posts_count": 4, 
+                    "source_name": "mendeley"
+                }, 
+                {
+                    "display_name": "Facebook pages", 
+                    "events_last_week_count": 0, 
+                    "posts_count": 2, 
+                    "source_name": "facebook"
+                }
+            ], 
+            "title": "The space of enzyme regulation in HeLa cells can be inferred from its intracellular metabolome.", 
+            "url": "http://doi.org/10.1038/srep28415", 
+            "year": "2016"
+        }, 
+        {
+            "_title": "Effective Design of Multifunctional Peptides by Combining Compatible Functions.", 
+            "altmetric_id": "6839981", 
+            "altmetric_score": 3.85, 
+            "authors": "Diener C, Garza Ramos Mart\u00ednez G, Moreno Blas D, Castillo Gonz\u00e1lez DA, Corzo G, Castro-Obregon S, Del Rio G", 
+            "doi": "10.1371/journal.pcbi.1004786", 
+            "events_last_week_count": 0, 
+            "fulltext_url": "http://doi.org/10.1371/journal.pcbi.1004786", 
+            "genre": "article", 
+            "has_fulltext_url": true, 
+            "id": "b9oXbcUScx", 
+            "journal": null, 
+            "license": "cc-by", 
+            "mendeley": {
+                "country_percent": {
+                    "China": 0.5, 
+                    "Mexico": 0.5
+                }, 
+                "job_title_percent": {
+                    "Faculty": 0.06, 
+                    "Masters Student": 0.13, 
+                    "PhD Student": 0.56, 
+                    "Researcher": 0.13, 
+                    "Undergrad Student": 0.13
+                }, 
+                "mendeley_url": "http://www.mendeley.com/research/effective-design-multifunctional-peptides-combining-compatible-functions", 
+                "readers": 16, 
+                "subdiscipline_percent": {
+                    "Agricultural and Biological Sciences": 0.38, 
+                    "Biochemistry, Genetics and Molecular Biology": 0.13, 
+                    "Chemistry": 0.06, 
+                    "Design": 0.06, 
+                    "Medicine and Dentistry": 0.13, 
+                    "Nursing and Health Professions": 0.06, 
+                    "Pharmacology, Toxicology and Pharmaceutical Science": 0.13, 
+                    "Physics and Astronomy": 0.06
+                }
+            }, 
+            "num_mentions": 24, 
+            "num_posts": 8, 
+            "orcid_id": "0000-0002-7476-0868", 
+            "posts": [
+                {
+                    "attribution": "Dave Fernig", 
+                    "followers": 292, 
+                    "posted_on": "2016-04-21T21:36:46+00:00", 
+                    "source": "twitter", 
+                    "title": "", 
+                    "twitter_handle": "DaveFernig", 
+                    "url": "http://twitter.com/DaveFernig/statuses/723264238257582080"
+                }, 
+                {
+                    "attribution": "PLOS", 
+                    "followers": 100536, 
+                    "posted_on": "2016-04-21T21:01:28+00:00", 
+                    "source": "twitter", 
+                    "title": "", 
+                    "twitter_handle": "PLOS", 
+                    "url": "http://twitter.com/PLOS/statuses/723255352687349760"
+                }, 
+                {
+                    "attribution": "Fabrice Leclerc", 
+                    "followers": 1662, 
+                    "posted_on": "2016-04-21T14:54:12+00:00", 
+                    "source": "twitter", 
+                    "title": "", 
+                    "twitter_handle": "rnomics", 
+                    "url": "http://twitter.com/rnomics/statuses/723162927960854528"
+                }, 
+                {
+                    "attribution": "Christian Diener", 
+                    "followers": 81, 
+                    "posted_on": "2016-04-21T14:21:47+00:00", 
+                    "source": "twitter", 
+                    "title": "", 
+                    "twitter_handle": "thaasophobia", 
+                    "url": "http://twitter.com/thaasophobia/statuses/723154770093993985"
+                }, 
+                {
+                    "attribution": "PLOS Comp Biol", 
+                    "followers": 9677, 
+                    "posted_on": "2016-04-21T12:07:15+00:00", 
+                    "source": "twitter", 
+                    "title": "", 
+                    "twitter_handle": "PLOSCompBiol", 
+                    "url": "http://twitter.com/PLOSCompBiol/statuses/723120915488231425"
+                }, 
+                {
+                    "attribution": "yeast_papers", 
+                    "followers": 638, 
+                    "posted_on": "2016-04-21T11:32:06+00:00", 
+                    "source": "twitter", 
+                    "title": "", 
+                    "twitter_handle": "yeast_papers", 
+                    "url": "http://twitter.com/yeast_papers/statuses/723112067067076608"
+                }, 
+                {
+                    "attribution": "SeqComplete", 
+                    "followers": 2787, 
+                    "posted_on": "2016-04-20T22:04:08+00:00", 
+                    "source": "twitter", 
+                    "title": "", 
+                    "twitter_handle": "SeqComplete", 
+                    "url": "http://twitter.com/SeqComplete/statuses/722908736168198147"
+                }, 
+                {
+                    "attribution": "Bioinformatics Feeds", 
+                    "followers": 258, 
+                    "posted_on": "2016-04-20T18:07:23+00:00", 
+                    "source": "twitter", 
+                    "title": "", 
+                    "twitter_handle": "BioinformaticsP", 
+                    "url": "http://twitter.com/BioinformaticsP/statuses/722849156641923075"
+                }
+            ], 
+            "sources": [
+                {
+                    "display_name": "Tweets", 
+                    "events_last_week_count": 0, 
+                    "posts_count": 8, 
+                    "source_name": "twitter"
+                }, 
+                {
+                    "display_name": "Mendeley saves", 
+                    "events_last_week_count": 0, 
+                    "posts_count": 16, 
+                    "source_name": "mendeley"
+                }
+            ], 
+            "title": "Effective Design of Multifunctional Peptides by Combining Compatible Functions.", 
+            "url": "http://doi.org/10.1371/journal.pcbi.1004786", 
+            "year": "2016"
+        }, 
+        {
+            "_title": "What influences DNA replication rate in budding yeast?", 
+            "altmetric_id": "4604059", 
+            "altmetric_score": 1.0, 
+            "authors": "Spiesser TW, Diener C, Barberis M, Klipp E", 
+            "doi": "10.1371/journal.pone.0010203", 
+            "events_last_week_count": 0, 
+            "fulltext_url": "http://doi.org/10.1371/journal.pone.0010203", 
+            "genre": "article", 
+            "has_fulltext_url": true, 
+            "id": "BnaTzx69r3", 
+            "journal": null, 
+            "license": "cc-by", 
+            "mendeley": {
+                "country_percent": {
+                    "France": 0.14, 
+                    "Germany": 0.43, 
+                    "Mexico": 0.14, 
+                    "Spain": 0.14, 
+                    "United States": 0.14
+                }, 
+                "job_title_percent": {
+                    "Faculty": 0.22, 
+                    "Masters Student": 0.15, 
+                    "PhD Student": 0.3, 
+                    "Researcher": 0.33
+                }, 
+                "mendeley_url": "http://www.mendeley.com/research/influences-dna-replication-rate-budding-yeast", 
+                "readers": 27, 
+                "subdiscipline_percent": {
+                    "Agricultural and Biological Sciences": 0.85, 
+                    "Biochemistry, Genetics and Molecular Biology": 0.04, 
+                    "Chemistry": 0.04, 
+                    "Computer Science": 0.04, 
+                    "Physics and Astronomy": 0.04
+                }
+            }, 
+            "num_mentions": 28, 
+            "num_posts": 1, 
+            "orcid_id": "0000-0002-7476-0868", 
+            "posts": [
+                {
+                    "posted_on": "2009-08-09T00:00:00+00:00", 
+                    "source": "peer_reviews", 
+                    "title": "[Paper # 09-PONE-RA-11821] General: This manuscript presents a theoretical analysis of the DNA replication rate \u2026", 
+                    "url": "https://publons.com/r/74670/"
+                }
+            ], 
+            "sources": [
+                {
+                    "display_name": "Public peer reviews", 
+                    "events_last_week_count": 0, 
+                    "posts_count": 1, 
+                    "source_name": "peer_reviews"
+                }, 
+                {
+                    "display_name": "Mendeley saves", 
+                    "events_last_week_count": 0, 
+                    "posts_count": 27, 
+                    "source_name": "mendeley"
+                }
+            ], 
+            "title": "What influences DNA replication rate in budding yeast?", 
+            "url": "http://doi.org/10.1371/journal.pone.0010203", 
+            "year": "2010"
+        }, 
+        {
+            "_title": "Yeast mating and image-based quantification of spatial pattern formation.", 
+            "altmetric_id": "2468272", 
+            "altmetric_score": 0.5, 
+            "authors": "Diener C, Schreiber G, Giese W, del Rio G, Schr\u00f6der A, Klipp E", 
+            "doi": "10.1371/journal.pcbi.1003690", 
+            "events_last_week_count": 0, 
+            "fulltext_url": "http://doi.org/10.1371/journal.pcbi.1003690", 
+            "genre": "article", 
+            "has_fulltext_url": true, 
+            "id": "FbfPNo9XQx", 
+            "journal": null, 
+            "license": "cc-by", 
+            "mendeley": {
+                "country_percent": {
+                    "Mexico": 0.33, 
+                    "United States": 0.67
+                }, 
+                "job_title_percent": {
+                    "Faculty": 0.12, 
+                    "Masters Student": 0.19, 
+                    "PhD Student": 0.38, 
+                    "Researcher": 0.27, 
+                    "Undergrad Student": 0.04
+                }, 
+                "mendeley_url": "http://www.mendeley.com/research/yeast-mating-imagebased-quantification-spatial-pattern-formation", 
+                "readers": 26, 
+                "subdiscipline_percent": {
+                    "Agricultural and Biological Sciences": 0.62, 
+                    "Biochemistry, Genetics and Molecular Biology": 0.15, 
+                    "Chemistry": 0.08, 
+                    "Computer Science": 0.04, 
+                    "Engineering": 0.08, 
+                    "Psychology": 0.04
+                }
+            }, 
+            "num_mentions": 28, 
+            "num_posts": 2, 
+            "orcid_id": "0000-0002-7476-0868", 
+            "posts": [
+                {
+                    "attribution": "yeast_papers", 
+                    "followers": 632, 
+                    "posted_on": "2014-06-27T12:38:25+00:00", 
+                    "source": "twitter", 
+                    "title": "", 
+                    "twitter_handle": "yeast_papers", 
+                    "url": "https://twitter.com/yeast_papers/status/482503214332256256"
+                }, 
+                {
+                    "attribution": "Ani", 
+                    "followers": 1360, 
+                    "posted_on": "2014-06-27T02:58:56+00:00", 
+                    "source": "twitter", 
+                    "title": "", 
+                    "twitter_handle": "animesh1977", 
+                    "url": "https://twitter.com/animesh1977/status/482357381494370304"
+                }
+            ], 
+            "sources": [
+                {
+                    "display_name": "Tweets", 
+                    "events_last_week_count": 0, 
+                    "posts_count": 2, 
+                    "source_name": "twitter"
+                }, 
+                {
+                    "display_name": "Mendeley saves", 
+                    "events_last_week_count": 0, 
+                    "posts_count": 26, 
+                    "source_name": "mendeley"
+                }
+            ], 
+            "title": "Yeast mating and image-based quantification of spatial pattern formation.", 
+            "url": "http://doi.org/10.1371/journal.pcbi.1003690", 
+            "year": "2014"
+        }, 
+        {
+            "_title": "Cell penetrating peptides and cationic antibacterial peptides: two sides of the same coin.", 
+            "altmetric_id": "2820454", 
+            "altmetric_score": 0.25, 
+            "authors": "Rodriguez Plaza JG, Morales-Nava R, Diener C, Schreiber G, Gonzalez ZD, Lara Ortiz MT, Ortega Blake I, Pantoja O, Volkmer R, Klipp E et al.", 
+            "doi": "10.1074/jbc.m113.515023", 
+            "events_last_week_count": 0, 
+            "fulltext_url": "http://www.jbc.org/content/289/21/14448.full.pdf", 
+            "genre": "article", 
+            "has_fulltext_url": true, 
+            "id": "oNsdE2pu2P", 
+            "journal": null, 
+            "license": null, 
+            "mendeley": {
+                "country_percent": {
+                    "Brazil": 0.2, 
+                    "Chile": 0.2, 
+                    "Mexico": 0.2, 
+                    "Portugal": 0.2, 
+                    "Sri Lanka": 0.2
+                }, 
+                "job_title_percent": {
+                    "Faculty": 0.11, 
+                    "Masters Student": 0.18, 
+                    "PhD Student": 0.36, 
+                    "Researcher": 0.32, 
+                    "Undergrad Student": 0.04
+                }, 
+                "mendeley_url": "http://www.mendeley.com/research/cell-penetrating-peptides-cationic-antibacterial-peptides-two-sides-same-coin", 
+                "readers": 28, 
+                "subdiscipline_percent": {
+                    "Agricultural and Biological Sciences": 0.5, 
+                    "Biochemistry, Genetics and Molecular Biology": 0.07, 
+                    "Chemistry": 0.25, 
+                    "Medicine and Dentistry": 0.18
+                }
+            }, 
+            "num_mentions": 29, 
+            "num_posts": 1, 
+            "orcid_id": "0000-0002-7476-0868", 
+            "posts": [
+                {
+                    "attribution": "yeast_papers", 
+                    "followers": 616, 
+                    "posted_on": "2014-10-29T17:45:08+00:00", 
+                    "source": "twitter", 
+                    "title": "", 
+                    "twitter_handle": "yeast_papers", 
+                    "url": "https://twitter.com/yeast_papers/status/527516495744466944"
+                }
+            ], 
+            "sources": [
+                {
+                    "display_name": "Tweets", 
+                    "events_last_week_count": 0, 
+                    "posts_count": 1, 
+                    "source_name": "twitter"
+                }, 
+                {
+                    "display_name": "Mendeley saves", 
+                    "events_last_week_count": 0, 
+                    "posts_count": 28, 
+                    "source_name": "mendeley"
+                }
+            ], 
+            "title": "Cell penetrating peptides and cationic antibacterial peptides: two sides of the same coin.", 
+            "url": "http://doi.org/10.1074/jbc.m113.515023", 
+            "year": "2014"
+        }, 
+        {
+            "_title": "Onset of immune senescence defined by unbiased pyrosequencing of human immunoglobulin mRNA repertoires.", 
+            "altmetric_id": "1101574", 
+            "altmetric_score": 0.25, 
+            "authors": "Rubelt F, Sievert V, Knaust F, Diener C, Lim TS, Skriner K, Klipp E, Reinhardt R, Lehrach H, Konthur Z", 
+            "doi": "10.1371/journal.pone.0049774", 
+            "events_last_week_count": 0, 
+            "fulltext_url": "http://doi.org/10.1371/journal.pone.0049774", 
+            "genre": "article", 
+            "has_fulltext_url": true, 
+            "id": "joEnGrFyKt", 
+            "journal": null, 
+            "license": "cc-by", 
+            "mendeley": {
+                "country_percent": {
+                    "Brazil": 0.13, 
+                    "French Polynesia": 0.13, 
+                    "Germany": 0.13, 
+                    "India": 0.25, 
+                    "Mexico": 0.13, 
+                    "United Kingdom": 0.13, 
+                    "United States": 0.13
+                }, 
+                "job_title_percent": {
+                    "Faculty": 0.12, 
+                    "Masters Student": 0.12, 
+                    "Other": 0.09, 
+                    "PhD Student": 0.42, 
+                    "Researcher": 0.24
+                }, 
+                "mendeley_url": "http://www.mendeley.com/research/onset-immune-senescence-defined-unbiased-pyrosequencing-human-immunoglobulin-mrna-repertoires", 
+                "readers": 33, 
+                "subdiscipline_percent": {
+                    "Agricultural and Biological Sciences": 0.73, 
+                    "Arts and Humanities": 0.03, 
+                    "Biochemistry, Genetics and Molecular Biology": 0.06, 
+                    "Chemistry": 0.03, 
+                    "Immunology and Microbiology": 0.03, 
+                    "Mathematics": 0.03, 
+                    "Medicine and Dentistry": 0.06, 
+                    "Pharmacology, Toxicology and Pharmaceutical Science": 0.03
+                }
+            }, 
+            "num_mentions": 34, 
+            "num_posts": 1, 
+            "orcid_id": "0000-0002-7476-0868", 
+            "posts": [
+                {
+                    "attribution": "Open Access", 
+                    "posted_on": "2012-12-02T18:06:41+00:00", 
+                    "source": "facebook", 
+                    "title": "by Florian Rubelt, Volker Sievert, Florian Knaust, Christian Diener, Theam Soon Lim, Karl Skriner, Edda \u2026", 
+                    "url": "https://www.facebook.com/permalink.php?story_fbid=471426286232712&id=173273506047993"
+                }
+            ], 
+            "sources": [
+                {
+                    "display_name": "Mendeley saves", 
+                    "events_last_week_count": 0, 
+                    "posts_count": 33, 
+                    "source_name": "mendeley"
+                }, 
+                {
+                    "display_name": "Facebook pages", 
+                    "events_last_week_count": 0, 
+                    "posts_count": 1, 
+                    "source_name": "facebook"
+                }
+            ], 
+            "title": "Onset of immune senescence defined by unbiased pyrosequencing of human immunoglobulin mRNA repertoires.", 
+            "url": "http://doi.org/10.1371/journal.pone.0049774", 
+            "year": "2012"
+        }, 
+        {
+            "_title": "A low number of SIC1 mRNA molecules ensures a low noise level in cell cycle progression of budding yeast.", 
+            "altmetric_id": null, 
+            "altmetric_score": 0.0, 
+            "authors": "Barberis M, Beck C, Amoussouvi A, Schreiber G, Diener C, Herrmann A, Klipp E", 
+            "doi": "10.1039/c1mb05073g", 
+            "events_last_week_count": 0, 
+            "fulltext_url": null, 
+            "genre": "article", 
+            "has_fulltext_url": false, 
+            "id": "AKFf6kFde8", 
+            "journal": null, 
+            "license": null, 
+            "mendeley": {
+                "country_percent": {
+                    "Germany": 0.67, 
+                    "Mexico": 0.33
+                }, 
+                "job_title_percent": {
+                    "Faculty": 0.14, 
+                    "Masters Student": 0.18, 
+                    "Other": 0.05, 
+                    "PhD Student": 0.36, 
+                    "Researcher": 0.23, 
+                    "Undergrad Student": 0.05
+                }, 
+                "mendeley_url": "http://www.mendeley.com/research/low-number-sic1-mrna-molecules-ensures-low-noise-level-cell-cycle-progression-budding-yeast", 
+                "readers": 22, 
+                "subdiscipline_percent": {
+                    "Agricultural and Biological Sciences": 0.82, 
+                    "Biochemistry, Genetics and Molecular Biology": 0.09, 
+                    "Chemistry": 0.05, 
+                    "Immunology and Microbiology": 0.05
+                }
+            }, 
+            "num_mentions": 22, 
+            "num_posts": 0, 
+            "orcid_id": "0000-0002-7476-0868", 
+            "posts": [], 
+            "sources": [
+                {
+                    "display_name": "Mendeley saves", 
+                    "events_last_week_count": 0, 
+                    "posts_count": 22, 
+                    "source_name": "mendeley"
+                }
+            ], 
+            "title": "A low number of SIC1 mRNA molecules ensures a low noise level in cell cycle progression of budding yeast.", 
+            "url": "http://doi.org/10.1039/c1mb05073g", 
+            "year": "2011"
+        }
+    ], 
+    "promos": {}, 
+    "sources": [
+        {
+            "display_name": "Tweets", 
+            "events_last_week_count": 0, 
+            "posts_count": 15, 
+            "source_name": "twitter"
+        }, 
+        {
+            "display_name": "Public peer reviews", 
+            "events_last_week_count": 0, 
+            "posts_count": 1, 
+            "source_name": "peer_reviews"
+        }, 
+        {
+            "display_name": "Mendeley saves", 
+            "events_last_week_count": 0, 
+            "posts_count": 156, 
+            "source_name": "mendeley"
+        }, 
+        {
+            "display_name": "Facebook pages", 
+            "events_last_week_count": 0, 
+            "posts_count": 3, 
+            "source_name": "facebook"
+        }
+    ], 
+    "subscores": [
+        {
+            "display_name": "buzz", 
+            "name": "buzz"
+        }, 
+        {
+            "display_name": "engagement", 
+            "name": "engagement"
+        }, 
+        {
+            "display_name": "openness", 
+            "name": "openness"
+        }, 
+        {
+            "display_name": "fun", 
+            "name": "fun"
+        }
+    ], 
+    "twitter": "thaasophobia", 
+    "updated": "2016-10-28 12:22:37.661673+00:00"
+}
