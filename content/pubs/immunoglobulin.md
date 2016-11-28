@@ -3,7 +3,7 @@ hero = ""
 pubmed = "23226220"
 doi = "10.1371/journal.pone.0049774"
 date = "2012-11-30"
-title = "Onset of immune senescence defined by unbiased pyrosequencing of human immunoglobulin mRNA repertoires"
+title = "Immunogenic variety and the Golden Agers"
 weight = 0
 
 +++

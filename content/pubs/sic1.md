@@ -1,6 +1,6 @@
 +++
 date = "2011-10-07"
-title = "A low number of SIC1 mRNA molecules ensures a low noise level in cell cycle progression of budding yeast"
+title = "Ensuring low noise in the yeast cell cycle"
 weight = 0
 hero = ""
 pubmed = "21717009"

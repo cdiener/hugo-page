@@ -1,6 +1,6 @@
 +++
 date = "2014-03-25T00:00:00"
-title = "Cell Penetrating Peptides and Cationic Antibacterial Peptides: Two sides of the same coin"
+title = "CPPs and CAPs: Two sides of the same coin"
 doi = "10.1074/jbc.M113.515023"
 weight = 0
 hero = ""
