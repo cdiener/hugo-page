@@ -13,18 +13,18 @@ css-html-js-minify.py static &> /dev/null
 echo "Saving changes..."
 git add -A > /dev/null
 git commit -am "$msg" > /dev/null
-git push > /dev/null
+git push 2> /dev/null
 
 echo "Cleaning up public..."
 (cd public && git reset --hard HEAD && git pull &> /dev/null)
 
 echo "Generating page..."
-hugo
+hugo > /dev/null
 
 echo "Deploying site..."
 cd public
 git add -A > /dev/null
 git commit -am "$msg" > /dev/null
-git push > /dev/null
+git push 2> /dev/null
 
 echo "--- done ---"
