@@ -13,7 +13,7 @@ css-html-js-minify.py static &> /dev/null
 echo "Saving changes..."
 git add -A > /dev/null
 git commit -am "$msg" > /dev/null
-git push
+git push > /dev/null
 
 echo "Cleaning up public..."
 (cd public && git reset --hard HEAD && git pull &> /dev/null)
