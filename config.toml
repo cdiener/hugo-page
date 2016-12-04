@@ -1,7 +1,6 @@
 baseurl = "https://cdiener.com"
 languageCode = "en-us"
 title = "Christian's website"
-pygmentsStyle = "default"
 
 [params]
     mdlversion = "1.2.1"

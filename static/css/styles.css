@@ -1,5 +1,5 @@
-html > body{
-    font-family:'Roboto' ,'Arial', sans-serif!important
+html > body {
+    font-family: 'Lato', 'Roboto', 'Arial', sans-serif !important;
 }
 
 a {
@@ -13,7 +13,7 @@ a {
 
 .mdl-navigation a.mdl-navigation__link {
 	color: #ddd;
-    font: 1.1rem Roboto, Helvetica, Arial, sans-serif;
+    font-size: 1.15rem;
 }
 
 .mdl-navigation a.mdl-navigation__link:hover {
@@ -30,6 +30,10 @@ a {
     padding: 1rem;
     width: auto;
     text-align: justify;
+}
+
+.card .mdl-card__supporting-text p, li {
+    font-size: 16px;
 }
 
 .card .mdl-card__supporting-text img {

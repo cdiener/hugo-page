@@ -25,6 +25,6 @@ echo "Deploying site..."
 cd public
 git add -A > /dev/null
 git commit -am "$msg" > /dev/null
-git push
+git push > /dev/null
 
 echo "--- done ---"

@@ -12,7 +12,7 @@
        {{.basics.location.country}}</p>
 </div></div>
 </section>
-<div class="card mdl-card mdl-shadow--4dp" style="margin: 3em 0;">
+<div class="card mdl-card mdl-shadow--4dp" style="margin: 2em 0;">
 <div class="mdl-card__title mdl-color--primary">
     <h1 class="mdl-card__title-text">Skills</h1></div>
     <div class="mdl-card__supporting-text">
@@ -20,7 +20,7 @@
         <p>Click on a node to open/collapse...</p>
     </div>
 </div>
-<div class="card mdl-card mdl-shadow--4dp">
+<div class="card mdl-card mdl-color--indigo-50 mdl-shadow--4dp">
     <div class="mdl-card__supporting-text" style="height:2em">
         <p>For a list of publications see the <a href="/pubs">Pubs section</a>.</p>
     </div>
@@ -65,10 +65,13 @@
 <div class="mdl-cell mdl-cell--12-col mdl-cell--4-col-phone mdl-cell--8-col-tablet card mdl-card mdl-shadow--4dp">
     <div class="mdl-card__title mdl-color--primary">
     <h1 class="mdl-card__title-text">Interests</h1></div>
-    <div class="mdl-card__supporting-text">
+    <div class="mdl-card__supporting-text" style="text-align: center">
     {{range .interests}}{{if .name}}<h2 class="mdl-color-text--primary">{{.name}}</h2>{{end}}
     {{range .keywords}}
-    <h3 class="mdl-color-test--gray">{{.}}</h3>
+    <span class="mdl-chip mdl-chip--contact" style="margin: 5px">
+    <span class="mdl-chip__contact mdl-color--accent mdl-color-text--white"><i class="material-icons" style="padding: 4px">star rate</i></span>
+    <span class="mdl-chip__text">{{.}}</span>
+    </span>
     {{end}}{{end}}
     </div>
 </div>{{end}}
