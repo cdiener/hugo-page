@@ -8,9 +8,14 @@ build:
 deploy:
     box: google/cloud-sdk
     steps:
-        - narinari/gcs-website-deploy:
-          bucket: cdiener.com
-          project: $GOOGLE_PROJECT_ID
-          access_key: $GCS_ACCESS_KEY_ID
-          secret: $GCS_SECRET_ACCESS_KEY
-          dir: public
+        - script:
+            name: Sync with GCS
+            code: |
+                echo "[Credentials]" > .boto
+                echo "gs_access_key_id = $GCS_ACCESS_KEY_ID" >> .boto
+                echo "gs_secret_access_key = $GCS_SECRET_ACCESS_KEY" >> .boto
+                echo "[GSUtil]" >> .boto
+                echo "default_project_id = $GOOGLE_PROJECT_ID" >> .boto
+                export BOTO_PATH=$PWD/.boto
+                gsutil -m rsync -r -d public gs://cdiener.com
+                gsutil -m cp -r -z html,css,js,xml,txt,json,map,svg public/* gs://cdiener.com
