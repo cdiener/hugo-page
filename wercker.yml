@@ -1,10 +1,16 @@
 box: debian
+
 build:
     steps:
         - arjen/hugo-build:
           version: "0.17"
 deploy:
     steps:
+        - script:
+          name: Install glpk lib
+          code: |
+              apt-get update
+              apt-get install -y curl 
         - narinari/gcs-website-deploy:
           bucket: cdiener.com
           project: $GOOGLE_PROJECT_ID
