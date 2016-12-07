@@ -1,9 +1,13 @@
-html > body {
+html > body, h1, h2, .mdl-button {
     font-family: 'Lato', 'Roboto', 'Arial', sans-serif !important;
 }
 
 a {
 	text-decoration: none;
+    font-weight: bold;
+}
+
+.mdl-button {
     font-weight: bold;
 }
 
@@ -32,11 +36,11 @@ a {
     text-align: justify;
 }
 
-.card .mdl-card__supporting-text p, li {
+.mdl-card__supporting-text p, li, span, div {
     font-size: 16px;
 }
 
-.card .mdl-card__supporting-text img {
+.mdl-card__supporting-text img {
     width: 100%;
 }
 
@@ -54,21 +58,20 @@ a {
 }
 
 .mdl-card h1 {
-    font-size: 1.5em;
+    font-size: 20px;
     line-height: normal;
     margin: 0.25em 0;
 }
 
 .mdl-card h2 {
-    font-size: 1.3em;
-    margin: 0;
+    font-size: 18px;
     line-height: normal;
     margin: 0.25em 0;
 }
 
 .mdl-card h3 {
-    font-size: 1.1em;
-    font-weight: 500;
+    font-size: 14px;
+    font-weight: bold;
     line-height: normal;
     margin: 0.25em 0;
 }
@@ -133,7 +136,7 @@ a {
   stroke: none;
   fill: black;
   pointer-events: none;
-  font: 0.85em Roboto;
+  font: 0.75em Lato, sans-serif;
 }
 
 #vis .link {

@@ -20,11 +20,7 @@
         <p>Click on a node to open/collapse...</p>
     </div>
 </div>
-<div class="card mdl-card mdl-color--indigo-50 mdl-shadow--4dp">
-    <div class="mdl-card__supporting-text" style="height:2em">
-        <p>For a list of publications see the <a href="/pubs">Pubs section</a>.</p>
-    </div>
-</div>
+<a class="mdl-button mdl-js-button mdl-button--colored mdl-js-ripple-effect" href="/pubs" style="margin: auto">Publications</a>
 </div></section>
 <section class="mdl-layout__tab-panel" id="education"> <div class="page-content mdl-grid">
 <div class="mdl-cell mdl-cell--12-col mdl-cell--4-col-phone mdl-cell--8-col-tablet card mdl-card mdl-shadow--4dp">
@@ -81,7 +77,7 @@
     <div class="mdl-card__supporting-text">
     {{range .awards}}<h2 class="mdl-color-text--primary">{{.title}}</h2>
     <h3 class="mdl-color-text--gray">{{.date}}</h3>
-    <span class="mdl-color-text--gary">at {{.institution}}</span>
+    <span class="mdl-color-text--teal-500">at {{.institution}}</span>
     <p>{{.summary}}</p>
     <br>{{end}}
     </div>
