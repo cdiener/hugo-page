@@ -7,10 +7,10 @@ build:
 deploy:
     steps:
         - script:
-          name: Install glpk lib
+          name: Install cURL
           code: |
               apt-get update
-              apt-get install -y curl 
+              apt-get install -y curl python
         - narinari/gcs-website-deploy:
           bucket: cdiener.com
           project: $GOOGLE_PROJECT_ID
