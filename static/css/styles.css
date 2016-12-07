@@ -57,19 +57,19 @@ a {
     color: #fff;
 }
 
-.mdl-card h1 {
+.mdl-card .mdl-card__supporting-text h1 {
     font-size: 20px;
     line-height: normal;
     margin: 0.25em 0;
 }
 
-.mdl-card h2 {
+.mdl-card .mdl-card__supporting-text h2 {
     font-size: 18px;
     line-height: normal;
     margin: 0.25em 0;
 }
 
-.mdl-card h3 {
+.mdl-card .mdl-card__supporting-text h3 {
     font-size: 14px;
     font-weight: bold;
     line-height: normal;
