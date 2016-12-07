@@ -15,5 +15,6 @@ deploy:
                 $GCS_ACCESS_KEY_ID
                 $GCS_SECRET_ACCESS_KEY
                 EOF
+                gcloud config set pass_credentials_to_gsutil false
                 gsutil -m rsync -r -d public gs://cdiener.com
                 gsutil -m cp -r -z html,css,js,xml,txt,json,map,svg public/* gs://cdiener.com
