@@ -9,12 +9,14 @@ deploy:
     box: google/cloud-sdk
     steps:
         - script:
-            name: Sync with GCS
+            name: activate service account
             code: |
-                gsutil config -a <<EOF
-                $GCS_ACCESS_KEY_ID
-                $GCS_SECRET_ACCESS_KEY
-                EOF
-                gcloud config set pass_credentials_to_gsutil false
-                gsutil -m rsync -r -d public gs://cdiener.com
-                gsutil -m cp -r -z html,css,js,xml,txt,json,map,svg public/* gs://cdiener.com
+                echo $GCS_KEY_JSON >> secret.json
+                CLOUDSDK_PYTHON_SITEPACKAGES=1 gcloud auth activate-service-account $GCS_CLIENT_MAIL --key-file secret.json
+        - script:
+            name: upload to gs
+            code: |
+                # Sync
+                gsutil -m rsync -r -d public gs://$GCS_BUCKET
+                # Create gz files
+                gsutil -m cp -r -z html,css,js,xml,txt,json,map,svg public/* gs://$GCS_BUCKET
