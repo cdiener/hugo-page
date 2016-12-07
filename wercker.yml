@@ -1,19 +1,16 @@
-box: debian
+box: debian:testing
 
 build:
     steps:
         - arjen/hugo-build:
           version: "0.17"
+          disable_pygments: true
 deploy:
+    box: google/cloud-sdk
     steps:
-        - script:
-          name: Install cURL
-          code: |
-              apt-get update
-              apt-get install -y curl python
         - narinari/gcs-website-deploy:
           bucket: cdiener.com
           project: $GOOGLE_PROJECT_ID
-          access_key_id: $GCS_ACCESS_KEY_ID
-          secret_access_key: $GCS_SECRET_ACCESS_KEY
+          access_key: $GCS_ACCESS_KEY_ID
+          secret: $GCS_SECRET_ACCESS_KEY
           dir: public
