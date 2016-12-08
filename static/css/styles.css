@@ -36,7 +36,7 @@ a {
     text-align: justify;
 }
 
-.mdl-card__supporting-text p, li, span, div {
+.mdl-card__supporting-text p, li {
     font-size: 16px;
 }
 
