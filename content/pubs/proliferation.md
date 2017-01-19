@@ -22,15 +22,16 @@ tumor. Both can provide distinct information as summarized in the following slid
 ![cell lines vs. biopsies](/media/sample_types.png)
 
 As we can see biopsies may provide large amounts of genomic data, but sometimes
-lacl some phenotype descriptions which are important, for instance the
-proliferation rate that measures how agressive a tumor is in multiplying itself.
+lack some phenotype descriptions which are important, for instance the
+proliferation rate that measures how agressive a tumor multiplies.
 
 In this publication we combined two large cancer data sets, NCI-60 and TCGA.
 NCI-60 contains genomic data and proliferation rates for 60 cancer cell lines whereas
 TCGA contains genomic data for cancer biopsies for more than 11.000 patients.
 By training a a simple model on the NCI-60 data set we predicted proliferation
 rates for all of 11.000+ tumor samples in TCGA. We observed that proliferation
-rates may vary substantially even within the same cancer subtype.
+rates may vary substantially even within the same cancer subtype and are associated
+to patient survival and the tumor stage.
 
 Proliferation rates are also closely connected to the metabolic capacity of
 a tumor. Thus, we also used metabolic modeling integrating the predicted
@@ -40,7 +41,7 @@ way have been confirmed by previously published works. In particular, we identif
 the pentose phosphate pathway, retinol, and branched-chain amino acid metabolism
 being the most specific alterations.
 
-Even though this study has many limitations it shows that combining phenotypic and
+Even though this study has many limitations, it shows that combining phenotypic and
 genomic data sets using Machine Learning techniques may provide another level
 of information and allows for patient-specific predicions of the tumor's aggresiveness
 and the metabolic alterations that maintain it.
