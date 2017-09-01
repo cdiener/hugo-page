@@ -12,9 +12,9 @@
 	{{ .Content }}
 	</div>
 	<div class="mdl-card__actions mdl-card--border">
-	<a class="mdl-button mdl-button--primary mdl-js-button mdl-js-ripple-effect {{ if not .Params.github }}mdl-button--disabled{{end}}" href={{ if .Params.github }}"http://github.com/cdiener/{{.Params.github}}" target="_blank"{{else}}""{{end}} id="github">
+	<a class="mdl-button mdl-button--primary mdl-js-button mdl-js-ripple-effect {{ if not .Params.github }}mdl-button--disabled{{end}}" href={{ if .Params.github }} "{{.Params.github}}" target="_blank"{{else}}""{{end}} id="github">
     {{ if .Params.github }}<img src="/media/github.svg" height="80%">{{end}}Source code</a>
-	<a class="mdl-button mdl-button--primary mdl-js-button mdl-js-ripple-effect {{ if not .Params.figshare }}mdl-button--disabled{{end}}" href={{ if .Params.figshare }}"http://figshare.com/{{.Params.figshare}}" target="_blank"{{else}}""{{end}}>
+	<a class="mdl-button mdl-button--primary mdl-js-button mdl-js-ripple-effect {{ if not .Params.figshare }}mdl-button--disabled{{end}}" href={{ if .Params.figshare }} "{{.Params.figshare}}" target="_blank"{{else}}""{{end}}>
     {{ if .Params.figshare }}<img src="/media/figshare.svg" height="80%">{{end}}Data</a>
     </div>
 </div></div>

@@ -60,20 +60,23 @@ a {
 .mdl-card .mdl-card__supporting-text h1 {
     font-size: 20px;
     line-height: normal;
-    margin: 0.25em 0;
+    margin: 1em 0 0.5em 0;
+    color: #5C6BC0;
 }
 
 .mdl-card .mdl-card__supporting-text h2 {
     font-size: 18px;
     line-height: normal;
-    margin: 0.25em 0;
+    margin: 1em 0 0.5em 0;
+    color: #5C6BC0;
 }
 
 .mdl-card .mdl-card__supporting-text h3 {
     font-size: 14px;
     font-weight: bold;
     line-height: normal;
-    margin: 0.25em 0;
+    margin: 1em 0 0.5em 0;
+    color: #5C6BC0;
 }
 
 .mdl-card__actions {
@@ -172,4 +175,12 @@ table {
     width: calc(100% - 120px);
     padding: 0 0 0 60px;
 }
+}
+
+blockquote::before {
+    content: none;
+}
+
+blockquote::after {
+    content: none;
 }

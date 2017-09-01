@@ -3,9 +3,15 @@
 </div>
 
 <script src="https://storage.googleapis.com/code.getmdl.io/{{.Site.Params.mdlversion}}/material.min.js"></script>
+<script src="/js/prism.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.3/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.3/contrib/auto-render.min.js"></script>
 <script>
 var ts = document.getElementsByTagName("table");
 for(var i=0; i<ts.length; i++) ts[i].classList.add("mdl-data-table", "mdl-js-data-table");
+</script>
+<script>
+renderMathInElement(document.body);
 </script>
 </body>
 </html>
