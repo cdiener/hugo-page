@@ -12,5 +12,5 @@ Metabolism in human disease. This is done within the [Human Systems Biology Grou
 This year is my year of the microbiome. I am working with several data sets
 that deal with the microbiota in diabetes. We are currently combining classical
 association studies with predictions from large community models (50+ species,
-hundred thousands of biochemical reactions) to understand the the metabolic
+hundred thousands of biochemical reactions) to understand the metabolic
 consequences of a particular microbial composition.
