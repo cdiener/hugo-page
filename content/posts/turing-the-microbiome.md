@@ -34,17 +34,6 @@ First thing we will need is to load the the data and get the dicrete distributio
 
 ``` r
 library(data.table)
-```
-
-    ## data.table 1.10.4
-
-    ##   The fastest way to learn (by data.table authors): https://www.datacamp.com/courses/data-analysis-the-data-table-way
-
-    ##   Documentation: ?data.table, example(data.table) and browseVignettes("data.table")
-
-    ##   Release notes, videos and slides: http://r-datatable.com
-
-``` r
 counts <- fread("ERR260132_genes.csv")
 real <- counts[, expected_count]
 names(real) <- counts[, name]
@@ -237,5 +226,7 @@ Summary
 -------
 
 So in general we have seen that diminishing attenuation estimators give some advantage over classical proportion based methods if the sample size is low. This advantage arises particularly when your principal error source is underestimating the occurrence of new genes, species, etc. Most estimators seem to perform pretty well after the sample size approaches the number of categories. In practice we probably do not know that number. So, we are back to the problem of judging whether our sample size was sufficiently large for the particular question we want to ask. In my opinion, the really amazing part of the diminishing attenuation estimator is the probability estimate for the "new" event, not the estimates for the observed events. The probability estimate for new events from the diminishing attenuation estimator is an approximate upper bound of the probability to observe a new event when increasing the sample size by one read. For instance for the gene count data set this probability is 0.002 and for the species count data set it is 3.5e-7. This gives us a clear quantification of how sure we can be that we have sampled enough which I feel may be pretty useful.
+
+Also, if you are interested in a much more complete overview of what Good and Turing have done for Science I highly recommend the linked [lecture of Susan Holmes](https://mrc.stanford.edu/content/breaking-codes-and-finding-patterns-0).
 
 Last but not least, if you have another estimator you would like me to try with the presented data sets do not hesitate to contact me on [twitter](https://twitter.com/thaasophobia) or by [mail](mailto:mail%20(at)%20cdiener.com) and I will happily add analyses for those.
