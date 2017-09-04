@@ -9,13 +9,8 @@ of Genomic Medicine](http://inmegen.gob.mx) working on the Systems Biology of
 Metabolism in human disease. This is done within the [Human Systems Biology Group]
 (http://resendislab.inmegen.gob.mx) of Prof. Resendis-Antonio.
 
-Currently, we are interested in the metabolic alterations that occur during 
-cancer. Even though have some idea of the metabolic liabilities of cancer in 
-cell lines, that knowledge can usually not simply be transferred to cancer 
-patients. We are trying to overcome this limitation by applying methods from 
-machine learning and metabolic modeling to the the 
-[NCI-60](https://dtp.cancer.gov/discovery_development/nci-60/) cancer cell line 
-panel as well as the Cancer Genome Atlas 
-([TCGA](https://tcga-data.nci.nih.gov/tcga/)). This way we can study 
-proliferation and metabolic fluxes in a personalized manner for the patients 
-within the TCGA. 
+This year is my year of the microbiome. I am working with several data sets
+that deal with the microbiota in diabetes. We are currently combining classical
+association studies with predictions from large community models (50+ species,
+hundred thousands of biochemical reactions) to understand the the metabolic
+consequences of a particular microbial composition.
