@@ -11,10 +11,9 @@ Metabolism in human disease. This is done within the [Human Systems Biology Grou
 
 In the last year(s) I switched my focus to the microbiome in the human gut which means
 I basically study the genetic material from the microbial communities that live within us.
-I am working with several data sets that deal with the microbiota in diabetes and try
-to identify the major changes in the microbiome in the transition from a healthy person
-to a diseased one. and to understand how the microbiome interacts with the host
-metabolism. I use various methods ranging from statistics to mathematical
+I am working with several data sets that deal with the microbiota in diabetes and am trying
+to identify the major changes in the microbiome during the transition from a healthy individual
+to a diseased one. To that effect, I use various methods ranging from statistics to mathematical
 modeling in order to understand how the microbiome affects the host
 metabolism.
 
