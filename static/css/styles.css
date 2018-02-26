@@ -33,7 +33,6 @@ a {
 .card .mdl-card__supporting-text {
     padding: 1rem;
     width: auto;
-    text-align: justify;
 }
 
 .mdl-card__supporting-text p, li {
@@ -57,26 +56,45 @@ a {
     color: #fff;
 }
 
-.mdl-card .mdl-card__supporting-text h1 {
+.mdl-card .mdl-card__supporting-text.post h1 {
     font-size: 20px;
     line-height: normal;
     margin: 1em 0 0.5em 0;
     color: #5C6BC0;
 }
 
-.mdl-card .mdl-card__supporting-text h2 {
+.mdl-card .mdl-card__supporting-text.post h2 {
     font-size: 18px;
     line-height: normal;
     margin: 1em 0 0.5em 0;
     color: #5C6BC0;
 }
 
+.mdl-card .mdl-card__supporting-text.post h3 {
+    font-size: 14px;
+    font-weight: bold;
+    line-height: normal;
+    margin: 0 0 0.5em 0;
+    color: #5C6BC0;
+}
+
+mdl-card .mdl-card__supporting-text h1 {
+    font-size: 20px;
+    line-height: normal;
+    margin: 0 0 0.5em 0;
+}
+
+.mdl-card .mdl-card__supporting-text h2 {
+    font-size: 18px;
+    line-height: normal;
+    margin: 0 0 0.5em 0;
+}
+
 .mdl-card .mdl-card__supporting-text h3 {
     font-size: 14px;
     font-weight: bold;
     line-height: normal;
-    margin: 1em 0 0.5em 0;
-    color: #5C6BC0;
+    margin: 0 0 0.5em 0;
 }
 
 .mdl-card__actions {
@@ -183,4 +201,12 @@ blockquote::before {
 
 blockquote::after {
     content: none;
+}
+
+div.highlight pre {
+    padding: 1em;
+}
+
+code {
+    font: 1.2em Inconsolata, monospace;
 }

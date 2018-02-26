@@ -22,20 +22,28 @@ basics:
     url: ""
 work:
 - company: National Institute for Genomic Medicine
-  position: PostDoc
+  position: Investigator in Medical Sciences "B"
   website: http://inmegen.gob.mx
   begin: 2015
   end: now
-  summary: PostDoc in the laboratory of Human Systems Biology of Dr. Osbaldo
-    Resendis in the field of Cancer Metabolomics.
+  summary: Position in the laboratory of Human Systems Biology of Dr. Osbaldo
+    Resendis. In the first half of my position I studied metabolic alterations in
+    cancer using a variety of data sources such as metabolome, genome and
+    transcriptome data and combining those with mathematical modeling
+    (flux balance analysis). Later I switched my focus to the microbiome where I analyzed
+    16S rRNA and metagenomic data sets from various cohorts and modeled the underlying
+    microbial communities.
 - company: Universidad Nacional Autónoma de México
-  position: PostDoc
+  position: Postdoctoral Fellow
   website: http://unam.mx
   begin: 2012
   end: 2014
   summary: PostDoc in the laboratory of Integrative Research of Biological Systems
     of Dr. Gabriel Del Rio Guerra in the field of Synthetic Biology and Peptide
-    design.
+    design. During my position at the UNAM I used a combination of Machine Learning
+    and Optimization to design multi-functional cell-penetrating and antimicrobial
+    peptides and validated their function in *E. coli* and *S. cerevisiae* using
+    a variety of Molecular Biology methods.
 education:
 - institution: Max Planck Institute for Molecular Genetics
   area: Systems Biology
@@ -57,7 +65,7 @@ awards:
 - title: Poster prize winner PostDoc
   date: 05/2017
   institution: Copenhagen Bioscience Conference
-  summary: Awarded for best poster.
+  summary: Awarded for best research project in the PostDoc category.
 - title: Award of the American Society of Biochemistry and Molecular Biology
   date: 10/2011
   institution: Cellular Signaling Conference, Mérida México
@@ -82,6 +90,7 @@ skills:
   - C/C++
   - Python
   - R
+  - Go
 - name: Web technologies
   level: Master
   keywords:
@@ -95,6 +104,7 @@ skills:
   - Confocal/epifluorescence microscopy
   - Handling of microbial cell lines
   - PCR and transfection
+  - DNA gels
 languages:
 - language: English
   fluency: fluent
@@ -106,7 +116,7 @@ interests:
 - name:
   keywords:
   - Systems Biology
+  - Metagenomics and microbial population dynamics
   - Modeling of disease metabolism
-  - Microbial population dynamics
-  - Integrative research on "omics" data
-  - Statistics for Metagenomics and Big Data
+  - Statistics for "omics" data
+  - Data Science

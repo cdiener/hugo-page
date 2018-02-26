@@ -20,18 +20,26 @@
         <p>Click on a node to open/collapse...</p>
     </div>
 </div>
-<a class="mdl-button mdl-js-button mdl-button--colored mdl-js-ripple-effect" href="/pubs" style="margin: auto">Publications</a>
+
+<div class="mdl-cell mdl-cell--12-col mdl-cell--4-col-phone mdl-cell--8-col-tablet card cv mdl-card mdl-shadow--4dp">
+    <div class="mdl-card__supporting-text">
+    <h2 class="mdl-color-text--primary">Want to know more?</h2>
+    <p>There is a <a href="/pubs">dedicated section for my publications</a>. You can
+       also just shoot me a <a href="mailto:mail(a)cdiener.com">mail</a> or
+       talk to me on <a href="//gitter.im">gitter</a> (user is cdiener).</p>
+</div></div>
+
 </div></section>
 <section class="mdl-layout__tab-panel" id="education"> <div class="page-content mdl-grid">
 <div class="mdl-cell mdl-cell--12-col mdl-cell--4-col-phone mdl-cell--8-col-tablet card mdl-card mdl-shadow--4dp">
     <div class="mdl-card__title mdl-color--indigo-900" style="height:auto">
     <div class="mdl-card__title-text">Education</div>
 </div></div>
-{{ range .education }}<div class="mdl-cell mdl-cell--12-col mdl-cell--4-col-phone mdl-cell--8-col-tablet card mdl-card mdl-shadow--4dp">
+{{ range .education }}<div class="mdl-cell mdl-cell--12-col mdl-cell--4-col-phone mdl-cell--8-col-tablet card cv mdl-card mdl-shadow--4dp">
     <div class="mdl-card__supporting-text">
     <h2 class="mdl-color-text--primary">{{.institution}}</h2>
     <h3 class="mdl-color-text--gray">{{.begin}} - {{.end}}</h3>
-    <h3>{{.title}} in {{.area}}</h3>
+    <h3 class="mdl-color-text--indigo-A700">{{.title}} in {{.area}}</h3>
 </div></div>{{end}}
 </div></section>
 <section class="mdl-layout__tab-panel" id="career"> <div class="page-content mdl-grid">
@@ -40,10 +48,10 @@
     <div class="mdl-card__title-text">Career</div>
 </div></div>
 {{ range .work }}<div class="mdl-cell mdl-cell--12-col mdl-cell--4-col-phone mdl-cell--8-col-tablet card mdl-card mdl-shadow--4dp">
-    <div class="mdl-card__supporting-text">
+    <div class="cv mdl-card__supporting-text">
     <h2 class="mdl-color-text--primary">{{.company}}</h2>
     <h3 class="mdl-color-text--gray">{{.begin}} - {{.end}}</h3>
-    <h3>{{.position}}</h3>
+    <h3 class="mdl-color-text--indigo-A700">{{.position}}</h3>
     <p>{{.summary}}</p>
     {{if .highlights}}
     <h2>Highlights</h2>

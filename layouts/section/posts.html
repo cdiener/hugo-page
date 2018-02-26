@@ -1,14 +1,16 @@
 {{ partial "header.html" . }}
 <div class="mdl-cell mdl-cell--12-col mdl-cell--4-col-phone mdl-cell--8-col-tablet">
-{{if eq .URL "/posts/"}}<h4>Posts</h4>{{end}}
-{{if eq .URL "/pubs/"}}<h4>Publications</h4>{{end}}</div>
+<div class="card mdl-card mdl-shadow--4dp">
+<div class="mdl-card__title mdl-color--indigo-900" style="height:auto">
+<div class="mdl-card__title-text">Posts</div>
+</div></div></div>
 {{ range $i, $e := .Data.Pages }}
 <div class="mdl-cell mdl-cell--4-col">
 <div class="card mdl-card mdl-shadow--4dp">
 <div class="mdl-card__title image-card mdl-color--primary" {{ if $e.Params.hero }}style="background: url('/media/{{$e.Params.hero}}') center / cover"{{end}}>
 	<h1 class="mdl-card__title-text">{{ $e.Title }}</h1>
 </div>
-	<div class="mdl-card__supporting-text">
+	<div class="mdl-card__supporting-text post">
     <p class="spaced">
     <span class="mdl-typography--caption-color-contrast">{{$e.Date.Format "02-01-2006"}}</span>
     <span class="mdl-typography--caption-color-contrast right">{{$e.ReadingTime}}m read</span></p>

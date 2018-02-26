@@ -24,7 +24,7 @@
 <div class="mdl-card__title image-card" {{ if $e.Params.hero }}style="background: url('/media/{{$e.Params.hero}}') center / cover"{{end}}>
 	<h1 class="mdl-card__title-text">My latest publication</h1>
 	</div>
-	<div class="mdl-card__supporting-text">
+	<div class="mdl-card__supporting-text post">
     <h2>{{ $e.Title }}</h2>
 	<p>{{ $e.Summary }}</p>
 	</div>
@@ -42,7 +42,7 @@
 <div class="mdl-card__title image-card" {{ if .Params.hero }}style="background: url('/media/{{.Params.hero}}') center / cover"{{end}}>
 	<h1 class="mdl-card__title-text">Latest post</h1>
 	</div>
-	<div class="mdl-card__supporting-text">
+	<div class="mdl-card__supporting-text post">
     <h2>{{ .Title }}</h2>
 	<p>{{ .Summary }}</p>
 	</div>

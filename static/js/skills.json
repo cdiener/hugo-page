@@ -21,15 +21,15 @@
 		{"name":"Systems Biology",
 		 "group": 6,
 		 "children": [
-			{"name":"Omics analysis", "group":7},
+			{"name":"Omics analyses", "group":7},
 			{"name":"ODEs/PDEs", "group": 7},
-			{"name":"Master equations", "group": 7},
+			{"name":"Stochastic Processes", "group": 7},
 			{"name":"FBA", "group": 7}
 		]},
         {"name":"Data Science",
 		 "group": 8,
 		 "children": [
-            {"name":"Data scraping", "group": 9},
+            {"name":"Data processing", "group": 9},
 			{"name":"Machine Learning", "group": 9},
 			{"name":"Hypothesis testing", "group": 9},
 			{"name":"Frequentist/Bayesian", "group": 9}
