@@ -3,9 +3,7 @@ box: debian:sid
 build:
     steps:
         - install-packages:
-          packages:
-            - hugo
-            - git
+          packages: hugo git
         - script:
           name: initialize git submodules
           code: git submodule update --init --recursive
