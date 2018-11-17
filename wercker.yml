@@ -6,10 +6,10 @@ build:
           packages: "hugo"
         - script:
           name: "hugo info"
-          command: hugo version
+          code: hugo version
         - script:
           name: "Run hugo"
-          command: |
+          code: |
             hugo --source=${WERCKER_SOURCE_DIR} -d ${WERCKER_SOURCE_DIR}/public && \
             ls ${WERCKER_SOURCE_DIR}
 deploy:
