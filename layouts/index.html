@@ -1,54 +1,57 @@
 {{ partial "header.html" . }}
+		<div class="hero-body">
+		  <div class="container">
+			<h1 class="title">
+			  Christian Diener, PhD
+			</h1>
+			<h2 class="subtitle">
+			  Scientist and Tech-Addict
+			</h2>
+		  </div>
+	  </section>
+<div class="container" style="max-width: 960px">
 {{ range where .Data.Pages "Section" "front" }}
-<div class="mdl-cell mdl-cell--2-offset-desktop mdl-cell--8-col mdl-cell--4-col-phone mdl-cell--8-col-tablet">
-<div class="card mdl-card mdl-shadow--4dp">
-<div class="mdl-card__title image-card">
-	<h1 class="mdl-card__title-text">{{ .Title }}</h1>
+<section class="section animated fadeIn">
+	<h1 class="title is-3 has-text-info has-text-weight-light">{{ .Title }}</h1>
+
+	<div class="content is-medium">
+		{{ .Content }}
 	</div>
-	<div class="mdl-card__supporting-text">
-	{{ .Content }}
-	</div>
-    {{ if eq .Weight 1 }}<div class="mdl-card__menu">
-	<a class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" href="http://orcid.org/0000-0002-7476-0868 " target="_blank">
-    <img src="/media/orcid.png" height="65%"/></a>
-    <a class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" href="http://github.com/cdiener" target="_blank">
-    <img src="/media/github_white.svg" height="80%"/></a>
-    <a class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" href="http://twitter.com/@thaasophobia" target="_blank">
-    <img src="/media/twitter_white.svg" height="80%"/></a>
-    </div>{{end}}
-</div></div>
-{{end}}
+</section>
+{{end}}</div>
+<section class="section">
+<div class="container" style="max-width: 960px">
 {{ range $i, $e := first 1 (where .Data.Pages "Section" "pubs") }}
-<div class="mdl-cell mdl-cell--2-offset-desktop mdl-cell--8-col mdl-cell--4-col-phone mdl-cell--8-col-tablet">
-<div class="card mdl-card mdl-shadow--4dp">
-<div class="mdl-card__title image-card" {{ if $e.Params.hero }}style="background: url('/media/{{$e.Params.hero}}') center / cover"{{end}}>
-	<h1 class="mdl-card__title-text">My latest publication</h1>
+<div class="card has-shadow block">
+<header class="card-header is-high" {{ if $e.Params.hero }}style="background: url('/media/{{$e.Params.hero}}') center / cover"{{end}}>
+</header>
+<div class="card-content">
+	<h1 class="subtitle is-5 has-text-weight-light">Latest publication</h1>
+	<h1 class="title is-5 has-text-info has-text-weight-normal">{{ .Title }}</h1>
+	<div class="content">
+		{{ $e.Summary }}
 	</div>
-	<div class="mdl-card__supporting-text post">
-    <h2>{{ $e.Title }}</h2>
-	<p>{{ $e.Summary }}</p>
+<div class="content">
+    <a class="button is-info is-outlined"
+        href="{{.RelPermalink}}">Read more...</a>&nbsp;
+	<a class="button is-info is-outlined" href="http://dx.doi.org/{{$e.Params.doi}}" target="_blank">
+		<span class="icon"><i class="fas fa-link"></i></span><span>DOI</span></a>
 	</div>
-	<div class="mdl-card__actions mdl-card--border">
-    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect"
-        href="{{.RelPermalink}}">Read more...</a>
-	<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect"
-        href="http://dx.doi.org/{{$e.Params.doi}}" target="_blank">DOI</a>
-    </div>
 </div></div>
 {{end}}
+<br>
 {{ range first 1 (where .Data.Pages "Section" "posts") }}
-<div class="mdl-cell mdl-cell--2-offset-desktop mdl-cell--8-col mdl-cell--4-col-phone mdl-cell--8-col-tablet">
-<div class="card mdl-card mdl-shadow--4dp">
-<div class="mdl-card__title image-card" {{ if .Params.hero }}style="background: url('/media/{{.Params.hero}}') center / cover"{{end}}>
-	<h1 class="mdl-card__title-text">Latest post</h1>
-	</div>
-	<div class="mdl-card__supporting-text post">
-    <h2>{{ .Title }}</h2>
-	<p>{{ .Summary }}</p>
-	</div>
-	<div class="mdl-card__actions mdl-card--border">
-	<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="{{.RelPermalink}}">Read more...</a>
-	</div>
-</div></div>
+<div class="card has-shadow">
+<header class="card-header is-high" {{ if .Params.hero }}style="background: url('/media/{{.Params.hero}}') center / cover; min-height: 7rem"{{end}}>
+</header>
+<div class="card-content">
+	  <h1 class="subtitle is-5 has-text-weight-light">Latest post</h1>
+    <h1 class="title is-5 has-text-info has-text-weight-normal">{{ .Title }}</h1>
+	<p class="content">{{ .Summary }}</p>
+<div class="content">
+	<a class="button is-info is-outlined" href="{{.RelPermalink}}">Read more...</a>
+</div></div></div>
 {{end}}
+</div>
+</section>
 {{ partial "info_footer.html" . }}

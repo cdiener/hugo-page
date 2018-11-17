@@ -1,106 +1,177 @@
-{{ partial "cv_header.html" . }}
-<section class="mdl-layout__tab-panel is-active" id="basics">
-<div class="page-content mdl-grid">
-<section class="mdl-cell mdl-cell--12-col mdl-cell--4-col-phone mdl-cell--8-col-tablet">
-<div class="basic-info">
-{{ with .Site.Data.cv }}<img class="face" src="/media/{{.basics.picture}}" />
-<div class="address">
-    <h1><span class="mdl-color-text--indigo-200">{{.basics.first}}</span>
-        <span class="mdl-color-text--indigo-900">{{.basics.last}}</span></h1>
-    <p>{{.basics.location.address}}<br/>
-       {{.basics.location.city}}, {{.basics.location.postalcode}}<br/>
-       {{.basics.location.country}}</p>
-</div></div>
-</section>
-<div class="card mdl-card mdl-shadow--4dp" style="margin: 2em 0;">
-<div class="mdl-card__title mdl-color--primary">
-    <h1 class="mdl-card__title-text">Skills</h1></div>
-    <div class="mdl-card__supporting-text">
-        <div id="vis"></div>
-        <p>Click on a node to open/collapse...</p>
+{{ partial "header.html" . }}
+<div class="hero-body">
+	<div class="container">
+	<h1 class="title">
+		CV
+	</h1>
+	<h2 class="subtitle">
+		Who am I and what did I do before.
+	</h2>
     </div>
 </div>
-
-<div class="mdl-cell mdl-cell--12-col mdl-cell--4-col-phone mdl-cell--8-col-tablet card cv mdl-card mdl-shadow--4dp">
-    <div class="mdl-card__supporting-text">
-    <h2 class="mdl-color-text--primary">Want to know more?</h2>
-    <p>There is a <a href="/pubs">dedicated section for my publications</a>. You can
-       also just shoot me a <a href="mailto:mail(a)cdiener.com">mail</a> or
-       talk to me on <a href="//gitter.im">gitter</a> (user is cdiener).</p>
-</div></div>
-
-</div></section>
-<section class="mdl-layout__tab-panel" id="education"> <div class="page-content mdl-grid">
-<div class="mdl-cell mdl-cell--12-col mdl-cell--4-col-phone mdl-cell--8-col-tablet card mdl-card mdl-shadow--4dp">
-    <div class="mdl-card__title mdl-color--indigo-900" style="height:auto">
-    <div class="mdl-card__title-text">Education</div>
-</div></div>
-{{ range .education }}<div class="mdl-cell mdl-cell--12-col mdl-cell--4-col-phone mdl-cell--8-col-tablet card cv mdl-card mdl-shadow--4dp">
-    <div class="mdl-card__supporting-text">
-    <h2 class="mdl-color-text--primary">{{.institution}}</h2>
-    <h3 class="mdl-color-text--gray">{{.begin}} - {{.end}}</h3>
-    <h3 class="mdl-color-text--indigo-A700">{{.title}} in {{.area}}</h3>
-</div></div>{{end}}
-</div></section>
-<section class="mdl-layout__tab-panel" id="career"> <div class="page-content mdl-grid">
-<div class="mdl-cell mdl-cell--12-col mdl-cell--4-col-phone mdl-cell--8-col-tablet card mdl-card mdl-shadow--4dp">
-    <div class="mdl-card__title mdl-color--indigo-900" style="height:auto">
-    <div class="mdl-card__title-text">Career</div>
-</div></div>
-{{ range .work }}<div class="mdl-cell mdl-cell--12-col mdl-cell--4-col-phone mdl-cell--8-col-tablet card mdl-card mdl-shadow--4dp">
-    <div class="cv mdl-card__supporting-text">
-    <h2 class="mdl-color-text--primary">{{.company}}</h2>
-    <h3 class="mdl-color-text--gray">{{.begin}} - {{.end}}</h3>
-    <h3 class="mdl-color-text--indigo-A700">{{.position}}</h3>
-    <p>{{.summary}}</p>
-    {{if .highlights}}
-    <h2>Highlights</h2>
-    <ul>{{ range .highlights }}<li>{{.}}</li>{{end}}</ul>{{end}}
-</div>
-{{ if .website }}<div class="mdl-card__actions mdl-card--border">
-<a class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" href="{{.website}}" target="_blank">
-<i class="material-icons">home</i></a>
-</div>{{end}}
-</div>{{end}}
-</div></section>
-<section class="mdl-layout__tab-panel" id="other">
-<div class="page-content mdl-grid">
-{{if .interests}}
-<div class="mdl-cell mdl-cell--12-col mdl-cell--4-col-phone mdl-cell--8-col-tablet card mdl-card mdl-shadow--4dp">
-    <div class="mdl-card__title mdl-color--primary">
-    <h1 class="mdl-card__title-text">Interests</h1></div>
-    <div class="mdl-card__supporting-text" style="text-align: center">
-    {{range .interests}}{{if .name}}<h2 class="mdl-color-text--primary">{{.name}}</h2>{{end}}
-    {{range .keywords}}
-    <span class="mdl-chip mdl-chip--contact" style="margin: 5px">
-    <span class="mdl-chip__contact mdl-color--accent mdl-color-text--white"><i class="material-icons" style="padding: 4px">star rate</i></span>
-    <span class="mdl-chip__text">{{.}}</span>
-    </span>
-    {{end}}{{end}}
-    </div>
-</div>{{end}}
-<div class="mdl-cell mdl-cell--12-col mdl-cell--4-col-phone mdl-cell--8-col-tablet card mdl-card mdl-shadow--4dp">
-    <div class="mdl-card__title mdl-color--primary">
-    <h1 class="mdl-card__title-text">Awards &amp; Scholarships</h1></div>
-    <div class="mdl-card__supporting-text">
-    {{range .awards}}<h2 class="mdl-color-text--primary">{{.title}}</h2>
-    <h3 class="mdl-color-text--gray">{{.date}}</h3>
-    <span class="mdl-color-text--teal-500">at {{.institution}}</span>
-    <p>{{.summary}}</p>
-    <br>{{end}}
-    </div>
-</div>
-{{if .languages}}<div class="mdl-cell mdl-cell--12-col mdl-cell--4-col-phone mdl-cell--8-col-tablet card mdl-card mdl-shadow--4dp">
-    <div class="mdl-card__title mdl-color--primary">
-    <h1 class="mdl-card__title-text">Languages</h1></div>
-    <div class="mdl-card__supporting-text">
+<div class="hero-footer">
+<nav class="tabs is-boxed is-fullwidth is-medium">
+    <div class="container">
     <ul>
-    {{range .languages}}
-    <li><span class="mdl-color-text--primary" style="font-weight: 500">{{.language}}</span> - {{.fluency}}</li>
-    {{end}}</ul>
+        <li class="tab is-active" onclick="open_tab(event, 'basics')">
+            <a>Basics</a>
+        </li>
+        <li class="tab" onclick="open_tab(event, 'education')">
+            <a>Education</a>
+        </li>
+        <li class="tab" onclick="open_tab(event, 'career')">
+            <a onclick="open_tab(event, 'career')">Career</a>
+        </li>
+        <li class="tab" onclick="open_tab(event, 'other')">
+            <a>Other</a>
+        </li>
+    </ul>
+    </div>
+</nav>
+</div>
+</section>
+
+<style>
+section.section.container {max-width: 960px}
+
+#vis .node {
+  stroke: #fff;
+  stroke-width: 2px;
+}
+
+#vis .node.fixed {
+  stroke: #000;
+}
+
+#vis .node text {
+  stroke: none;
+  fill: black;
+  pointer-events: none;
+  font: 0.75em Lato, sans-serif;
+}
+
+#vis .link {
+  fill: none;
+  stroke: #999;
+  stroke-opacity: .4;
+  stroke-width: 2;
+}
+
+#vis {
+	margin: 0 auto;
+	padding: 0;
+	max-width: 700px;
+}
+</style>
+
+<article class="is-tab animated fadeIn" id="basics">
+<section class="section container">
+{{ with .Site.Data.cv }}
+<div class="columns is-centered"><div class="column is-8-tablet is-12-mobile">
+<div class="media" style="flex-wrap: wrap; justify-content: space-around">
+    <figure class="media-left" style="width: 160px">
+        <p class="image is-square">
+            <img src="/media/{{.basics.picture}}">
+        </p>
+    </figure>
+    <div class="media-content">
+        <div class="content is-medium">
+            <h1 class="title is-3"><span class="has-text-info">{{.basics.first}}</span>
+            <span>{{.basics.last}}</h1>
+            <p>{{.basics.location.address}}<br/>
+                {{.basics.location.city}}, {{.basics.location.postalcode}}<br/>
+                {{.basics.location.country}}</p>
+        </div>
+    </div>
+</div></div></div></section>
+
+<section class="section container">
+<div class="box is-centered">
+    <h1 class="title is-3 has-text-primary is-spaced">Skills</h1>
+    <div id="vis"></div>
+        <p>Click on a node to open/collapse...</p>
+</div></section>
+
+<section class="section container">
+<div class="box">
+    <h2 class="title is-4 has-text-primary">Want to know more?</h2>
+    <p>There is a <a href="/pubs">dedicated section for my publications</a>. You can
+       also just shoot me a <a href="{{.basics.email}}">mail</a>.</p>
+</div></section>
+</article>
+
+<article class="is-tab animated fadeIn" id="education" style="display: none">
+<section class="section container">
+<span class="box has-background-primary"><h1 class="title is-2 has-text-white has-text-weight-light">Education</h1></span>
+{{ range .education }}<div class="box">
+    <h1 class="title is-5 has-text-info">{{.institution}}</h1>
+    <h3 class="subtitle is-6 is-grey">{{.begin}} - {{.end}}</h3>
+    <h2 class="subtitle is-5 has-text-link">{{.title}} in {{.area}}</h2>
+    </div>
+{{end}}
+</section></article>
+
+<article class="is-tab animated fadeIn" id="career" style="display: none">
+<section class="section container">
+<span class="box has-background-primary"><h1 class="title is-2 has-text-white has-text-weight-light">Career</h1></span>
+{{ range .work }}
+<div class="box">
+    <h1 class="title is-5 has-text-info">{{.company}}</h1>
+    <h3 class="subtitle is-6 is-grey">{{.begin}} - {{.end}}</h3>
+    <h2 class="subtitle is-5 has-text-link">{{.position}}</h2>
+    <p class="content">{{.summary}}</p>
+    {{if .highlights}}
+    <h2 class="title is-6">Highlights</h2>
+    <ul>{{ range .highlights }}<li>{{.}}</li>{{end}}</ul>{{end}}
+    {{ if .website }}<div class="content">
+    <a class="button is-outlined is-primary" href="{{.website}}" target="_blank">
+        <span class="icon"><i class="fas fa-home"></i></span><span>Website</span>
+    </a></div>{{ end }}
+    </div>{{ end }}
+</section></article>
+
+<article class="is-tab animated fadeIn" id="other" style="display: none">
+<section class="section container">
+{{if .interests}}
+<div class="card has-shadow">
+    <div class="card-header has-background-primary">
+    <h1 class="card-header-title title is-2 has-text-white has-text-weight-light">Interests</h1>
+    </div>
+    <div class="card-content">
+        <div class="content is-medium">
+        {{range .interests}}{{if .name}}<h2 class="title is-6 has-text-grey">{{.name}}</h2>{{end}}
+        <ul>{{range .keywords}}<li>{{ . }}</li>{{end}}</ul>
+        {{end}}
+        </div>
     </div>
 </div>{{end}}
-</div></section>{{end}}
+</section>
+
+<section class="section container">
+        <span class="box has-background-primary"><h1 class="title is-2 has-text-white has-text-weight-light">Awards &amp; Scholarships</h1></span>
+{{range .awards}}<div class="box">
+    <h1 class="title is-6 has-text-info">{{.title}}</h1>
+    <h3 class="subtitle is-6 has-text-grey" style="margin-bottom: 0">{{.date}}</h3>
+    <h2 class="subtitle is-6">at {{.institution}}</h2>
+    <p class="content">{{.summary}}</p>
+</div>
+{{end}}
+</section>
+
+{{if .languages}}<section class="section container">
+<div class="card has-shadow">
+    <div class="card-header has-background-primary">
+    <h1 class="card-header-title title is-2 has-text-white has-text-weight-light">Languages</h1>
+    </div>
+    <div class="card-content">
+        <div class="content is-medium">
+        <ul>{{range .languages}}<li>
+            <span class="has-text-info">{{ .language }}</span>: {{.fluency}}
+        </li>{{end}}</ul></div>
+    </div>
+</div>
+</section>{{ end }}
+{{end}}
 <script src="/js/d3.min.js" charset="utf-8"></script>
 <script src="/js/tree.min.js"></script>
-{{ partial "cv_footer.html" . }}
+{{ partial "footer.html" . }}

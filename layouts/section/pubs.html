@@ -1,24 +1,37 @@
 {{ partial "header.html" . }}
-<div class="mdl-cell mdl-cell--12-col mdl-cell--4-col-phone mdl-cell--8-col-tablet">
-		<div class="card mdl-card mdl-shadow--4dp">
-		<div class="mdl-card__title mdl-color--indigo-900" style="height:auto">
-		<div class="mdl-card__title-text">Publications</div>
-</div></div></div>
-{{ range $i, $e := .Data.Pages }}
-<div class="mdl-cell mdl-cell--4-col">
-<div class="card mdl-card mdl-shadow--4dp">
-<div class="mdl-card__title image-card mdl-color--primary" {{ if $e.Params.hero }}style="background: url('/media/{{$e.Params.hero}}') center / cover"{{end}}>
-	<h1 class="mdl-card__title-text">{{ $e.Title }}</h1>
-</div>
-	<div class="mdl-card__supporting-text">
-    <p class="spaced">
-    <span class="mdl-typography--caption-color-contrast">{{$e.Date.Format "02-01-2006"}}</span>
-    <span class="mdl-typography--caption-color-contrast right">{{$e.ReadingTime}}m read</span></p>
-	<p>{{ $e.Summary }}</p>
+<div class="hero-body">
+	<div class="container">
+	<h1 class="title">
+		Publications
+	</h1>
+	<h2 class="subtitle">
+		My publications summarized. What did I do and why.
+	</h2>
 	</div>
-	<div class="mdl-card__actions mdl-card--border">
-	<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect"
-        href="{{.RelPermalink}}">Read more...</a>
+</section>
+<section class="section">
+<div class="container">
+<div class="columns is-tablet is-multiline">
+{{ range $i, $e := .Data.Pages }}
+<div class="column is-4-widescreen is-6-tablet">
+<div class="card has-shadow animated zoomIn fast">
+<header class="card-header is-high" style="background: url('/media/{{$e.Params.hero | default "default.jpg"}}') center / cover">
+</header>
+<div class="card-content">
+	<h1 class="title is-5 has-text-info has-text-weight-normal">{{ $e.Title }}</h1>
+    <p class="level subtitle is-6 has-text-grey is-mobile">
+    <span class="level-start"><span class="icon"><i class="far fa-calendar"></i></span>{{$e.Date.Format "2006-01-02"}}</span>
+    <span class="level-end"><span class="icon"><i class="far fa-clock"></i></span>{{$e.ReadingTime}}m read</span></p>
+	<p class="content">{{ $e.Summary }}</p>
+
+	<div class="content buttons">
+		<a class="button is-primary is-outlined" href="{{.RelPermalink}}">Read more...</a>
+		<a class="button is-primary is-outlined" href="http://dx.doi.org/{{$e.Params.doi}}" target="_blank">
+			<span class="icon"><i class="fas fa-link"></i></span><span>Fulltext</span>
+		</a>
+	</div>
 </div></div></div>
 {{end}}
+</div></div></section>
 {{ partial "footer.html" . }}
+

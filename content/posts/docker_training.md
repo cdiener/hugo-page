@@ -1,5 +1,5 @@
 +++
-categories = ["science", "technology", "docker"]
+keywords = ["teaching", "technology", "docker"]
 date = "2015-11-27T10:46:38-06:00"
 figshare = ""
 github = "https://github.com/cdiener/docker_mini_training"

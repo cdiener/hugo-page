@@ -1,8 +1,39 @@
-	</div>
-	</main>
-</div>
 
-<script src="https://storage.googleapis.com/code.getmdl.io/{{.Site.Params.mdlversion}}/material.min.js"></script>
+<script>
+function open_tab(evt, tabName) {
+  var i, tabs, tablinks;
+  tabs = document.getElementsByClassName("is-tab");
+  for (i = 0; i < tabs.length; i++) {
+      tabs[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tab");
+  for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].classList.remove("is-active");
+  }
+  document.getElementById(tabName).style.display = "block";
+  evt.currentTarget.classList.add("is-active");
+}
 
+document.addEventListener('DOMContentLoaded', () => {
+const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+if ($navbarBurgers.length > 0) {
+  // Add a click event on each of them
+  $navbarBurgers.forEach( el => {
+    el.addEventListener('click', () => {
+      // Get the target from the "data-target" attribute
+      const target = el.dataset.target;
+      const $target = document.getElementById(target);
+      // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+      el.classList.toggle('is-active');
+      $target.classList.toggle('is-active');
+    });
+  });
+}
+});
+</script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
 </body>
 </html>
