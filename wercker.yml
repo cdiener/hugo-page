@@ -1,10 +1,9 @@
-box: debian
+box: debian:sid
 
 build:
     steps:
-        - arjen/hugo-build:
-          version: "0.50"
-          disable_pygments: true
+        - install_packges:
+          packages: "hugo"
 deploy:
     box: google/cloud-sdk
     steps:
