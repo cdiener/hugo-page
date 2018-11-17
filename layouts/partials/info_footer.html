@@ -1,11 +1,36 @@
-    </div>
-    <footer class="mdl-mini-footer">
-    <a href="mailto:mail(a)cdiener.com">mail(a)cdiener.com</a>
-    <div class="mdl-layout-spacer"></div>
-    <span>built with <a href="http://gohugo.io">Hugo</a></span>
-    </footer>
-	</main>
-</div>
-<script src="https://storage.googleapis.com/code.getmdl.io/{{.Site.Params.mdlversion}}/material.min.js"></script>
+
+<footer class="footer is-dark">
+<div class="content">
+<div class="level is-mobile">
+    <a class="level-item" href="mailto:mail(a)cdiener.com">mail(a)cdiener.com</a>
+    <span class="level-item">built with&nbsp;<a href="http://gohugo.io">Hugo</a></span>
+</div></div>
+</footer>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+
+// Get all "navbar-burger" elements
+const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+// Check if there are any navbar burgers
+if ($navbarBurgers.length > 0) {
+
+  // Add a click event on each of them
+  $navbarBurgers.forEach( el => {
+    el.addEventListener('click', () => {
+
+      // Get the target from the "data-target" attribute
+      const target = el.dataset.target;
+      const $target = document.getElementById(target);
+
+      // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+      el.classList.toggle('is-active');
+      $target.classList.toggle('is-active');
+
+    });
+  });
+}
+});
+</script>
 </body>
 </html>

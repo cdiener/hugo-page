@@ -1,5 +1,5 @@
 +++
-categories = ["teaching", "opinion"]
+keywords = ["teaching", "opinion"]
 date = "2016-06-01T21:58:51-05:00"
 figshare = ""
 github = ""
@@ -85,7 +85,7 @@ but when expertly done, can leave a much more lasting impression than a lecture
 using all types of tech gimmicks. For an example see the following lecture from
 Richard Feynman...
 
-{{< youtube EYPapE-3FRw >}}    
+{{< youtube EYPapE-3FRw >}}
 
 <br>
 To be honest, you will usually only need plan B (offline teaching with some
@@ -95,7 +95,3 @@ gimmicks) but I still recommend to have at least some strategy for a plan C
 In the end, the time spent in preparing plan B and C will never be "lost" since
 the work you invest here will also improve your plan A lecture. So go on with
 your happy teaching. I am sure it will be awesome!
-
-```
-
-```

@@ -1,22 +1,37 @@
-{{ partial "header_no_menu.html" . }}
+{{ partial "header.html" . }}
+<div class="hero-body">
+		<div class="container animated fadeIn">
+		  <h1 class="title is-2 has-text-weight-light is-spaced">
+			{{ .Title }}
+		  </h1>
+		  <h2 class="subtitle">
+			<span class="icon"><i class="far fa-calendar"></i></span>{{.Date.Format "January 1, 2006"}}
+		  </h2>
+		  <div class="tags">
+		  {{ range .Keywords }}
+		  <span class="tag is-white">{{ . }}</span>
+		  {{ end }}
+		  </div>
+		</div></div>
+	</section>
+<section class="section">
 
-<a class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect back" href="/{{.Section}}" id="back">
-<i class="material-icons">arrow_back</i></a>
-<span class="mdl-tooltip mdl-tooltip--right" for="back">Return to overview...</span>
-<div class="mdl-cell mdl-cell--12-col mdl-cell--4-col-phone mdl-cell--8-col-tablet">
-<div class="card mdl-card mdl-shadow--4dp">
-<div class="mdl-card__title mdl-color--primary" {{ if .Params.hero }}style="background: url('/media/{{.Params.hero}}') center / cover"{{end}}>
-	<h1 class="mdl-card__title-text">{{ .Title }}</h1>
-	</div>
-	<div class="mdl-card__supporting-text post">
+<article class="container animated fadeIn slow" style="max-width: 960px">
+<div class="content">
 	{{ .Content }}
-	</div>
-	<div class="mdl-card__actions mdl-card--border">
-	<a class="mdl-button mdl-button--primary mdl-js-button mdl-js-ripple-effect {{ if not .Params.github }}mdl-button--disabled{{end}}" href={{ if .Params.github }} "{{.Params.github}}" target="_blank"{{else}}""{{end}} id="github">
-    {{ if .Params.github }}<img src="/media/github.svg" height="80%">{{end}}Source code</a>
-	<a class="mdl-button mdl-button--primary mdl-js-button mdl-js-ripple-effect {{ if not .Params.figshare }}mdl-button--disabled{{end}}" href={{ if .Params.figshare }} "{{.Params.figshare}}" target="_blank"{{else}}""{{end}}>
-    {{ if .Params.figshare }}<img src="/media/figshare.svg" height="80%">{{end}}Data</a>
-    </div>
-</div></div>
-
-{{ partial "post_footer.html" . }}
+</div>
+<div class="buttons">
+{{ if .Params.github }}
+<a class="button is-info is-outlined" href="{{ .Params.github }}" target="_blank">
+	<span class="icon"><i class="fab fa-github"></i></span><span>Github</span>
+</a>
+{{ end }}
+{{ if .Params.figshare }}
+<a class="button is-info is-outlined" href="{{ .Params.figshare }}" target="_blank">
+	<span class="icon"><img src="/media/figshare.svg"></span><span>Figshare</span>
+</a>
+{{ end }}
+</div>
+</article>
+</section>
+{{ partial "footer.html" . }}

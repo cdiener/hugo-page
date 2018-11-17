@@ -8,39 +8,80 @@
 	{{ .Hugo.Generator }}
 	<title>{{ .Site.Title }}</title>
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,500,700" type="text/css">
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/{{ .Site.Params.mdlversion }}/material.{{.Site.Params.mdltheme}}.min.css">
-	<link rel="stylesheet" href="/css/styles.css">
-    <link rel="icon" type="image/png" href="/media/favicon.png" />
-    <style>
-    .mdl-cell {
-        padding: 0.75vw;
-    }
-    </style>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+	{{ $style := resources.Get "sass/styles.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
+	<link rel="stylesheet" href="{{ $style.Permalink }}">
+	<link rel="icon" type="image/png" href="/media/favicon.png" />
 </head>
 <body>
-<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-<header class="mdl-layout__header mdl-shadow--6dp">
-<div class="mdl-layout__header-row">
-	<span class="mdl-layout-title">Christian Diener, PhD</span>
-	<div class="mdl-layout-spacer"></div>
-	<nav class="mdl-navigation mdl-layout--large-screen-only">
-		<a class="mdl-navigation__link" href="/">Home</a>
-		<a class="mdl-navigation__link" href="/posts">Posts</a>
-        <a class="mdl-navigation__link" href="/pubs">Pubs</a>
-		<a class="mdl-navigation__link" href="/cv">Résumé</a>
-	</nav>
+{{ .Scratch.Set "color" "is-primary" }}
+{{ if .Params.hero }}{{ .Scratch.Set "color" "is-dark" }}
+{{ else if .Section }}{{ .Scratch.Set "color" "is-primary" }}{{ end }}
+{{ .Scratch.Set "shadow" "has-shadow" }}
+{{ if eq .Section "cv" }}{{ .Scratch.Set "shadow" "" }}{{ end }}
+<section class="hero {{ .Scratch.Get "color" }} is-bold {{ .Scratch.Get "shadow" }}" {{ if .IsPage }}style="background: url(/media/{{ .Params.hero | default "default.jpg"}}) center / cover !important"{{ end }}>
+<div class="hero-head">
+<nav class="navbar" role="navigation" aria-label="main navigation">
+	<div class="container">
+	<div class="navbar-brand">
+		{{ if not .IsHome}}
+		<a class="navbar-item" href="/">
+	    <h1 class="title is-5 has-text-white">Christian Diener, PhD</h1>
+		</a>
+		{{ end }}
+		<a class="navbar-item is-hidden-desktop" href="http://orcid.org/0000-0002-7476-0868 " target="_blank">
+			<span class="icon is-medium">
+				<img src="/media/orcid.png" width="70%">
+			</span>
+		</a>
+		<a class="navbar-item is-hidden-desktop" href="http://github.com/cdiener" target="_blank">
+			<span class="icon is-medium has-text-white">
+				<i class="fab fa-lg fa-github"></i>
+			</span>
+		</a>
+		<a class="navbar-item is-hidden-desktop" href="http://twitter.com/@thaasophobia" target="_blank">
+			<span class="icon is-medium">
+				<i class="fab fa-lg fa-twitter"></i>
+			</span>
+		</a>
+		<a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="top-nav">
+		<span aria-hidden="true"></span>
+		<span aria-hidden="true"></span>
+		<span aria-hidden="true"></span>
+		</a>
+	</div>
+	<div id="top-nav" class="navbar-menu">
+			<div class="navbar-start">
+			  <a class="navbar-item" href="/posts">
+				<span class="icon"><i class="fas fa-align-left"></i></span><span>Posts</span>
+			  </a>
+			  <a class="navbar-item" href="/pubs">
+				<span class="icon"><i class="fas fa-book"></i></span><span>Publications</span>
+			  </a>
+			  <a class="navbar-item" href="/cv">
+				<span class="icon"><i class="fas fa-id-card"></i></span><span>CV</span>
+			  </a>
+			</div>
+			<div class="navbar-end is-hidden-touch {{ if .IsPage }}is-invisible{{ end }}">
+				<a class="navbar-item" href="http://orcid.org/0000-0002-7476-0868 " target="_blank">
+					<span class="icon is-medium">
+						<img src="/media/orcid.png" width="70%">
+					</span>
+				</a>
+				<a class="navbar-item" href="http://github.com/cdiener" target="_blank">
+					<span class="icon is-medium has-text-white">
+						<i class="fab fa-lg fa-github"></i>
+					</span>
+				</a>
+				<a class="navbar-item" href="http://twitter.com/@thaasophobia" target="_blank">
+					<span class="icon is-medium">
+						<i class="fab fa-lg fa-twitter"></i>
+					</span>
+				</a>
+			</div>
+	</div>
 </div>
-</header>
-<div class="mdl-layout__drawer">
-	<span class="mdl-layout-title">Menu</span>
-	<nav class="mdl-navigation">
-	  <a class="mdl-navigation__link" href="/">Home</a>
-	  <a class="mdl-navigation__link" href="/posts">Posts</a>
-      <a class="mdl-navigation__link" href="/pubs">Pubs</a>
-	  <a class="mdl-navigation__link" href="/cv">Résumé</a>
-	</nav>
-</div>
-<main class="mdl-layout__content mdl-color--grey-100">
-<div class="page-content mdl-grid">
+</nav></div>
+

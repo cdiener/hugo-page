@@ -1,5 +1,5 @@
 +++
-categories = ["science", "microbiome", "statistics"]
+keywords = ["science", "microbiome", "statistics"]
 date = "2017-09-03T11:00:00-05:00"
 figshare = "https://doi.org/10.6084/m9.figshare.5371024.v1"
 github = "https://gist.github.com/cdiener/069a24964d0b426de067020e20bca0ec"
