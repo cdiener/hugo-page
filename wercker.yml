@@ -4,6 +4,9 @@ build:
     steps:
         - install-packages:
           packages: "hugo"
+        - script:
+          name: "Run hugo"
+          command: hugo -d public
 deploy:
     box: google/cloud-sdk
     steps:
