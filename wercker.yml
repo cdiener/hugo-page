@@ -6,7 +6,7 @@ build:
           packages: "hugo"
         - script:
           name: "Run hugo"
-          command: hugo -d public
+          command: hugo --source=${WERCKER_SOURCE_DIR} -d public
 deploy:
     box: google/cloud-sdk
     steps:
