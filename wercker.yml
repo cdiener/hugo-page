@@ -5,6 +5,9 @@ build:
         - install-packages:
           packages: "hugo"
         - script:
+          name: "hugo info"
+          command: hugo version
+        - script:
           name: "Run hugo"
           command: |
             hugo --source=${WERCKER_SOURCE_DIR} -d ${WERCKER_SOURCE_DIR}/public && \
