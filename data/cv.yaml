@@ -8,11 +8,11 @@ basics:
   website:
   summary:
   location:
-    address: INMEGEN, Periférico Sur No. 4809
-    postalcode: 14610
-    city: México D.F.
-    country: MEX
-    region: Tlalpan
+    address: Institute for Systems Biology, Terry Ave 401
+    postalcode: 98107
+    city: Seattle
+    country: USA
+    region:
   profiles:
   - network: twitter
     user: thaasophobia
@@ -21,11 +21,23 @@ basics:
     user: cdiener
     url: ""
 work:
+- company: Institute for Systems Biology
+  position: Postdoctoral Research Fellow
+  website: https://systemsbiology.org
+  begin: 2018
+  end: now
+  summary: Washington Research Foundation Distinguished Postdoctoral Fellow
+    in the Gibbons Lab. My research was focused on leveraging data from
+    metagenomics, deep phenotyping and in vitro experiments in order to unravel
+    the functional consequences of compositional shifts in the microbiome. I also
+    worked on designing interventions in order to engineer a personalized
+    microbiota that will persist wellness. Additionally, I also worked with
+    environmental samples and nanopore sequencing of metagenome samples.
 - company: National Institute for Genomic Medicine
   position: Investigator in Medical Sciences "B"
   website: http://inmegen.gob.mx
   begin: 2015
-  end: now
+  end: 2018
   summary: Position in the laboratory of Human Systems Biology of Dr. Osbaldo
     Resendis. In the first half of my position I studied metabolic alterations in
     cancer using a variety of data sources such as metabolome, genome and
