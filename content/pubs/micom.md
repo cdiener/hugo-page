@@ -1,0 +1,10 @@
++++
+weight = 0
+hero = "tech1.jpg"
+pubmed = ""
+doi = "10.1101/361907"
+date = 2019-04-06T15:09:39-07:00
+title = "Micom: metagenome-scale modeling to infer metabolic interactions in the microbiota"
++++
+
+Alterations in the gut microbiota have been associated with a variety of medical conditions such as obesity, Crohn's disease and diabetes. However, establishing connections between the microbial composition and function remains a challenge. We introduce a strategy based on metabolic models of complete microbial gut communities and apply it to derive the particular metabolic consequences of the microbial composition for the diabetic gut in a balanced cohort of 186 individuals. By using a heuristic optimization approach based on L2 regularization we were able to obtain a unique set of realistic growth rates that allows growth for the majority of observed taxa in a sample. We also integrated various additional constraints such as diet and the measured abundances of microbial species to derive the resulting metabolic alterations for individual metagenomic samples. In particular, we show that growth rates vary greatly across samples and that there exists a network of bacteria implicated in health and disease that mutually maintain each other's growth rates. Studying individual exchange fluxes in the gut microbiota we observed that consumption of metabolites by the microbiota follows a niche structure whereas production of short chain fatty acids by the microbiota was highly sample-specific, showed complex cross-feeding, and was affected in diabetes. In particular the models predicted alterations in SCFA production in Danish individuals and its restoration after metformin treatment. Additionally, we found that production of many metabolites by the microbiota could not be easily influenced by single-target interventions and that intervention effects may be very different across individuals. All methods are implemented in the open source Python package "micom" which is available at https://github.com/resendislab/micom.

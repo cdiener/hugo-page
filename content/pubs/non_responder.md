@@ -1,0 +1,10 @@
++++
+weight = 0
+hero = "science1.jpg"
+pubmed = ""
+doi = "10.1101/566190 "
+date = 2019-04-06T15:11:51-07:00
+title = "Non-responder phenotype reveals microbiome-wide antibiotic resistance in the murine gut"
++++
+
+Broad spectrum antibiotics can cause both transient and lasting damage to the ecology of the gut microbiome. Loss of gut bacterial diversity has been linked to immune dysregulation and disease susceptibility. Antibiotic-resistant populations of cells are known to arise spontaneously in single-strain systems. Furthermore, prior work on subtherapeutic antibiotic treatment in humans and therapeutic treatments in non-human animals have suggested that entire gut communities may exhibit spontaneous resistance phenotypes. In this study, we validate the existence of these community resistance phenotypes in the murine gut and explore how antibiotic duration or diet influence the frequency of this phenotype. We find that almost a third of mice exhibit whole-community resistance to a therapeutic concentration of the β-lactam antibiotic cefoperazone, independent of antibiotic treatment duration or xenobiotic dietary amendment. These non-responder (i.e. resistant) microbiota were protected from biomass depletion, transient ecological community collapse, and lasting diversity loss seen in the susceptible microbiota. There were no major differences between non-responder microbiota and untreated control microbiota at the community structure level. However, gene expression was vastly different between non-responder microbiota and controls during antibiotic treatment, with non-responder communities showing an upregulation of antimicrobial resistance genes and a down-regulation of central metabolism. Thus, non-responder phenotypes appear to combat antibiotic assault through a combination of efflux transporter upregulation and a reduced growth rate across the entire gut community. Future work should focus on what factors are responsible for tipping entire communities from susceptible to resistant phenotypes so that we might harness this phenomenon to protect our microbiota from exposure to therapeutic antibiotic treatment regimes.
