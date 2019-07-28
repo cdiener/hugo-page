@@ -123,7 +123,7 @@ err_plot
 
     ## `geom_smooth()` using method = 'loess'
 
-![](/media/orlitsky/bench1-1.png)
+![](bench1-1.png)
 
 First obvious thing we see is that subsampling, which is the same thing done in rarefaction, really messes with the estimation. In median we are overestimating probabilities by a lot. So if you are interested in getting a good estimation of proportions/probabilities, rarefaction is not the best choice. In fact, even if you are only interested in relative changes between samples there are almost always better strategies as discussed in an [excellenct article by Susan Holmes' group](https://doi.org/10.1371/journal.pcbi.1003531). Simple proportions and pseudo counts basically perform the same. Actually, proportions have a pretty bad rep in microbiome research. They are an unbiased estimator and the maximum-likelihood estimate and have decent convergence. It is more a problem of sample sizes than the problem of a bad estimator. There are many alternative methods to estimate probabilities based on event counts, however many requires some kind of additional assumptions or prior distributions (when using Bayesian methods). Is there something simple we could try that does not require additional information?
 
@@ -195,7 +195,7 @@ err_plot %+% bench_long
 
     ## `geom_smooth()` using method = 'loess'
 
-![](/media/orlitsky/bench2-1.png)
+![](bench2-1.png)
 
 Well, it seems to work. Relative errors are certainly smaller with Orlitsky's diminishing attenuation estimator. We can also see that it draws with the other estimators around a n of one million which is where we expect to have seen most of the actual events, so the advantage of estimating the probability for an unobserved event is lost. The probability estimate for observing a new event can be substantial and is larger 50% for the first few n.
 
@@ -218,7 +218,7 @@ err_plot %+% bench_long
 
     ## `geom_smooth()` using method = 'loess'
 
-![](/media/orlitsky/bench3-1.png)
+![](bench3-1.png)
 
 In general, there is a lower level of overestimation. Again, the diminishing attenuation estimator loses its advantage after passing the number of discrete events (species in this case). You might ask yourself why the estimator seems to overestimate probabilities more than the proportion estimator. This, is due to the fact that Orlitsky's estimator assigns a probability close to p\_max which is not necessarily the "real" distribution. In particular it still considers that there might be unobserved events which is probably correct. In the end our "real" distribution was taken from a population sample.
 
