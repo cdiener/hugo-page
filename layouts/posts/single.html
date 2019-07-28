@@ -1,37 +1,38 @@
 {{ partial "header.html" . }}
 <div class="hero-body">
-		<div class="container animated fadeIn">
-		  <h1 class="title is-2 has-text-weight-light is-spaced">
+	<div class="container animated fadeIn">
+		<h1 class="title is-2 has-text-weight-light is-spaced has-text-shadow">
 			{{ .Title }}
-		  </h1>
-		  <h2 class="subtitle">
+		</h1>
+		<h2 class="subtitle">
 			<span class="icon"><i class="far fa-calendar"></i></span>{{.Date.Format "January 1, 2006"}}
-		  </h2>
-		  <div class="tags">
-		  {{ range .Keywords }}
-		  <span class="tag is-white">{{ . }}</span>
-		  {{ end }}
-		  </div>
-		</div></div>
-	</section>
+		</h2>
+		<div class="tags">
+			{{ range .Keywords }}
+			<span class="tag is-white">{{ . }}</span>
+			{{ end }}
+		</div>
+	</div>
+</div>
+</section>
 <section class="section">
 
-<article class="container animated fadeIn slow" style="max-width: 960px">
-<div class="content">
-	{{ .Content }}
-</div>
-<div class="buttons">
-{{ if .Params.github }}
-<a class="button is-info is-outlined" href="{{ .Params.github }}" target="_blank">
-	<span class="icon"><i class="fab fa-github"></i></span><span>Github</span>
-</a>
-{{ end }}
-{{ if .Params.figshare }}
-<a class="button is-info is-outlined" href="{{ .Params.figshare }}" target="_blank">
-	<span class="icon"><img src="/media/figshare.svg"></span><span>Figshare</span>
-</a>
-{{ end }}
-</div>
-</article>
+	<article class="container animated fadeIn slow" style="max-width: 960px">
+		<div class="content">
+			{{ .Content }}
+		</div>
+		<div class="buttons">
+			{{ if .Params.github }}
+			<a class="button is-info is-outlined" href="{{ .Params.github }}" target="_blank">
+				<span class="icon"><i class="fab fa-github"></i></span><span>Github</span>
+			</a>
+			{{ end }}
+			{{ if .Params.figshare }}
+			<a class="button is-info is-outlined" href="{{ .Params.figshare }}" target="_blank">
+				<span class="icon"><img src="/media/figshare.svg"></span><span>Figshare</span>
+			</a>
+			{{ end }}
+		</div>
+	</article>
 </section>
 {{ partial "footer.html" . }}

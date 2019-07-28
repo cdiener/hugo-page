@@ -1,95 +1,104 @@
 <!doctype html>
 <html lang="en">
+
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="description" content="My personal website incuding Posts and my CV.">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-	{{ .Hugo.Generator }}
+	{{ hugo.Generator }}
 
 	<meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@thaasophobia" />
-    <meta property="og:url" content="{{.Permalink}}" />
-    <meta property="og:title" content="{{.Title}}" />
-    <meta property="og:description" content="{{.Summary}}..." />
-	{{ if .Params.hero }}<meta property="og:image" content="{{ .Site.BaseURL }}/media/{{.Params.hero}}" />{{end}}
+	<meta name="twitter:site" content="@thaasophobia" />
+	<meta property="og:url" content="{{.Permalink}}" />
+	<meta property="og:title" content="{{.Title}}" />
+	<meta property="og:description" content="{{.Summary}}..." />
+	{{ if .Params.hero }}
+	<meta property="og:image" content="{{ .Site.BaseURL }}/media/{{.Params.hero}}" />{{end}}
 
 	<title>{{ .Site.Title }}</title>
 
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+		integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 
 	{{ $style := resources.Get "sass/styles.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
 	<link rel="stylesheet" href="{{ $style.Permalink }}">
 	<link rel="icon" type="image/png" href="/media/favicon.png" />
 </head>
-<body>
-{{ .Scratch.Set "color" "is-primary" }}
-{{ if .Params.hero }}{{ .Scratch.Set "color" "is-dark" }}
-{{ else if .Section }}{{ .Scratch.Set "color" "is-primary" }}{{ end }}
-{{ .Scratch.Set "shadow" "has-shadow" }}
-{{ if eq .Section "cv" }}{{ .Scratch.Set "shadow" "" }}{{ end }}
-<section class="hero {{ .Scratch.Get "color" }} is-bold {{ .Scratch.Get "shadow" }}" {{ if .IsPage }}style="background: url(/media/{{ .Params.hero | default "default.jpg"}}) center / cover !important"{{ end }}>
-<div class="hero-head">
-<nav class="navbar" role="navigation" aria-label="main navigation">
-	<div class="container">
-	<div class="navbar-brand">
-		{{ if not .IsHome}}
-		<a class="navbar-item is-hidden-touch" href="/">
-	    <h1 class="title is-5 has-text-white">Christian Diener, PhD</h1>
-		</a>
-		{{ end }}
-		<a class="navbar-item is-hidden-desktop" href="http://orcid.org/0000-0002-7476-0868 " target="_blank">
-			<span class="icon is-medium">
-				<img src="/media/orcid.png" width="70%">
-			</span>
-		</a>
-		<a class="navbar-item is-hidden-desktop" href="http://github.com/cdiener" target="_blank">
-			<span class="icon is-medium has-text-white">
-				<i class="fab fa-lg fa-github"></i>
-			</span>
-		</a>
-		<a class="navbar-item is-hidden-desktop" href="http://twitter.com/@thaasophobia" target="_blank">
-			<span class="icon is-medium">
-				<i class="fab fa-lg fa-twitter"></i>
-			</span>
-		</a>
-		<a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="top-nav">
-		<span aria-hidden="true"></span>
-		<span aria-hidden="true"></span>
-		<span aria-hidden="true"></span>
-		</a>
-	</div>
-	<div id="top-nav" class="navbar-menu">
-			<div class="navbar-start">
-			  <a class="navbar-item" href="/posts">
-				<span class="icon"><i class="fas fa-align-left"></i></span><span>Posts</span>
-			  </a>
-			  <a class="navbar-item" href="/pubs">
-				<span class="icon"><i class="fas fa-book"></i></span><span>Publications</span>
-			  </a>
-			  <a class="navbar-item" href="/cv">
-				<span class="icon"><i class="fas fa-id-card"></i></span><span>CV</span>
-			  </a>
-			</div>
-			<div class="navbar-end is-hidden-touch {{ if .IsPage }}is-invisible{{ end }}">
-				<a class="navbar-item" href="http://orcid.org/0000-0002-7476-0868 " target="_blank">
-					<span class="icon is-medium">
-						<img src="/media/orcid.png" width="70%">
-					</span>
-				</a>
-				<a class="navbar-item" href="http://github.com/cdiener" target="_blank">
-					<span class="icon is-medium has-text-white">
-						<i class="fab fa-lg fa-github"></i>
-					</span>
-				</a>
-				<a class="navbar-item" href="http://twitter.com/@thaasophobia" target="_blank">
-					<span class="icon is-medium">
-						<i class="fab fa-lg fa-twitter"></i>
-					</span>
-				</a>
-			</div>
-	</div>
-</div>
-</nav></div>
 
+<body>
+	{{ .Scratch.Set "color" "is-primary" }}
+	{{ if .Params.hero }}{{ .Scratch.Set "color" "is-dark" }}
+	{{ else if .Section }}{{ .Scratch.Set "color" "is-primary" }}{{ end }}
+	{{ .Scratch.Set "shadow" "has-shadow" }}
+	{{ if eq .Section "cv" }}{{ .Scratch.Set "shadow" "" }}{{ end }}
+	<section class="hero {{ .Scratch.Get "color" }} is-bold {{ .Scratch.Get "shadow" }}"
+		{{ if .IsPage }}style="background: url(/media/{{ .Params.hero | default "default.jpg"}}) center / cover !important"
+		{{ end }}>
+		<div class="hero-head">
+			<nav class="navbar" role="navigation" aria-label="main navigation">
+				<div class="container">
+					<div class="navbar-brand">
+						{{ if not .IsHome}}
+						<a class="navbar-item is-hidden-touch" href="/">
+							<h1 class="title is-5 has-text-white">Christian Diener, PhD</h1>
+						</a>
+						{{ end }}
+						<a class="navbar-item is-hidden-desktop" href="http://orcid.org/0000-0002-7476-0868 "
+							target="_blank">
+							<span class="icon is-medium">
+								<img src="/media/orcid.png" width="70%">
+							</span>
+						</a>
+						<a class="navbar-item is-hidden-desktop" href="http://github.com/cdiener" target="_blank">
+							<span class="icon is-medium has-text-white">
+								<i class="fab fa-lg fa-github"></i>
+							</span>
+						</a>
+						<a class="navbar-item is-hidden-desktop" href="http://twitter.com/@thaasophobia"
+							target="_blank">
+							<span class="icon is-medium">
+								<i class="fab fa-lg fa-twitter"></i>
+							</span>
+						</a>
+						<a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+							data-target="top-nav">
+							<span aria-hidden="true"></span>
+							<span aria-hidden="true"></span>
+							<span aria-hidden="true"></span>
+						</a>
+					</div>
+					<div id="top-nav" class="navbar-menu">
+						<div class="navbar-start">
+							<a class="navbar-item" href="/posts">
+								<span class="icon"><i class="fas fa-align-left"></i></span><span>Posts</span>
+							</a>
+							<a class="navbar-item" href="/pubs">
+								<span class="icon"><i class="fas fa-book"></i></span><span>Publications</span>
+							</a>
+							<a class="navbar-item" href="/cv">
+								<span class="icon"><i class="fas fa-id-card"></i></span><span>CV</span>
+							</a>
+						</div>
+						<div class="navbar-end is-hidden-touch {{ if .IsPage }}is-invisible{{ end }}">
+							<a class="navbar-item" href="http://orcid.org/0000-0002-7476-0868 " target="_blank">
+								<span class="icon is-medium">
+									<img src="/media/orcid.png" width="70%">
+								</span>
+							</a>
+							<a class="navbar-item" href="http://github.com/cdiener" target="_blank">
+								<span class="icon is-medium has-text-white">
+									<i class="fab fa-lg fa-github"></i>
+								</span>
+							</a>
+							<a class="navbar-item" href="http://twitter.com/@thaasophobia" target="_blank">
+								<span class="icon is-medium">
+									<i class="fab fa-lg fa-twitter"></i>
+								</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</div>
