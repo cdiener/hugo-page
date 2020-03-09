@@ -1,0 +1,54 @@
+https://keybase.io/cdiener
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://cdiener.com
+  * I am cdiener (https://keybase.io/cdiener) on keybase.
+  * I have a public key ASCV-ATpjuiPH-zodeyNNPnTGGH7I08lPTyFBb9FjpVaXwo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "012059551650f54fea26efe3616762904eba7c9f556e5ea0f9858df7635539c73c920a",
+      "host": "keybase.io",
+      "kid": "012095f804e98ee88f1fece875ec8d34f9d31861fb234f253d3c8505bf458e955a5f0a",
+      "uid": "0384e90b9ee4b58bcce25c4f61196019",
+      "username": "cdiener"
+    },
+    "merkle_root": {
+      "ctime": 1583775239,
+      "hash": "72929f1a9d7d36d521f0eaaaafa22581d08fb1bd36f027be2499ad3e373930daf785aa057329b0b75fc0604310d7fcba9207ad6a6f060f00d91c4a06979dc365",
+      "hash_meta": "9b2238938b131bfd06b0b21b918f1f596cd66bb34071fd292f942a89da4688aa",
+      "seqno": 15218879
+    },
+    "service": {
+      "entropy": "QwGhqRO6gb2jm6nkCsnzbGLY",
+      "hostname": "cdiener.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "5.2.1"
+  },
+  "ctime": 1583775259,
+  "expire_in": 504576000,
+  "prev": "0c038c1b0ed703995c11dc366a88c9a9f6b9badb2c255ceca83a4f431661096c",
+  "seqno": 9,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEglfgE6Y7ojx/s6HXsjTT50xhh+yNPJT08hQW/RY6VWl8Kp3BheWxvYWTESpcCCcQgDAOMGw7XA5lcEdw2aojJqfa5utssJVzsqDpPQxZhCWzEIKRJ0NHnLbLbnU8nsVXzwHeHJpuEoa8uzKttEEehrifJAgHCo3NpZ8RANCiS0Cv44i9Tigs0ZGPuirXqSMED0ieBQyQSn0rBSSkFHp7I6lEI+uv1Hhe3y725BiBFzMOmRABJ4P2jnhDNA6hzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIJoVryr2Xa8vzrL4A5q0r6OnzChz7uLVAzndr3v+44F2o3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/cdiener
+
