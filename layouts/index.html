@@ -10,7 +10,7 @@
 		  </div>
 	  </section>
 <div class="container" style="max-width: 960px">
-{{ range where .Data.Pages "Section" "front" }}
+{{ range where .Site.RegularPages "Section" "front" }}
 <section class="section animated fadeIn">
 	<h1 class="title is-3 has-text-info has-text-weight-light">{{ .Title }}</h1>
 
@@ -21,7 +21,7 @@
 {{end}}</div>
 <section class="section">
 <div class="container" style="max-width: 960px">
-{{ range $i, $e := first 1 (where .Data.Pages "Section" "pubs") }}
+{{ range $i, $e := first 1 (where .Site.RegularPages "Section" "pubs") }}
 <div class="card has-shadow block">
 <header class="card-header is-high" {{ if $e.Params.hero }}style="background: url('/media/{{$e.Params.hero}}') center / cover"{{end}}>
 </header>
@@ -40,7 +40,7 @@
 </div></div>
 {{end}}
 <br>
-{{ range first 1 (where .Data.Pages "Section" "posts") }}
+{{ range first 1 (where .Site.RegularPages "Section" "posts") }}
 <div class="card has-shadow">
 <header class="card-header is-high" {{ if .Params.hero }}style="background: url('/media/{{.Params.hero}}') center / cover; min-height: 7rem"{{end}}>
 </header>
