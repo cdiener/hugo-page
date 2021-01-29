@@ -14,9 +14,10 @@
 		 "group": 4,
 		 "children": [
 			{"name":"Microbial cultures", "group": 5},
+			{"name": "NGS", "group": 5},
 			{"name":"PCR", "group": 5},
 			{"name":"Confocal Microscopy", "group": 5},
-			{"name":"DNA gels", "group": 5}
+			{"name":"DNA handling", "group": 5}
 		]},
 		{"name":"Systems Biology",
 		 "group": 6,
@@ -24,7 +25,7 @@
 			{"name":"Omics analyses", "group":7},
 			{"name":"ODEs/PDEs", "group": 7},
 			{"name":"Stochastic Processes", "group": 7},
-			{"name":"FBA", "group": 7}
+			{"name":"Metabolic Modeling", "group": 7}
 		]},
         {"name":"Data Science",
 		 "group": 8,

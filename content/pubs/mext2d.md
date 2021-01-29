@@ -1,9 +1,9 @@
 +++
 weight = 0
-hero = "health1.jpg"
-pubmed = ""
-doi = "10.1101/710152 "
-date = 2019-07-22T16:24:42-07:00
+hero = "health2.jpg"
+pubmed = "33488518 "
+doi = "10.3389/fendo.2020.602326"
+date = 2021-01-08T16:24:42-07:00
 title = "Progressive shifts in the gut microbiome reflect prediabetes and diabetes development in a treatment-naive Mexican cohort"
 +++
 
@@ -28,4 +28,4 @@ direct link between the gut microbiome and T2D in a critically high-risk
 population. Whether or not these T2D-associated changes in the gut contribute
 to the etiology of T2D or its comorbidities remains to be seen.
 
-{{< tweet 1154123045977485312 >}}
+{{< tweet 1347604838721355778>}}

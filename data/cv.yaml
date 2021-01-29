@@ -9,7 +9,7 @@ basics:
   summary:
   location:
     address: Institute for Systems Biology, Terry Ave 401
-    postalcode: 98107
+    postalcode: 98109
     city: Seattle
     country: USA
     region:
@@ -22,11 +22,21 @@ basics:
     url: ""
 work:
 - company: Institute for Systems Biology
-  position: Postdoctoral Research Fellow
-  website: https://systemsbiology.org
-  begin: 2018
+  position: Research Scientist
+  website: https://isbscience.org.org
+  begin: 2020
   end: now
-  summary: Washington Research Foundation Distinguished Postdoctoral Fellow
+  summary: |
+    I was promoted to a Research Scientist position in 2020. My research topics remained
+    mostly the same with an additional emphasis on Metabolic Modeling of the gut
+    microbiota to predict the effect of metabolic intervention.
+- company: Institute for Systems Biology
+  position: Postdoctoral Research Fellow
+  website: https://isbscience.org
+  begin: 2018
+  end: 2020
+  summary: |
+    Washington Research Foundation Distinguished Postdoctoral Fellow
     in the Gibbons Lab. My research was focused on leveraging data from
     metagenomics, deep phenotyping and in vitro experiments in order to unravel
     the functional consequences of compositional shifts in the microbiome. I also
@@ -38,7 +48,8 @@ work:
   website: http://inmegen.gob.mx
   begin: 2015
   end: 2018
-  summary: Position in the laboratory of Human Systems Biology of Dr. Osbaldo
+  summary: |
+    Position in the laboratory of Human Systems Biology of Dr. Osbaldo
     Resendis. In the first half of my position I studied metabolic alterations in
     cancer using a variety of data sources such as metabolome, genome and
     transcriptome data and combining those with mathematical modeling
@@ -50,7 +61,8 @@ work:
   website: http://unam.mx
   begin: 2012
   end: 2014
-  summary: PostDoc in the laboratory of Integrative Research of Biological Systems
+  summary: |
+    PostDoc in the laboratory of Integrative Research of Biological Systems
     of Dr. Gabriel Del Rio Guerra in the field of Synthetic Biology and Peptide
     design. During my position at the UNAM I used a combination of Machine Learning
     and Optimization to design multi-functional cell-penetrating and antimicrobial
@@ -74,6 +86,12 @@ education:
   begin: 2004
   end: 2007
 awards:
+- title: Precision Nutrition Gaps And Opportunities Workshop Poster Award
+  date: 01/2021
+  institution: National Institute of Diabetes and Digestive and Kidney Diseases (NIDDK)
+  summary: |
+    Awarded for poster titled "Predicting personalized responses to dietary
+    interventions with metagenome-scale metabolic models of the gut microbiota".
 - title: Poster prize winner PostDoc
   date: 05/2017
   institution: Copenhagen Bioscience Conference
@@ -116,7 +134,8 @@ skills:
   - Confocal/epifluorescence microscopy
   - Handling of microbial cell lines
   - PCR and transfection
-  - DNA gels
+  - Next-generation sequencing
+  - DNA handling
 languages:
 - language: English
   fluency: fluent
@@ -128,7 +147,8 @@ interests:
 - name:
   keywords:
   - Systems Biology
+  - Microbial Ecology
   - Metagenomics and microbial population dynamics
-  - Modeling of disease metabolism
+  - Modeling microbial metabolism at the host interface
   - Statistics for "omics" data
   - Data Science
