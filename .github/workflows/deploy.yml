@@ -3,7 +3,7 @@ name: github pages
 on:
   push:
     branches:
-      - main  # Set a branch to deploy
+      - master  # Set a branch to deploy
 
 jobs:
   deploy:
@@ -22,16 +22,16 @@ jobs:
 
       - name: Build
         run: hugo --minify
-      
+
       - name: Set up Cloud SDK
         uses: google-github-actions/setup-gcloud@master
         with:
           project_id: ${{ secrets.GCP_PROJECT_ID }}
           service_account_key: ${{ secrets.GCP_CREDENTIALS }}
           export_default_credentials: true
-          
+
       - name: upload files
-        shell: |
+        run: |
           # Sync
           gsutil -m rsync -r -d public gs://${{ secrets.GCS_BUCKET }}
           # Create gz files
