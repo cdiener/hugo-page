@@ -28,4 +28,4 @@ direct link between the gut microbiome and T2D in a critically high-risk
 population. Whether or not these T2D-associated changes in the gut contribute
 to the etiology of T2D or its comorbidities remains to be seen.
 
-{{< tweet 1347604838721355778>}}
+{{< tweet user="thaasophobia" id="1347604838721355778" >}}

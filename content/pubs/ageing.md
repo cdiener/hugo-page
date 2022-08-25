@@ -2,24 +2,11 @@
 weight = 0
 hero = "health2.jpg"
 pubmed = ""
-doi = "10.1101/2020.02.26.966747 "
-date = 2020-02-26T16:00:00-07:00
-title = "Gut Microbiome Pattern Reflects Healthy Aging and Predicts Extended Survival in Humans"
+doi = "10.1038/s42255-021-00348-0"
+date = 2021-02-18T16:00:00-07:00
+title = "Gut microbiome pattern reflects healthy ageing and predicts survival in humans"
 +++
 
-The gut microbiome has important effects on human health, yet its importance in human
-aging remains unclear. Using two independent cohorts comprising 4582 individuals across
-the adult lifespan we demonstrate that, starting in mid-to-late adulthood, gut
-microbiomes become increasingly unique with age. This uniqueness pattern is strongly
-associated with gut microbial amino acid derivatives circulating within the bloodstream,
-many of which have been previously identified as longevity biomarkers. At the latest
-stages of human life, two distinct patterns emerge wherein individuals in good health
-show continued microbial drift toward a unique compositional state, while the same drift
-is absent in individuals who perform worse on a number of validated health measures. The
-identified healthy aging pattern is characterized by an overall depletion of core genera
-found across most humans - primarily a depletion in the nearly ubiquitous genus
-Bacteroides. Consistently, retaining a high Bacteroides dominance into extreme age, or,
-equivalently, having a low gut microbiome uniqueness score, predicts decreased survival
-in a four-year follow-up. Our comprehensive analysis identifies the gut microbiome as a
-novel component of healthy aging, with important implications for the world’s growing
-older population.
+The gut microbiome has important effects on human health, yet its importance in human ageing remains unclear. In the present study, we demonstrate that, starting in mid-to-late adulthood, gut microbiomes become increasingly unique to individuals with age. We leverage three independent cohorts comprising over 9,000 individuals and find that compositional uniqueness is strongly associated with microbially produced amino acid derivatives circulating in the bloodstream. In older age (over ~80 years), healthy individuals show continued microbial drift towards a unique compositional state, whereas this drift is absent in less healthy individuals. The identified microbiome pattern of healthy ageing is characterized by a depletion of core genera found across most humans, primarily Bacteroides. Retaining a high Bacteroides dominance into older age, or having a low gut microbiome uniqueness measure, predicts decreased survival in a 4-year follow-up. Our analysis identifies increasing compositional uniqueness of the gut microbiome as a component of healthy ageing, which is characterized by distinct microbial metabolic outputs in the blood.
+
+{{< tweet user="TWilmanski" id="1362450675465125889" >}}

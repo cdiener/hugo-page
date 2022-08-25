@@ -1,3 +1,4 @@
 public
 \.vscode
 resources
+.hugo_build.lock

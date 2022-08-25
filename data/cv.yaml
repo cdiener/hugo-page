@@ -86,12 +86,30 @@ education:
   begin: 2004
   end: 2007
 awards:
+- title: Dr. Christine Schaeffer Award for Exemplary Service to STEM Education
+  date: 07/2022
+  institution: Institute for Systems Biology
+  summary: |
+    The award is given to ISB scientists who have taken up the mantle of devoting
+    their time and efforts to improving STEM education.
+- title: ISB Innovator Award 2022 (PI)
+  date: 04/2022
+  institution: Institute for Systems Biology
+  summary: |
+    Awarded $55,000 for the project "A Clinical and Experimental Exploration
+    of Gut Microbiome-Statin Interactions".
 - title: Precision Nutrition Gaps And Opportunities Workshop Poster Award
   date: 01/2021
   institution: National Institute of Diabetes and Digestive and Kidney Diseases (NIDDK)
   summary: |
     Awarded for poster titled "Predicting personalized responses to dietary
     interventions with metagenome-scale metabolic models of the gut microbiota".
+- title: ISB Innovator Award 2019 (Co-PI)
+  date: 04/2019
+  institution: Institute for Systems Biology
+  summary: |
+    Awarded $55,000 for the project Integrating genetics, blood proteomics and the
+    gut microbiome to understand transitions from high to lower weightss".
 - title: Poster prize winner PostDoc
   date: 05/2017
   institution: Copenhagen Bioscience Conference
