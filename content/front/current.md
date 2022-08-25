@@ -6,7 +6,7 @@ weight = 2
 
 I am currently a Research Scientist at the [Institute for Systems Biology](https://isbscience.org)
 and working in the field of Microbial Systems Ecology and Evolution. This is done within the
-[Gibbons Lab](http://gibbons.systemsbiology.org).
+[Gibbons Lab](http://gibbons.isbscience.org).
 
 My work is focussed on the human gut microbiome which means
 I basically study the genetic material, metabolism and ecology of microbial communities that live within us.
