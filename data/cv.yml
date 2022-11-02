@@ -1,0 +1,236 @@
+basics:
+  first: Christian
+  last: Diener
+  label: Microbial Systems Biologist
+  picture: face.webp
+  email: mail [at] cdiener.com
+  phone:
+  website: https://cdiener.com
+  summary:
+  location:
+    address: Institute for Systems Biology, 401 Terry Ave N
+    postalcode: 98109
+    city: Seattle
+    country: USA
+    region: WA
+  profiles:
+  - network: twitter
+    user: thaasophobia
+    url: ""
+  - network: github
+    user: cdiener
+    url: ""
+work:
+- company: Institute for Systems Biology (ISB)
+  location: USA
+  position: Research Scientist
+  website: https://isbscience.org
+  begin: 2018
+  end: now
+  summary: |
+    I started as a Washington Research Foundation Distinguished Postdoctoral Fellow
+    in the Gibbons Lab. I was promoted to a Research Scientist position in 2020 and
+    to a Senior Research Scientist position in 2022. My research is focused on leveraging data from
+    metagenomics, deep phenotyping and wet lab experiments to unravel
+    the functional consequences of compositional shifts in the mammalian gut microbiome. I also worked with
+    environmental samples and long-read sequencing of metagenome samples.
+    In the wet lab, I standardized and performed anaerobic *ex vivo* culturing assays and
+    processed samples for shotgun sequencing, RNA-seq, proteomic, and metabolomic quantification.
+- company: National Institute for Genomic Medicine
+  location: Mexico
+  position: Investigator in Medical Sciences
+  website: https://inmegen.gob.mx
+  begin: 2015
+  end: 2018
+  summary: |
+    I held a position in Dr. Osbaldo Resendis' laboratory of Human Systems Biology.
+    In the first half of my position I studied metabolic alterations in
+    cancer using a variety of data sources such as metabolome, genome and
+    transcriptome data and combined those with mathematical modeling
+    (flux balance analysis). Later I switched my focus to the microbiome where I analyzed
+    16S amplicon sequencing and metagenomic data sets from various cohorts and modeled the underlying
+    microbial communities.
+- company: Universidad Nacional Autónoma de México (UNAM)
+  location: Mexico
+  position: Postdoctoral Fellow
+  website: https://unam.mx
+  begin: 2012
+  end: 2014
+  summary: |
+    I worked as a postdoctoral fellow in the laboratory of Integrative Research of Biological Systems
+    of Dr. Gabriel Del Rio Guerra in the field of Synthetic Biology and Peptide
+    design. During my position at the UNAM I used a combination of machine learning
+    and optimization theory to design multi-functional cell-penetrating and antimicrobial
+    peptides and validated their function in *E. coli* and *S. cerevisiae* using
+    a variety of molecular biology methods.
+education:
+- institution: Freie Universität Berlin
+  area: Systems Biology
+  location: Germany
+  title: Ph.D. in  Bioinformatics
+  begin: 2008
+  end: 2012
+  summary: |
+    Ph.D. with distinction (summa cum laude) in Bioinformatics from the Free University of Berlin
+    within the International Max Planck Research School for Computational Biology and Scientific Computing (IMPRS-CBSC).
+    Thesis: "Localized signaling and communication during yeast mating", supervised by Dr. Edda Klipp and Dr. Martin Vingron.
+- institution: Max Planck Institute for Molecular Genetics
+  location: Berlin, Germany
+  area: Systems Biology
+  title: preparatory program (M.Sc. equivalent) in Systems Biology
+  begin: 2007
+  end: 2008
+  summary: |
+    Fast-track program of the International Max Planck Research School for Computational
+    Biology and Scientific Computing (IMPRS-CBSC).
+- institution: Freie Universität Berlin
+  area: Computational Biology
+  title: B.Sc. in Bioinformatics
+  begin: 2004
+  end: 2007
+  summary: Undergraduate program in Bioinformatics.
+awards:
+- title: Dr. Christine Schaeffer Award for Exemplary Service to STEM Education
+  date: 07/2022
+  institution: Institute for Systems Biology
+  summary: |
+    The award is given to ISB scientists who have taken up the mantle of devoting
+    their time and efforts to improving STEM education.
+- title: ISB Innovator Award 2022 (PI)
+  date: 04/2022
+  institution: Institute for Systems Biology
+  summary: |
+    Awarded $55,000 for the project "A Clinical and Experimental Exploration
+    of Gut Microbiome-Statin Interactions".
+- title: Precision Nutrition Gaps And Opportunities Workshop Poster Award
+  date: 01/2021
+  institution: National Institute of Diabetes and Digestive and Kidney Diseases (NIDDK)
+  summary: |
+    Awarded for poster titled "Predicting personalized responses to dietary
+    interventions with metagenome-scale metabolic models of the gut microbiota".
+- title: ISB Innovator Award 2019 (PI)
+  date: 04/2019
+  institution: Institute for Systems Biology
+  summary: |
+    Awarded $55,000 for the project "Integrating genetics, blood proteomics and the
+    gut microbiome to understand transitions from high to lower weights".
+- title: Poster prize winner PostDoc
+  date: 05/2017
+  institution: Copenhagen Bioscience Conference
+  summary: Awarded for best research project in the PostDoc category.
+- title: Award of the American Society of Biochemistry and Molecular Biology
+  date: 10/2011
+  institution: Cellular Signaling Conference, Mérida México
+  summary: Awarded for exceptional research quality.
+- title: Scholarship of the German Academic Exchange Program (DAAD)
+  date: 2011
+  institution: Universidad Nacional Autónoma de México
+  summary: Scholarship for a short research stay.
+- title: Scholarship of the International Max Planck Research School
+  date: 2007
+  institution: Max Planck Institute for Molecular Genetics
+  summary: Full scholarship for pre-doc and Ph.D. studies.
+- title: Young investigator award
+  date: 2007
+  institution: SYSBIOHEALTH symposium, Milano Italy
+  summary: Awarded for best poster.
+teaching:
+- organization: National Science Foundation REU program
+  position: Mentor
+  begin: 2022
+  end: 2022
+  summary: |
+    I mentored two undergrad students from Cornell and Notre Dame University within the
+    ISB Summer Undergraduate Research Experience.
+- organization: National Science Foundation REU program
+  position: Research Consultant
+  begin: 2021
+  end: 2022
+  summary: |
+    I collaborated with community college educators from Washington state in developing
+    classroom modules for the NSF-funded RCN-UBE program at the ISB.
+    The designed activities were implemented in classrooms in 2022.
+- organization: Institute for Systems Biology
+  position: Lead Instructor
+  begin: 2020
+  end: 2022
+  summary: |
+    I designed teaching materials and acted as a lead instructor for the
+    [ISB Microbiome Series](https://isbscience.org/microbiome2022), a
+    recurring freely available online course teaching microbiome data analysis and
+    metabolic modeling. The three iterations of the course were attended by more than
+    3000 international registrants.
+- organization: Institute for Systems Biology
+  position: Mentor
+  begin: 2019
+  end: 2020
+  summary: |
+    I mentored two high school students from Washington state within the ISB High School Internship program.
+- organization: Desafío LatAm, Mexico City
+  position: Teacher
+  begin: 2017
+  end: 2018
+  summary: |
+    Developed and gave classes in a Developer Bootcamp Program for professionals in Big Data
+    Engineering (5h/week).
+  topics:
+    - Data Science with Python
+    - Statistics and Visualization
+    - Machine Learning,
+    - Apache Spark
+    - Streaming Data
+    - Deep Learning
+    - Deployment of Machine Learning Solutions
+- organization: Universidad Nacional Autónoma de México
+  position: Teaching Assistant
+  begin: 2013
+  end: 2013
+  summary: |
+    Taught classes, designed and graded exercises and exams to students in the Bioengineering program.
+  topics:
+    - Introduction to Machine Learning
+- organization: Universidad Nacional Autónoma de México
+  position: Teaching Assistant
+  begin: 2013
+  end: 2013
+  summary: |
+    Prepared lectures, designed exercises and exams and provided tutoring to students in
+    the Biophysics program.
+  topics:
+    - Introduction to Systems Biology
+    - Statistical Physics,
+    - Introduction to Databases in Bioinformatics
+publications:
+skills:
+- name: Programming
+  level: Master
+  keywords:
+  - C/C++
+  - Python
+  - R
+  - Go
+  - Javascript
+- name: Molecular Microbiology
+  level: Master
+  keywords:
+    - Handling of microbial cell lines
+    - PCR and transfection
+    - DNA extraction and library prep
+    - Multiplexed DNA and RNA sequencing
+    - Anaerobic culturing
+languages:
+- language: English
+  fluency: fluent
+- language: Spanish
+  fluency: fluent
+- language: German
+  fluency: native speaker
+interests:
+- name:
+  keywords:
+    - Systems Biology
+    - Microbial Ecology
+    - Metagenomics and microbial population dynamics
+    - Modeling microbial metabolism at the host interface
+    - Applied Statistics
+    - Machine Learning and Data Science

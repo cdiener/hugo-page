@@ -22,8 +22,11 @@
         <li class="tab" onclick="open_tab(event, 'career')">
             <a onclick="open_tab(event, 'career')">Career</a>
         </li>
+        <li class="tab" onclick="open_tab(event, 'teaching')">
+            <a onclick="open_tab(event, 'teaching')">Teaching</a>
+        </li>
         <li class="tab" onclick="open_tab(event, 'other')">
-            <a>Other</a>
+            <a>Awards/Funding</a>
         </li>
     </ul>
     </div>
@@ -69,7 +72,7 @@ section.section.container {max-width: 960px}
 {{ with .Site.Data.cv }}
 <div class="columns is-centered"><div class="column is-8-tablet is-12-mobile">
 <div class="media" style="flex-wrap: wrap; justify-content: space-around">
-    <figure class="media-left" style="width: 160px">
+    <figure class="media-left" style="width: 200px">
         <p class="image is-square">
             <img src="/media/{{.basics.picture}}">
         </p>
@@ -79,11 +82,41 @@ section.section.container {max-width: 960px}
             <h1 class="title is-3"><span class="has-text-info">{{.basics.first}}</span>
             <span>{{.basics.last}}</h1>
             <p>{{.basics.location.address}}<br/>
-                {{.basics.location.city}}, {{.basics.location.postalcode}}<br/>
-                {{.basics.location.country}}</p>
+                {{.basics.location.city}} {{.basics.location.postalcode}}<br/>
+                {{.basics.location.region}}, {{.basics.location.country}}</p>
         </div>
     </div>
 </div></div></div></section>
+
+<section class="section container">
+{{if .interests}}
+<div class="card has-shadow">
+    <div class="card-header has-background-primary">
+    <h1 class="card-header-title title is-2 has-text-white has-text-weight-light">Interests</h1>
+    </div>
+    <div class="card-content">
+        <div class="content is-medium">
+        {{range .interests}}{{if .name}}<h2 class="title is-6 has-text-grey">{{.name}}</h2>{{end}}
+        <ul>{{range .keywords}}<li>{{ . }}</li>{{end}}</ul>
+        {{end}}
+        </div>
+    </div>
+</div>{{end}}
+</section>
+
+{{if .languages}}<section class="section container">
+<div class="card has-shadow">
+    <div class="card-header has-background-primary">
+    <h1 class="card-header-title title is-2 has-text-white has-text-weight-light">Languages</h1>
+    </div>
+    <div class="card-content">
+        <div class="content is-medium">
+        <ul>{{range .languages}}<li>
+            <span class="has-text-info">{{ .language }}</span>: {{.fluency}}
+        </li>{{end}}</ul></div>
+    </div>
+</div>
+</section>{{ end }}
 
 <section class="section container">
 <div class="box is-centered">
@@ -106,7 +139,8 @@ section.section.container {max-width: 960px}
 {{ range .education }}<div class="box">
     <h1 class="title is-5 has-text-info">{{.institution}}</h1>
     <h3 class="subtitle is-6 is-grey">{{.begin}} - {{.end}}</h3>
-    <h2 class="subtitle is-5 has-text-link">{{.title}} in {{.area}}</h2>
+    <h2 class="subtitle is-5 has-text-link">{{.title}}</h2>
+    <p class="content">{{.summary}}</p>
     </div>
 {{end}}
 </section></article>
@@ -130,22 +164,19 @@ section.section.container {max-width: 960px}
     </div>{{ end }}
 </section></article>
 
+<article class="is-tab animate__animated animate__fadeIn" id="teaching" style="display: none">
+    <section class="section container">
+    <span class="box has-background-primary"><h1 class="title is-2 has-text-white has-text-weight-light">Teaching</h1></span>
+    {{ range .teaching }}
+    <div class="box">
+        <h1 class="title is-5 has-text-info">{{.organization}}</h1>
+        <h3 class="subtitle is-6 is-grey">{{.begin}} - {{.end}}</h3>
+        <h2 class="subtitle is-5 has-text-link">{{.position}}</h2>
+        <p class="content">{{.summary}}</p>
+        </div>{{ end }}
+    </section></article>
+
 <article class="is-tab animate__animated animate__fadeIn" id="other" style="display: none">
-<section class="section container">
-{{if .interests}}
-<div class="card has-shadow">
-    <div class="card-header has-background-primary">
-    <h1 class="card-header-title title is-2 has-text-white has-text-weight-light">Interests</h1>
-    </div>
-    <div class="card-content">
-        <div class="content is-medium">
-        {{range .interests}}{{if .name}}<h2 class="title is-6 has-text-grey">{{.name}}</h2>{{end}}
-        <ul>{{range .keywords}}<li>{{ . }}</li>{{end}}</ul>
-        {{end}}
-        </div>
-    </div>
-</div>{{end}}
-</section>
 
 <section class="section container">
         <span class="box has-background-primary"><h1 class="title is-2 has-text-white has-text-weight-light">Awards &amp; Scholarships</h1></span>
@@ -158,19 +189,6 @@ section.section.container {max-width: 960px}
 {{end}}
 </section>
 
-{{if .languages}}<section class="section container">
-<div class="card has-shadow">
-    <div class="card-header has-background-primary">
-    <h1 class="card-header-title title is-2 has-text-white has-text-weight-light">Languages</h1>
-    </div>
-    <div class="card-content">
-        <div class="content is-medium">
-        <ul>{{range .languages}}<li>
-            <span class="has-text-info">{{ .language }}</span>: {{.fluency}}
-        </li>{{end}}</ul></div>
-    </div>
-</div>
-</section>{{ end }}
 {{end}}
 <script src="/js/d3.min.js" charset="utf-8"></script>
 <script src="/js/tree.min.js"></script>
