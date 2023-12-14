@@ -21,12 +21,21 @@ basics:
     user: cdiener
     url: ""
 work:
+- company: Medical University of Graz
+  location: Austria
+  position: Assistant Professor
+  website: https://isbscience.org
+  begin: 2024
+  end: now
+  summary: |
+    I will be joining the Medical University of Graz in 2024 as an Assistant Professor in
+    Computational Microbiome Research.
 - company: Institute for Systems Biology (ISB)
   location: USA
-  position: Research Scientist
+  position: Senior Research Scientist
   website: https://isbscience.org
   begin: 2018
-  end: now
+  end: 2024
   summary: |
     I started as a Washington Research Foundation Distinguished Postdoctoral Fellow
     in the Gibbons Lab. I was promoted to a Research Scientist position in 2020 and

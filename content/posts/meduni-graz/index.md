@@ -20,7 +20,7 @@ collaborate with many of you in the future.
 
 ---
 
-![A basic illustratin showing the microbial niche space.](niches.png)
+![A basic illustration showing the microbial niche space.](niches.png)
 
 In very broad terms my team and I will research the **niche dynamics in microbial communities**.
 The trillions of microorganisms living in our gut (as well as the 70 gigatons carbon of microbes on

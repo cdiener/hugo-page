@@ -17,4 +17,4 @@ modeling in order to understand how the microbiome affects the host metabolism. 
 in methods that go beyond mere correlations and also do some wet lab work in order to validate computational predictions.
 
 Before that I studied signaling in microbial cultures and metabolic alterations in cancer (you can find more about that
-in my [publications](/pubs)).
+in my [publications](/pubs).

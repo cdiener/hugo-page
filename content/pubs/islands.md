@@ -1,0 +1,9 @@
++++
+hero = "agriculture1.jpg"
+date = 2023-08-12T15:19:03-08:00
+title = "Island biogeography theory and the gut: why taller people tend to harbor more diverse gut microbiomes"
+pubmed = ""
+doi = "10.1101/2023.08.08.552554"
++++
+
+Prior work has shown a positive scaling relationship between vertebrate body size and gut microbiome alpha-diversity. This observation mirrors commonly observed species area relationships (SAR) in many other ecosystems. Here, we show a similar scaling relationship between human height and gut microbiome alpha-diversity across two large, independent cohorts, controlling for a wide range of relevant covariates, such as body mass index, age, sex, and bowel movement frequency. Island Biogeography Theory (IBT), which predicts that larger islands tend to harbor greater species diversity through neutral demographic processes, provides a simple mechanism for these positive SARs. Using an individual-based model of IBT adapted to the gut, we demonstrate that increasing the length of a flow-through ecosystem is associated with increased species diversity. We delve into the possible clinical implications of these SARs in the American Gut Cohort. Consistent with prior observations that lower alpha-diversity is a risk factor for Clostridioides difficile infection (CDI), we found that individuals who reported a history of CDI were shorter than those who did not and that this relationship appeared to be mediated by alpha-diversity. We also observed that vegetable consumption mitigated this risk increase, also by mediation through alpha-diversity. In summary, we find that body size and gut microbiome diversity show a robust positive association, that this macroecological scaling relationship is related to CDI risk, and that greater vegetable intake can mitigate this effect.
