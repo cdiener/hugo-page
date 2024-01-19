@@ -113,11 +113,11 @@ Magnúsdóttir et al., https://doi.org/10.1038/nbt.3703
 
 ## Personalized engraftment prediction of <i>C. difficile</i>
 
-<img src="assets/cdiff1.webp" width="90%">
+<img src="assets/cdiff1.webp" width="85%">
 
 <div class="footnote">
 
-with Alex Carr (Gibbons Lab)<br>
+*Alex Carr* (Gibbons Lab)<br>
 preprint at https://doi.org/10.1101/2023.04.28.538771
 
 </div>
