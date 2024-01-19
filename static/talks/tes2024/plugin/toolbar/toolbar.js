@@ -39,19 +39,19 @@ var RevealToolbar =
     var dom = {};
 
     loadResource(
-      options.path + '/toolbar.css',
+      options.path + 'toolbar.css',
       'stylesheet',
       'toolbar-defaults',
       function() {
         loadResource(
-          options.path + '/lib/screenfull/screenfull.min.js',
+          options.path + 'lib/screenfull/screenfull.min.js',
           'script',
           null,
           function() {
             if (loadIcons) {
               loadResource(
                 options.path +
-                  '/font-awesome-5.0.2/css/fontawesome-all.min.css',
+                  'font-awesome-5.0.2/css/fontawesome-all.min.css',
                 'stylesheet',
                 '',
                 loadPlugin
