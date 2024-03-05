@@ -8,11 +8,11 @@ basics:
   website: https://cdiener.com
   summary:
   location:
-    address: Institute for Systems Biology, 401 Terry Ave N
-    postalcode: 98109
-    city: Seattle
-    country: USA
-    region: WA
+    address: Medical University of Graz, Neue Stiftingtalstr. 6
+    postalcode: 8010
+    city: Graz
+    country: Austria
+    region: Styria
   profiles:
   - network: twitter
     user: thaasophobia
@@ -24,12 +24,14 @@ work:
 - company: Medical University of Graz
   location: Austria
   position: Assistant Professor
-  website: https://isbscience.org
+  website: https://medunigraz.at
   begin: 2024
   end: now
   summary: |
-    I will be joining the Medical University of Graz in 2024 as an Assistant Professor in
-    Computational Microbiome Research.
+    I joined the Medical University in Graz in march 2024 as an Assistant Professor for
+    Computational Microbiome Science. My lab operates within the Diagnostic and Research
+    Institute of Hygiene, Microbiology and Environmental Medicine and also forms part of the
+    the The lab forms part of the Austrian FWF Cluster of Excellence "Microbiomes Drive Planetary Health".
 - company: Institute for Systems Biology (ISB)
   location: USA
   position: Senior Research Scientist
