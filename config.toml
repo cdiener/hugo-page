@@ -1,7 +1,14 @@
 baseurl = "https://cdiener.com"
-languageCode = "en-us"
+locale = "en-us"
 title = "Christian's website"
 
 pygmentsCodeFences = true
 pygmentsStyle = "monokai"
 pygmentsOptions = "linenos=true"
+
+[taxonomies]
+  author = "authors"
+  keyword = "keywords"
+
+[markup.goldmark.renderer]
+  unsafe = true

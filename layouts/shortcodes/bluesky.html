@@ -1,0 +1,20 @@
+{{- $link := .Get "link"  -}}
+{{- $query := querify "url" $link -}}
+{{- $request := printf "https://embed.bsky.app/oembed?%s" $query -}}
+
+{{- $jsonOHTML := "" -}}
+{{- with try (resources.GetRemote $request) -}}
+  {{- with .Err -}}
+  {{- else with .Value -}}
+    {{- $jsonOembed := . | transform.Unmarshal -}}
+    {{- $jsonOHTML = $jsonOembed.html -}}
+  {{- end -}}
+{{- end -}}
+
+{{- if $jsonOHTML -}}
+<div style="display: flex; justify-content: center;">
+{{- $jsonOHTML | safeHTML -}}
+</div>
+{{- else -}}
+<blockquote class="bluesky-embed"><a href="{{ $link }}" target="_blank">{{ $link }}</a></blockquote>
+{{- end -}}

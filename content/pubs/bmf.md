@@ -1,18 +1,25 @@
 +++
-weight = 0
-hero = "midjourney6.png"
-pubmed = ""
-doi = "10.1101/2023.03.04.531100"
-date = 2023-03-04T16:00:00-07:00
-title = "Generally-healthy individuals with aberrant bowel movement frequencies show enrichment for microbially-derived blood metabolites associated with impaired kidney function"
+hero = "toilet1.jpg"
+pubmed = "39019013"
+doi = "10.1016/j.xcrm.2024.101646 "
+title = "Aberrant bowel movement frequencies coincide with increased microbe-derived blood metabolites associated with reduced organ function "
+keywords = ["article"]
+date = "2024-07-16T13:35:47+02:00"
 +++
 
-**Obiective** Bowel movement frequency (BMF) variation has been linked to changes in the composition of the human gut microbiome and to many chronic conditions, like metabolic disorders, neurodegenerative diseases, chronic kidney disease (CKD), and other intestinal pathologies like irritable bowel syndrome (IBS) and inflammatory bowel disease (IBD). Slow intestinal transit times (constipation) are thought to lead to compromised intestinal barrier integrity and a switch from saccharolytic to proteolytic fermentation within the microbiota, giving rise to microbially-derived toxins that may make their way into circulation and cause damage to organ systems. However, these phenomena have not been characterized in generally-healthy populations, and the connections between microbial metabolism and the early-stage development and progression of chronic disease remain underexplored.
+Bowel movement frequency (BMF) directly impacts the gut microbiota and is linked to
+diseases like chronic kidney disease or dementia. In particular, prior work has shown
+that constipation is associated with an ecosystem-wide switch from fiber fermentation
+and short-chain fatty acid production to more detrimental protein fermentation and toxin
+production. Here, we analyze multi-omic data from generally healthy adults to see how
+BMF affects their molecular phenotypes, in a pre-disease context.
 
-**Design** Here, we examine the phenotypic impact of BMF variation across a cohort of over 2,000 generally-healthy, community dwelling adults with detailed clinical, lifestyle, and multi-omic data.
-
-**Results** We show significant differences in key blood plasma metabolites, proteins, chemistries, gut bacterial genera, and lifestyle factors across BMF groups that have been linked, in particular, to inflammation and CKD severity and progression.
-
-**Discussion** In addition to dissecting BMF-related heterogeneity in blood metabolites, proteins, and the gut microbiome, we identify self-reported diet, lifestyle, and psychological factors associated with BMF variation, which suggest several potential strategies for mitigating constipation and diarrhea. Overall, this work highlights the potential for managing BMF to prevent disease.
-
-{{< tweet user="gibbological" id="1632830900064104448" >}}
+Results show
+differential abundances of gut microbial genera, blood metabolites, and variation in
+lifestyle factors across BMF categories. These differences relate to inflammation, heart
+health, liver function, and kidney function. Causal mediation analysis indicates that
+the association between lower BMF and reduced kidney function is partially mediated by
+the microbially derived toxin 3-indoxyl sulfate (3-IS). This result, in a generally
+healthy context, suggests that the accumulation of microbiota-derived toxins associated
+with abnormal BMF precede organ damage and may be drivers of chronic, aging-related
+diseases.

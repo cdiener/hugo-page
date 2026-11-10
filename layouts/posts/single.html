@@ -1,22 +1,28 @@
 {{ partial "header.html" . }}
 <div class="hero-body">
 	<div class="container animate__animated animate__fadeIn">
-		<h1 class="title is-2 has-text-weight-light is-spaced has-text-shadow">
+		<h1 class="title has-text-weight-light is-spaced has-text-shadow">
 			{{ .Title }}
 		</h1>
-		<h2 class="subtitle">
-			<span class="icon"><i class="far fa-calendar"></i></span>{{.Date.Format "January 1, 2006"}}
+		{{ if .Params.Authors }}
+		<h2 class="subtitle is-spaced">
+			by {{ delimit .Params.Authors ", " " & " }}
 		</h2>
-		<div class="tags">
-			{{ range .Keywords }}
-			<span class="tag is-white">{{ . }}</span>
-			{{ end }}
+		{{ end }}
+		<div class="level">
+			<h2 class="level-start subtitle">
+				<span class="icon"><i class="far fa-calendar"></i></span>{{.Date.Format "January 2, 2006"}}
+			</h2>
+			<div class="level-end tags">
+				{{ range .Keywords }}
+				<span class="tag is-medium is-white">{{ . }}</span>
+				{{ end }}
+			</div>
 		</div>
 	</div>
 </div>
 </section>
 <section class="section">
-
 	<article class="container animate__animated animate__fadeIn animate__slow" style="max-width: 960px">
 		<div class="content">
 			{{ .Content }}
@@ -30,6 +36,11 @@
 			{{ if .Params.figshare }}
 			<a class="button is-info is-outlined" href="{{ .Params.figshare }}" target="_blank">
 				<span class="icon"><img src="/media/figshare.svg"></span><span>Figshare</span>
+			</a>
+			{{ end }}
+			{{ range $name, $url := .Params.Links }}
+			<a class="button is-info is-outlined" href="{{ $url }}" target="_blank">
+				<span class="icon"><i class="fas fa-book"></i></span><span>{{ $name }}</span>
 			</a>
 			{{ end }}
 		</div>

@@ -1,36 +1,61 @@
-
 <footer class="footer is-dark">
 <div class="content">
 <div class="level is-mobile">
     <a class="level-item" href="mailto:mail(a)cdiener.com">mail(a)cdiener.com</a>
-    <span class="level-item">built with&nbsp;<a href="http://gohugo.io">Hugo</a></span>
+    <span class="level-item">built with&nbsp;<a href="http://gohugo.io">Hugo {{ hugo.Version }}</a></span>
 </div></div>
 </footer>
 <script>
+function open_tab(evt, tabName) {
+  var i, tabs, tablinks;
+  tabs = document.getElementsByClassName("is-tab");
+  for (i = 0; i < tabs.length; i++) {
+      tabs[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tab");
+  for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].classList.remove("is-active");
+  }
+  document.getElementById(tabName).style.display = "block";
+  evt.currentTarget.classList.add("is-active");
+}
+
+function toggle_mode() {
+  const element = document.getElementsByTagName("html")[0];
+  var theme = element.getAttribute("data-theme") === "dark" ? "light" : "dark";
+  element.setAttribute("data-theme", theme)
+  localStorage.setItem("theme", theme)
+}
+
 document.addEventListener('DOMContentLoaded', () => {
-
-// Get all "navbar-burger" elements
 const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-
-// Check if there are any navbar burgers
 if ($navbarBurgers.length > 0) {
-
   // Add a click event on each of them
   $navbarBurgers.forEach( el => {
     el.addEventListener('click', () => {
-
       // Get the target from the "data-target" attribute
       const target = el.dataset.target;
       const $target = document.getElementById(target);
-
       // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
       el.classList.toggle('is-active');
       $target.classList.toggle('is-active');
-
     });
   });
 }
+
+const element = document.getElementsByTagName("html")[0];
+if (localStorage.getItem("theme") === null) {
+  localStorage.setItem("theme", "light")
+  if (window.matchMedia) {
+    // Check if the dark-mode Media-Query matches
+    if(window.matchMedia('(prefers-color-scheme: dark)').matches){
+      localStorage.setItem("theme", "dark")
+    }
+  }
+}
+element.setAttribute('data-theme', localStorage.getItem('theme'));
 });
 </script>
+<script src="https://kit.fontawesome.com/19f47405ce.js" crossorigin="anonymous"></script>
 </body>
 </html>

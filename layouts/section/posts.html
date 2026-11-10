@@ -1,7 +1,7 @@
 {{ partial "header.html" . }}
 <div class="hero-body">
-	<div class="container animated shiftInLeft">
-	<h1 class="title">
+	<div class="container">
+	<h1 class="title has-text-weight-normal">
 		Blog
 	</h1>
 	<h2 class="subtitle">
@@ -13,7 +13,7 @@
 <section class="section">
 <div class="container">
 <div class="columns is-tablet is-multiline">
-{{ range $i, $e := .Data.Pages }}
+{{ range $i, $e := .Pages }}
 <div class="column is-4-widescreen is-6-tablet">
 <div class="card has-shadow animate__animated animate__zoomIn animate__fast">
 <header class="card-header is-high" style="background: url('/media/{{$e.Params.hero | default "default.jpg"}}') center / cover">
@@ -23,9 +23,14 @@
     <p class="level subtitle is-6 has-text-grey is-mobile">
     <span class="level-start"><span class="icon"><i class="far fa-calendar"></i></span>{{$e.Date.Format "2006-01-02"}}</span>
     <span class="level-end"><span class="icon"><i class="far fa-clock"></i></span>{{$e.ReadingTime}}m read</span></p>
-	<p class="content">{{ $e.Summary }}</p>
+	<div class="tags">
+		{{ range .Keywords }}
+		<span class="tag is-info">{{ . }}</span>
+		{{ end }}
+	</div>
+	<div class="content">{{ $e.Summary }}</div>
 
-	<div class="content">
+	<div class="content buttons">
 		<a class="button is-primary is-outlined" href="{{.RelPermalink}}">Read more...</a>
 	</div>
 </div></div></div>

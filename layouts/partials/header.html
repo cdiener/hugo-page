@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="description" content="My personal website incuding Posts and my CV.">
+	<meta name="description" content="My personal website including Posts and my CV.">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
 	{{ hugo.Generator }}
 
@@ -18,11 +18,13 @@
 
 	<title>{{ .Site.Title }}</title>
 
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
-		integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 
-	{{ $style := resources.Get "sass/styles.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
+	{{ $opts := dict
+		"transpiler" "dartsass"
+	}}
+
+	{{ $style := resources.Get "sass/styles.scss" | css.Sass $opts | resources.Minify | resources.Fingerprint }}
 	<link rel="stylesheet" href="{{ $style.Permalink }}">
 	<link rel="icon" type="image/png" href="/media/favicon.png" />
 </head>
@@ -37,18 +39,28 @@
 		{{ if .IsPage }}style="background: url(/media/{{ .Params.hero | default "default.jpg"}}) center / cover !important"
 		{{ end }}>
 		<div class="hero-head">
-			<nav class="navbar" role="navigation" aria-label="main navigation">
+			<nav class="navbar is-primary" role="navigation" aria-label="main navigation">
 				<div class="container">
 					<div class="navbar-brand">
 						{{ if not .IsHome}}
 						<a class="navbar-item is-hidden-touch" href="/">
 							<h1 class="title is-5 has-text-white">Christian Diener, PhD</h1>
 						</a>
+						<a class="navbar-item is-hidden-desktop" href="/">
+							<span class="icon is-medium has-text-white">
+								<i class="fa-solid fa-lg fa-house"></i>
+							</span>
+						</a>
 						{{ end }}
+						<a class="navbar-item is-hidden-desktop" role="button" aria-label="dark-mode" onclick="toggle_mode()">
+							<span class="icon is-medium has-text-white dark-mode">
+								<i class="fas fa-moon"></i>
+							</span>
+						</a>
 						<a class="navbar-item is-hidden-desktop" href="http://orcid.org/0000-0002-7476-0868"
 							target="_blank">
-							<span class="icon is-medium">
-								<img src="/media/orcid.png" width="70%">
+							<span class="icon is-medium has-text-white">
+								<i class="fab fa-lg fa-orcid"></i>
 							</span>
 						</a>
 						<a class="navbar-item is-hidden-desktop" href="http://github.com/cdiener" target="_blank">
@@ -62,20 +74,15 @@
 								<i class="fab fa-lg fa-mastodon"></i>
 							</span>
 						</a>
-						<a class="navbar-item is-hidden-desktop" href="http://twitter.com/thaasophobia"
-							target="_blank">
-							<span class="icon is-medium has-text-white">
-								<i class="fab fa-lg fa-twitter"></i>
-							</span>
-						</a>
 						<a class="navbar-item is-hidden-desktop" href="https://bsky.app/profile/cdiener.com"
 							target="_blank">
-							<span class="icon is-medium">
-								<img src="/media/bluesky.png" width="70%">
+							<span class="icon is-medium has-text-white">
+								<i class="fa-brands fa-lg fa-bluesky"></i>
 							</span>
 						</a>
 						<a role="button" class="navbar-burger burger has-text-white" aria-label="menu"
 							aria-expanded="false" data-target="top-nav">
+							<span aria-hidden="true"></span>
 							<span aria-hidden="true"></span>
 							<span aria-hidden="true"></span>
 							<span aria-hidden="true"></span>
@@ -84,19 +91,24 @@
 					<div id="top-nav" class="navbar-menu">
 						<div class="navbar-start">
 							<a class="navbar-item" href="/posts">
-								<span class="icon"><i class="fas fa-align-left"></i></span><span>Posts</span>
+								<span class="icon"><i class="fa-regular fa-comment-dots"></i></span><span>Posts</span>
 							</a>
 							<a class="navbar-item" href="/pubs">
-								<span class="icon"><i class="fas fa-book"></i></span><span>Publications</span>
+								<span class="icon"><i class="fas fa-newspaper"></i></span><span>Publications</span>
 							</a>
 							<a class="navbar-item" href="/cv">
 								<span class="icon"><i class="fas fa-id-card"></i></span><span>CV</span>
 							</a>
 						</div>
-						<div class="navbar-end is-hidden-touch {{ if .IsPage }}is-invisible{{ end }}">
-							<a class="navbar-item" href="http://orcid.org/0000-0002-7476-0868 " target="_blank">
-								<span class="icon is-medium">
-									<img src="/media/orcid.png" width="70%">
+						<div class="navbar-end is-hidden-touch">
+							<a class="navbar-item" role="button" aria-label="dark-mode" onclick="toggle_mode()">
+								<span class="icon is-medium has-text-white">
+									<i class="fas fa-moon"></i>
+								</span>
+							</a>
+							<a class="navbar-item" href="http://orcid.org/0000-0002-7476-0868" target="_blank">
+								<span class="icon is-medium has-text-white">
+									<i class="fab fa-lg fa-orcid"></i>
 								</span>
 							</a>
 							<a class="navbar-item" href="http://github.com/cdiener" target="_blank">
@@ -109,17 +121,12 @@
 									<i class="fab fa-lg fa-mastodon"></i>
 								</span>
 							</a>
-							<a class="navbar-item" href="http://twitter.com/@thaasophobia" target="_blank">
+							<a class="navbar-item" href="https://bsky.app/profile/cdiener.com"
+								target="_blank">
 								<span class="icon is-medium has-text-white">
-									<i class="fab fa-lg fa-twitter"></i>
+									<i class="fa-brands fa-lg fa-bluesky"></i>
 								</span>
 							</a>
-							<a class="navbar-item" href="https://bsky.app/profile/cdiener.com"
-							target="_blank">
-							<span class="icon is-medium">
-								<img src="/media/bluesky.png" width="70%">
-							</span>
-						</a>
 						</div>
 					</div>
 				</div>

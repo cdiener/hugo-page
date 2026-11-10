@@ -4,7 +4,8 @@ hero = ""
 pubmed = ""
 doi = ""
 title = ""
+keywords = []
 date = {{ .Date }}
 +++
 
-{{< tweet user="thaasophobia" id="[ID]" >}}
+{{< bluesky link="https://bsky.app/profile/..." >}}

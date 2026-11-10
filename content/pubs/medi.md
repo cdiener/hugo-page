@@ -1,28 +1,29 @@
 +++
-hero = "health2.jpg"
+hero = "food_dna2.jpeg"
 pubmed = ""
-doi = "10.1101/2024.02.02.578701 "
+doi = "10.1038/s42255-025-01220-1"
 title = "Metagenomic estimation of dietary intake from human stool"
-keywords = ["preprint"]
-date = "2024-02-07T17:03:26-08:00"
+keywords = []
+date = "2025-02-18T10:03:26-08:00"
 +++
 
-Dietary intake is tightly coupled to gut microbiota composition, human metabolism, and
-to the incidence of virtually all major chronic diseases. Dietary and nutrient intake
-are usually quantified using dietary questionnaires, which tend to focus on broad food
-categories, suffer from self-reporting biases, and require strong compliance from study
-participants. Here, we present MEDI (Metagenomic Estimation of Dietary Intake): a method
-for quantifying dietary intake using food-derived DNA in stool metagenomes. We show that
-food items can be accurately detected in metagenomic shotgun sequencing data, even when
-present at low abundances (>10 reads). Furthermore, we show how dietary intake, in terms
-of DNA abundance from specific organisms, can be converted into a detailed metabolic
-representation of nutrient intake. MEDI could identify the onset of solid food
-consumption in infants and it accurately predicted food questionnaire responses in an
-adult population. Additionally, we were able to identify specific dietary features
-associated with metabolic syndrome in a large clinical cohort, providing a
-proof-of-concept for detailed quantification of individual-specific dietary patterns
-without the need for questionnaires.
+Dietary intake is tightly coupled to gut microbiota composition, human metabolism and
+the incidence of virtually all major chronic diseases. Dietary and nutrient intake are
+usually assessed using self-reporting methods, including dietary questionnaires and food
+records, which suffer from reporting biases and require strong compliance from study
+participants. Here, we present Metagenomic Estimation of Dietary Intake (MEDI): a method
+for quantifying food-derived DNA in human faecal metagenomes.
 
-{{< tweet user="gibbological" id="1755018066277339186" >}}
+We show that
+DNA-containing food components can be reliably detected in stool-derived metagenomic
+data, even when present at low abundances (more than ten reads). We show how MEDI
+dietary intake profiles can be converted into detailed metabolic representations of
+nutrient intake. MEDI identifies the onset of solid food consumption in infants, shows
+significant agreement with food frequency questionnaire responses in an adult population
+and shows agreement with food and nutrient intake in two controlled-feeding studies.
+Finally, we identify specific dietary features associated with metabolic syndrome in a
+large clinical cohort without dietary records, providing a proof-of-concept for detailed
+tracking of individual-specific, health-relevant dietary patterns without the need for
+questionnaires.
 
-{{< tweet user="thaasophobia" id="1754938057697132628" >}}
+{{< bluesky link="https://bsky.app/profile/cdiener.com/post/3lih4d5gpms2u" >}}

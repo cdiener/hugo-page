@@ -1,25 +1,24 @@
 @charset "utf-8";
 
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700|Roboto+Mono');
-
-$family-sans-serif: "Open Sans", BlinkMacSystemFont, -apple-system, "Segoe UI",
+$family-sf: "Open Sans", BlinkMacSystemFont, -apple-system, "Segoe UI",
                     "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
                     "Droid Sans", "Helvetica Neue", "Helvetica", "Arial",
                     sans-serif;
-$family-monospace: "Roboto Mono", monospace;
 $blue: #3949AB;
-$cyan: #448AFF;
+$cyan: #317cff;
 $purple: #AA00FF;
 $red: #E53935;
 $turquoise: #00BFA5;
 $orange: #FF3D00;
 $yellow: #FFE57F;
-$primary: $blue;
-$link: $turquoise;
-$info: $cyan;
-$link-hover: darken($turquoise, 15%);
 
-@import "../bulma/bulma.sass";
+@use "../bulma/sass" with (
+    $family-primary: $family-sf,
+    $family-monospace: '"Roboto Mono", monospace',
+    $primary: $blue,
+    $link: $turquoise,
+    $info: $cyan
+);
 
 .card-header.is-high {
     min-height: 7rem;
@@ -33,17 +32,62 @@ $link-hover: darken($turquoise, 15%);
 }
 
 .hero.has-shadow {
-    box-shadow: 0 2px 4px rgba(10, 10, 10, 0.3),0 0 0 1px rgba(10,10,10,.6);
-}
-
-span.icon {
-    margin-right: 0.25em;
+    box-shadow: 0 3px 6px rgba(10, 10, 10, 0.3)
 }
 
 .twitter-tweet {
-    margin: auto;
+    margin: 2em auto;
 }
 
 .has-text-shadow {
     text-shadow: 0 2px 2px #000;
 }
+
+.basic-info {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.basic-info > div {
+    text-align: center;
+    width: 260px;
+}
+
+.basic-info > div > span {
+    white-space: nowrap;
+}
+
+.basic-info .face {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 0 0 1em 0;
+}
+
+html[data-theme=dark] {
+    background-color: var(--bulma-grey-darker) !important;
+}
+
+html[data-theme=dark] .tabs.is-boxed li.is-active a {
+    color: var(--bulma-link-color) !important;
+    background-color: var(--bulma-grey-darker) !important;
+}
+
+html[data-theme=dark] .has-text-info {
+    color: #82b1ff !important;
+}
+
+html[data-theme=dark] .has-text-primary {
+    color: #9fa8da !important;
+}
+
+@media screen and (max-width: 1023px) {
+    .hero.is-primary.is-bold .navbar-menu {
+        background-color: var(--bulma-navbar-background-color);
+        background-image: none;
+    }
+}
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700|Roboto+Mono');
