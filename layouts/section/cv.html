@@ -37,33 +37,56 @@
 <style>
 section.section.container {max-width: 960px}
 
-#vis .node {
-  stroke: #fff;
+#vis {
+  --graph-text: #363636;
+  --graph-border: #363636;
+  --graph-link: #717171;
+  margin: 0 auto;
+  overflow-x: auto;
+  padding: 0;
+  max-width: 700px;
+}
+
+html[data-theme=dark] #vis {
+  --graph-text: #f5f5f5;
+  --graph-border: #f5f5f5;
+  --graph-link: #b5b5b5;
+}
+
+#vis svg {
+  display: block;
+  width: 100%;
+  min-width: 600px;
+  height: auto;
+}
+
+#vis .node circle {
+  stroke: var(--graph-border);
   stroke-width: 2px;
 }
 
-#vis .node.fixed {
-  stroke: #000;
+#vis .node.expandable {
+  cursor: pointer;
+}
+
+#vis .node:focus circle {
+  stroke-width: 4px;
 }
 
 #vis .node text {
-  stroke: none;
-  fill: black;
+  stroke: var(--bulma-box-background-color);
+  stroke-width: 4px;
+  stroke-linejoin: round;
+  paint-order: stroke;
+  fill: var(--graph-text);
   pointer-events: none;
-  font: 0.75em Lato, sans-serif;
+  font: 20px "Open Sans", sans-serif;
 }
 
 #vis .link {
-  fill: none;
-  stroke: #999;
-  stroke-opacity: .4;
+  stroke: var(--graph-link);
+  stroke-opacity: .7;
   stroke-width: 2;
-}
-
-#vis {
-	margin: 0 auto;
-	padding: 0;
-	max-width: 700px;
 }
 </style>
 
@@ -122,7 +145,7 @@ section.section.container {max-width: 960px}
 <div class="box is-centered">
     <h1 class="title is-3 has-text-primary is-spaced">Skills</h1>
     <div id="vis"></div>
-        <p>Click on a node to open/collapse...</p>
+        <p>Click or press Enter on a category to expand or collapse it. Drag nodes to rearrange the graph; scroll horizontally if needed.</p>
 </div></section>
 
 <section class="section container">
@@ -191,5 +214,6 @@ section.section.container {max-width: 960px}
 
 {{end}}
 <script src="/js/d3.min.js" charset="utf-8"></script>
-<script src="/js/tree.min.js"></script>
+{{ $skillsScript := resources.Get "js/tree.js" | resources.Minify | resources.Fingerprint }}
+<script src="{{ $skillsScript.RelPermalink }}"></script>
 {{ partial "footer.html" . }}
