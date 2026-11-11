@@ -101,6 +101,26 @@ education:
   end: 2007
   summary: Undergraduate program in Bioinformatics.
 awards:
+- title: Principles of Scientific Writing
+  date: 2024-now
+  institution: Medical University of Graz
+  summary: |
+    I teach a class on Scientific Writing every summer semester within the MolMed
+    PhD program. It combines clear principles with active writing groups to make students
+    better writers and great storytellers.
+- title: Problem-based learning courses for Medical Students
+  date: 2024-now
+  institution: Medical University of Graz
+  summary: |
+    I hold problem-based learning modules (PBLs) for medical students on the topic of
+    diarrheal and urinary tract infections where I guide them through clinical case
+    examples.
+- title: Microbiome Course
+  date: 2024-now
+  institution: Medical University of Graz
+  summary: |
+    I taught within the course "Introduction to Microbiome Research" within the MolMed
+    PhD program.
 - title: Dr. Christine Schaeffer Award for Exemplary Service to STEM Education
   date: 07/2022
   institution: Institute for Systems Biology
