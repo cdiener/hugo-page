@@ -8,7 +8,8 @@ basics:
   website: https://cdiener.com
   summary:
   location:
-    address: Medical University of Graz, Neue Stiftingtalstr. 6
+    institution: Medical University of Graz
+    address: Neue Stiftingtalstr. 6
     postalcode: 8010
     city: Graz
     country: Austria
@@ -101,26 +102,6 @@ education:
   end: 2007
   summary: Undergraduate program in Bioinformatics.
 awards:
-- title: Principles of Scientific Writing
-  date: 2024-now
-  institution: Medical University of Graz
-  summary: |
-    I teach a class on Scientific Writing every summer semester within the MolMed
-    PhD program. It combines clear principles with active writing groups to make students
-    better writers and great storytellers.
-- title: Problem-based learning courses for Medical Students
-  date: 2024-now
-  institution: Medical University of Graz
-  summary: |
-    I hold problem-based learning modules (PBLs) for medical students on the topic of
-    diarrheal and urinary tract infections where I guide them through clinical case
-    examples.
-- title: Microbiome Course
-  date: 2024-now
-  institution: Medical University of Graz
-  summary: |
-    I taught within the course "Introduction to Microbiome Research" within the MolMed
-    PhD program.
 - title: Dr. Christine Schaeffer Award for Exemplary Service to STEM Education
   date: 07/2022
   institution: Institute for Systems Biology
@@ -166,6 +147,24 @@ awards:
   institution: SYSBIOHEALTH symposium, Milano Italy
   summary: Awarded for best poster.
 teaching:
+- organization: Medical University of Graz
+  position: Professor
+  begin: 2024
+  end: now
+  summary: |
+    **Principles of Scientific Writing**:
+    I teach  class on Scientific Writing every summer semester within the MolMed
+    PhD program. It combines clear principles with active writing groups to make students
+    better writers and great storytellers.
+
+    **Problem-based learning Microbiology**:
+    I hold problem-based learning modules (PBLs) for medical students on the topic of
+    diarrheal and urinary tract infections where I guide them through clinical case
+    examples.
+
+    **Microbiome Course**:
+    I taught within the course "Introduction to Microbiome Research" within the MolMed
+    PhD program.
 - organization: National Science Foundation REU program
   position: Mentor
   begin: 2022

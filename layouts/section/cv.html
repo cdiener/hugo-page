@@ -104,7 +104,7 @@ html[data-theme=dark] #vis {
         <div class="content is-medium">
             <h1 class="title is-3"><span class="has-text-info">{{.basics.first}}</span>
             <span>{{.basics.last}}</h1>
-            <p>{{.basics.location.address}}<br/>
+            <p>{{.basics.location.institution}}<br/>{{.basics.location.address}}<br/>
                 {{.basics.location.city}} {{.basics.location.postalcode}}<br/>
                 {{.basics.location.region}}, {{.basics.location.country}}</p>
         </div>
@@ -163,7 +163,7 @@ html[data-theme=dark] #vis {
     <h1 class="title is-5 has-text-info">{{.institution}}</h1>
     <h3 class="subtitle is-6 is-grey">{{.begin}} - {{.end}}</h3>
     <h2 class="subtitle is-5 has-text-link">{{.title}}</h2>
-    <p class="content">{{.summary}}</p>
+    <div class="content">{{ .summary | markdownify }}</div>
     </div>
 {{end}}
 </section></article>
@@ -176,7 +176,7 @@ html[data-theme=dark] #vis {
     <h1 class="title is-5 has-text-info">{{.company}}</h1>
     <h3 class="subtitle is-6 is-grey">{{.begin}} - {{.end}}</h3>
     <h2 class="subtitle is-5 has-text-link">{{.position}}</h2>
-    <p class="content">{{.summary}}</p>
+    <div class="content">{{ .summary | markdownify }}</div>
     {{if .highlights}}
     <h2 class="title is-6">Highlights</h2>
     <ul>{{ range .highlights }}<li>{{.}}</li>{{end}}</ul>{{end}}
@@ -195,7 +195,7 @@ html[data-theme=dark] #vis {
         <h1 class="title is-5 has-text-info">{{.organization}}</h1>
         <h3 class="subtitle is-6 is-grey">{{.begin}} - {{.end}}</h3>
         <h2 class="subtitle is-5 has-text-link">{{.position}}</h2>
-        <p class="content">{{.summary}}</p>
+        <div class="content">{{ .summary | markdownify }}</div>
         </div>{{ end }}
     </section></article>
 
@@ -207,7 +207,7 @@ html[data-theme=dark] #vis {
     <h1 class="title is-6 has-text-info">{{.title}}</h1>
     <h3 class="subtitle is-6 has-text-grey" style="margin-bottom: 0">{{.date}}</h3>
     <h2 class="subtitle is-6">at {{.institution}}</h2>
-    <p class="content">{{.summary}}</p>
+    <div class="content">{{ .summary | markdownify }}</div>
 </div>
 {{end}}
 </section>
